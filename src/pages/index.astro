@@ -221,9 +221,9 @@ import Layout from '../layouts/Layout.astro';
 							<span class="portfolio-badge">Novo</span>
 						</div>
 						<p>Plataforma de benefícios e vantagens para clientes.</p>
-						<div class="portfolio-metric">
-							<span class="metric-icon">📈</span>
-							<span>+60% engajamento de clientes</span>
+						<div class="portfolio-tech">
+							<span class="tech-tag">WordPress</span>
+							<span class="tech-tag">Elementor</span>
 						</div>
 						<div class="portfolio-footer">
 							<div class="tags">
@@ -251,9 +251,9 @@ import Layout from '../layouts/Layout.astro';
 							<h3>Driffer</h3>
 						</div>
 						<p>Gestão de frotas com tecnologia de ponta.</p>
-						<div class="portfolio-metric">
-							<span class="metric-icon">⏱️</span>
-							<span>100% tempo de carregamento</span>
+						<div class="portfolio-tech">
+							<span class="tech-tag">Astro</span>
+							<span class="tech-tag">IA</span>
 						</div>
 						<div class="portfolio-footer">
 							<div class="tags">
@@ -282,9 +282,9 @@ import Layout from '../layouts/Layout.astro';
 							<span class="portfolio-badge">Novo</span>
 						</div>
 						<p>Energia solar com design que converte.</p>
-						<div class="portfolio-metric">
-							<span class="metric-icon">💰</span>
-							<span>+45% leads qualificados</span>
+						<div class="portfolio-tech">
+							<span class="tech-tag">Astro</span>
+							<span class="tech-tag">IA</span>
 						</div>
 						<div class="portfolio-footer">
 							<div class="tags">
@@ -313,9 +313,9 @@ import Layout from '../layouts/Layout.astro';
 							<span class="portfolio-badge">Novo</span>
 						</div>
 						<p>Soluções energéticas modernas e sustentáveis.</p>
-						<div class="portfolio-metric">
-							<span class="metric-icon">🌱</span>
-							<span>Zero burocracia no cadastro</span>
+						<div class="portfolio-tech">
+							<span class="tech-tag">Astro</span>
+							<span class="tech-tag">IA</span>
 						</div>
 						<div class="portfolio-footer">
 							<div class="tags">
@@ -343,9 +343,9 @@ import Layout from '../layouts/Layout.astro';
 							<h3>Somar Agrotech</h3>
 						</div>
 						<p>Tecnologia aplicada ao agronegócio.</p>
-						<div class="portfolio-metric">
-							<span class="metric-icon">🌾</span>
-							<span>+35% demandas online</span>
+						<div class="portfolio-tech">
+							<span class="tech-tag">Astro</span>
+							<span class="tech-tag">IA</span>
 						</div>
 						<div class="portfolio-footer">
 							<div class="tags">
@@ -373,9 +373,9 @@ import Layout from '../layouts/Layout.astro';
 							<h3>Wallacy Designer</h3>
 						</div>
 						<p>Portfólio de design gráfico e web.</p>
-						<div class="portfolio-metric">
-							<span class="metric-icon">🎨</span>
-							<span>100% responsivo</span>
+						<div class="portfolio-tech">
+							<span class="tech-tag">WordPress</span>
+							<span class="tech-tag">Elementor</span>
 						</div>
 						<div class="portfolio-footer">
 							<div class="tags">
@@ -404,9 +404,9 @@ import Layout from '../layouts/Layout.astro';
 							<span class="portfolio-badge">Novo</span>
 						</div>
 						<p>Site institucional para hospital.</p>
-						<div class="portfolio-metric">
-							<span class="metric-icon">🏥</span>
-							<span>+50% agendamentos online</span>
+						<div class="portfolio-tech">
+							<span class="tech-tag">Astro</span>
+							<span class="tech-tag">IA</span>
 						</div>
 						<div class="portfolio-footer">
 							<div class="tags">
@@ -435,9 +435,9 @@ import Layout from '../layouts/Layout.astro';
 							<span class="portfolio-badge">Novo</span>
 						</div>
 						<p>Provedor de internet e soluções digitais.</p>
-						<div class="portfolio-metric">
-							<span class="metric-icon">🌐</span>
-							<span>+70% pedidos de plano</span>
+						<div class="portfolio-tech">
+							<span class="tech-tag">Astro</span>
+							<span class="tech-tag">IA</span>
 						</div>
 						<div class="portfolio-footer">
 							<div class="tags">
@@ -1305,22 +1305,22 @@ import Layout from '../layouts/Layout.astro';
 		line-height: 1.7;
 	}
 
-	.portfolio-metric {
+	.portfolio-tech {
 		display: flex;
-		align-items: center;
-		gap: 0.6rem;
-		padding: 0.75rem 1rem;
-		background: linear-gradient(135deg, rgba(0, 230, 118, 0.1) 0%, rgba(0, 230, 118, 0.03) 100%);
-		border: 1px solid rgba(0, 230, 118, 0.12);
-		border-radius: 14px;
-		margin-bottom: 1.25rem;
-		font-size: 0.85rem;
-		color: var(--primary);
-		font-weight: 600;
+		flex-wrap: wrap;
+		gap: 0.4rem;
+		margin-bottom: 1rem;
 	}
 
-	.metric-icon {
-		font-size: 1.1rem;
+	.tech-tag {
+		padding: 0.3rem 0.7rem;
+		background: rgba(0, 230, 118, 0.08);
+		border: 1px solid rgba(0, 230, 118, 0.15);
+		border-radius: 6px;
+		font-size: 0.7rem;
+		font-weight: 600;
+		color: var(--primary);
+		letter-spacing: 0.3px;
 	}
 
 	.portfolio-footer {
