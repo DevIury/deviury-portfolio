@@ -1738,7 +1738,7 @@ import Layout from '../layouts/Layout.astro';
 		background: linear-gradient(135deg, #00C853, #00E676, #69F0AE);
 		color: #fff;
 		border-radius: 50%;
-		display: flex;
+		display: none;
 		align-items: center;
 		justify-content: center;
 		box-shadow: 0 4px 25px rgba(0, 230, 118, 0.5);
@@ -1863,11 +1863,11 @@ import Layout from '../layouts/Layout.astro';
 		}
 
 		.floating-whatsapp {
-			display: none;
+			display: flex;
 		}
 
 		.mobile-cta-bar {
-			display: block;
+			display: none;
 		}
 
 		.hero-content {
@@ -1901,6 +1901,14 @@ import Layout from '../layouts/Layout.astro';
 		.cta-group {
 			justify-content: center;
 			flex-wrap: wrap;
+		}
+
+		.cta-group .btn-primary {
+			display: none;
+		}
+
+		.floating-whatsapp {
+			display: flex;
 		}
 
 		.services-grid {
