@@ -7,8 +7,8 @@ import Layout from '../layouts/Layout.astro';
 		<nav class="nav">
 			<a href="#" class="logo">Dev<span>Iury</span></a>
 			<ul class="nav-links">
-				<li><a href="#sobre">Sobre</a></li>
 				<li><a href="#servicos">Serviços</a></li>
+				<li><a href="#sobre">Sobre</a></li>
 				<li><a href="#portfolio">Portfólio</a></li>
 				<li><a href="#contato">Contato</a></li>
 			</ul>
@@ -30,8 +30,8 @@ import Layout from '../layouts/Layout.astro';
 		</button>
 		<nav class="sidebar__nav">
 			<span class="sidebar__label">Navegação</span>
-			<a href="#sobre" class="sidebar__link">Sobre</a>
 			<a href="#servicos" class="sidebar__link">Serviços</a>
+			<a href="#sobre" class="sidebar__link">Sobre</a>
 			<a href="#portfolio" class="sidebar__link">Portfólio</a>
 			<a href="#contato" class="sidebar__link">Contato</a>
 		</nav>
@@ -913,6 +913,8 @@ import Layout from '../layouts/Layout.astro';
 		line-height: 1.15;
 		margin-bottom: 1.25rem;
 		letter-spacing: -0.5px;
+		text-align: left;
+		min-height: 3.8em;
 	}
 
 	.hero-text h1 span {
@@ -1846,6 +1848,7 @@ import Layout from '../layouts/Layout.astro';
 
 		.hero-text h1 {
 			font-size: 2rem;
+			min-height: 3em;
 		}
 
 		.hero-text p {
