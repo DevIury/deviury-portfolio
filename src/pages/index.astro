@@ -28,6 +28,7 @@ import Layout from '../layouts/Layout.astro';
 				<path d="M18 6L6 18M6 6l12 12"/>
 			</svg>
 		</button>
+		<a href="#" class="sidebar__logo"><img src="/logo-deviury.png" alt="DevIury" height="60"></a>
 		<nav class="sidebar__nav">
 			<span class="sidebar__label">Navegação</span>
 			<a href="#servicos" class="sidebar__link">Serviços</a>
@@ -773,6 +774,18 @@ import Layout from '../layouts/Layout.astro';
 		background: rgba(255, 255, 255, 0.1);
 		border-color: rgba(255, 255, 255, 0.15);
 		transform: rotate(90deg);
+	}
+
+	.sidebar__logo {
+		display: flex;
+		justify-content: center;
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+	}
+
+	.sidebar__logo img {
+		height: 60px;
+		width: auto;
 	}
 
 	.sidebar__nav {
