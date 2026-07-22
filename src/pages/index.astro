@@ -201,7 +201,7 @@ import Layout from '../layouts/Layout.astro';
 		<div class="container">
 			<span class="section-tag">Portfólio</span>
 			<h2>Projetos em Destaque</h2>
-			<p class="section-subtitle">8 sites reais que estão no ar e gerando resultados</p>
+			<p class="section-subtitle">Sites reais e protótipos desenvolvidos por mim</p>
 			<div class="portfolio-grid">
 				<a href="https://homevantagens.com.br" target="_blank" class="portfolio-card animate-on-scroll">
 					<div class="portfolio-image">
@@ -249,6 +249,7 @@ import Layout from '../layouts/Layout.astro';
 					<div class="portfolio-info">
 						<div class="portfolio-header">
 							<h3>Driffer</h3>
+							<span class="portfolio-badge portfolio-badge-prototype">Protótipo</span>
 						</div>
 						<p>Gestão de frotas com tecnologia de ponta.</p>
 						<div class="portfolio-tech">
@@ -279,7 +280,7 @@ import Layout from '../layouts/Layout.astro';
 					<div class="portfolio-info">
 						<div class="portfolio-header">
 							<h3>RGE Energia</h3>
-							<span class="portfolio-badge">Novo</span>
+							<span class="portfolio-badge portfolio-badge-prototype">Protótipo</span>
 						</div>
 						<p>Energia solar com design que converte.</p>
 						<div class="portfolio-tech">
@@ -310,7 +311,7 @@ import Layout from '../layouts/Layout.astro';
 					<div class="portfolio-info">
 						<div class="portfolio-header">
 							<h3>CoEnergy</h3>
-							<span class="portfolio-badge">Novo</span>
+							<span class="portfolio-badge portfolio-badge-prototype">Protótipo</span>
 						</div>
 						<p>Soluções energéticas modernas e sustentáveis.</p>
 						<div class="portfolio-tech">
@@ -341,6 +342,7 @@ import Layout from '../layouts/Layout.astro';
 					<div class="portfolio-info">
 						<div class="portfolio-header">
 							<h3>Somar Agrotech</h3>
+							<span class="portfolio-badge portfolio-badge-prototype">Protótipo</span>
 						</div>
 						<p>Tecnologia aplicada ao agronegócio.</p>
 						<div class="portfolio-tech">
@@ -401,7 +403,7 @@ import Layout from '../layouts/Layout.astro';
 					<div class="portfolio-info">
 						<div class="portfolio-header">
 							<h3>Hospital Santo Antônio</h3>
-							<span class="portfolio-badge">Novo</span>
+							<span class="portfolio-badge portfolio-badge-prototype">Protótipo</span>
 						</div>
 						<p>Site institucional para hospital.</p>
 						<div class="portfolio-tech">
@@ -432,7 +434,7 @@ import Layout from '../layouts/Layout.astro';
 					<div class="portfolio-info">
 						<div class="portfolio-header">
 							<h3>Rz Net</h3>
-							<span class="portfolio-badge">Novo</span>
+							<span class="portfolio-badge portfolio-badge-prototype">Protótipo</span>
 						</div>
 						<p>Provedor de internet e soluções digitais.</p>
 						<div class="portfolio-tech">
@@ -1291,6 +1293,12 @@ import Layout from '../layouts/Layout.astro';
 		letter-spacing: 1.2px;
 		box-shadow: 0 4px 15px rgba(0, 230, 118, 0.4);
 		animation: pulse-badge 2s infinite;
+	}
+
+	.portfolio-badge-prototype {
+		background: linear-gradient(135deg, #FF6B35, #FF8C42);
+		box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+		animation: none;
 	}
 
 	@keyframes pulse-badge {
