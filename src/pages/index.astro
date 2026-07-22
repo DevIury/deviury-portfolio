@@ -1,0 +1,2054 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="DevIury | Web Designer">
+	<header class="header">
+		<nav class="nav">
+			<a href="#" class="logo">Dev<span>Iury</span></a>
+			<ul class="nav-links">
+				<li><a href="#sobre">Sobre</a></li>
+				<li><a href="#servicos">Serviços</a></li>
+				<li><a href="#portfolio">Portfólio</a></li>
+				<li><a href="#contato">Contato</a></li>
+			</ul>
+			<a href="https://wa.me/5538998894811" class="nav-cta">Fale Comigo</a>
+			<button class="menu-btn" id="menu-btn" aria-label="Abrir menu">
+				<span class="menu-btn__line"></span>
+				<span class="menu-btn__line"></span>
+				<span class="menu-btn__line"></span>
+			</button>
+		</nav>
+	</header>
+
+	<div class="overlay" id="overlay"></div>
+	<aside class="sidebar" id="sidebar">
+		<button class="sidebar__close" id="sidebar-close" aria-label="Fechar menu">
+			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+				<path d="M18 6L6 18M6 6l12 12"/>
+			</svg>
+		</button>
+		<nav class="sidebar__nav">
+			<span class="sidebar__label">Navegação</span>
+			<a href="#sobre" class="sidebar__link">Sobre</a>
+			<a href="#servicos" class="sidebar__link">Serviços</a>
+			<a href="#portfolio" class="sidebar__link">Portfólio</a>
+			<a href="#contato" class="sidebar__link">Contato</a>
+		</nav>
+		<a href="https://wa.me/5538998894811" class="sidebar__cta">
+			<svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+				<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+			</svg>
+			Fale Comigo
+		</a>
+	</aside>
+
+	<section class="hero">
+		<div class="hero-content">
+			<div class="hero-text">
+				<span class="badge">Web Designer Disponível</span>
+				<h1>Transformo suas ideias em <span class="typing-text" id="typing-text">sites que vendem</span><span class="typing-cursor">|</span></h1>
+				<p>Crio sites modernos, rápidos e otimizados para converter visitantes em clientes. Seu negócio merece presença digital de alto nível.</p>
+				<div class="stats">
+					<div class="stat">
+						<strong>8+</strong>
+						<span>Sites no ar</span>
+					</div>
+					<div class="stat">
+						<strong>100%</strong>
+						<span>Satisfação</span>
+					</div>
+				</div>
+				<div class="cta-group">
+					<a href="https://wa.me/5538998894811" class="btn btn-primary">
+						<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+							<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+						</svg>
+						Fale no WhatsApp
+					</a>
+					<a href="#portfolio" class="btn btn-secondary">Ver Projetos</a>
+				</div>
+			</div>
+			<div class="hero-image">
+				<img src="/iury-profissional.jpeg" alt="DevIury - Web Designer">
+			</div>
+		</div>
+	</section>
+
+	<section id="servicos" class="services">
+		<div class="container">
+			<span class="section-tag">Serviços</span>
+			<h2>O Que Eu Faço</h2>
+			<p class="section-subtitle">Do conceito ao lançamento, crio experiências digitais que geram resultados</p>
+			<div class="services-grid">
+				<div class="card">
+					<div class="card-number">01</div>
+					<div class="card-icon">
+						<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+							<rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+							<line x1="8" y1="21" x2="16" y2="21"></line>
+							<line x1="12" y1="17" x2="12" y2="21"></line>
+						</svg>
+					</div>
+					<h3>Sites Institucionais</h3>
+					<p>Sua empresa com cara profissional. Transmite confiança e converte visitantes em clientes reais.</p>
+				</div>
+				<div class="card card-featured">
+					<div class="card-number">02</div>
+					<div class="card-icon">
+						<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+							<circle cx="12" cy="12" r="10"></circle>
+							<line x1="2" y1="12" x2="22" y2="12"></line>
+							<path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+						</svg>
+					</div>
+					<h3>Landing Pages</h3>
+					<p>Páginas que vendem. Design focado em conversão com copy que gera ação.</p>
+				</div>
+				<div class="card">
+					<div class="card-number">03</div>
+					<div class="card-icon">
+						<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+							<rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+							<line x1="12" y1="18" x2="12.01" y2="18"></line>
+						</svg>
+					</div>
+					<h3>Design Responsivo</h3>
+					<p>Experiência perfeita em qualquer tela. Desktop, tablet ou smartphone.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="sobre" class="about">
+		<div class="container">
+			<div class="about-content">
+				<div class="about-text">
+					<span class="section-tag">Sobre Mim</span>
+					<h2>Quem é DevIury</h2>
+					<p>Sou web designer apaixonado por criar sites que geram resultados reais. Com foco em design moderno e performance, transformo ideias em experiências digitais que convertem.</p>
+					<p>Meu objetivo é simples: criar sites que não ficam bonitos apenas no papel, mas que de fato trazem mais clientes e receita para o seu negócio.</p>
+					
+					<div class="about-highlights">
+						<div class="highlight-item">
+							<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+								<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+								<polyline points="22 4 12 14.01 9 11.01"/>
+							</svg>
+							<span>Design moderno e profissional</span>
+						</div>
+						<div class="highlight-item">
+							<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+								<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+								<polyline points="22 4 12 14.01 9 11.01"/>
+							</svg>
+							<span>Foco em conversão e resultados</span>
+						</div>
+						<div class="highlight-item">
+							<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+								<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+								<polyline points="22 4 12 14.01 9 11.01"/>
+							</svg>
+							<span>Suporte contínuo pós-lançamento</span>
+						</div>
+					</div>
+				</div>
+				<div class="about-stats">
+					<div class="about-stat">
+						<div class="stat-icon">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+								<circle cx="12" cy="12" r="10"/>
+								<path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+							</svg>
+						</div>
+						<strong>8+</strong>
+						<span>Sites no ar</span>
+					</div>
+					<div class="about-stat">
+						<div class="stat-icon">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+								<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+							</svg>
+						</div>
+						<strong>100%</strong>
+						<span>Satisfação</span>
+					</div>
+					<div class="about-stat">
+						<div class="stat-icon">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+								<circle cx="12" cy="12" r="10"/>
+								<polyline points="12 6 12 12 16 14"/>
+							</svg>
+						</div>
+						<strong>24h</strong>
+						<span>Tempo de resposta</span>
+					</div>
+					<div class="about-stat">
+						<div class="stat-icon">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+								<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+							</svg>
+						</div>
+						<strong>5★</strong>
+						<span>Avaliação média</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="portfolio" class="portfolio">
+		<div class="container">
+			<span class="section-tag">Portfólio</span>
+			<h2>Projetos em Destaque</h2>
+			<p class="section-subtitle">8 sites reais que estão no ar e gerando resultados</p>
+			<div class="portfolio-grid">
+				<a href="https://homevantagens.com.br" target="_blank" class="portfolio-card animate-on-scroll">
+					<div class="portfolio-image">
+						<img src="/home.png" alt="Home Vantagens" loading="lazy" width="600" height="400">
+						<div class="portfolio-overlay">
+							<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+								<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+								<polyline points="15 3 21 3 21 9"/>
+								<line x1="10" y1="14" x2="21" y2="3"/>
+							</svg>
+						</div>
+						<span class="portfolio-year">2026</span>
+					</div>
+					<div class="portfolio-info">
+						<div class="portfolio-header">
+							<h3>Home Vantagens</h3>
+							<span class="portfolio-badge">Novo</span>
+						</div>
+						<p>Plataforma de benefícios e vantagens para clientes.</p>
+						<div class="portfolio-metric">
+							<span class="metric-icon">📈</span>
+							<span>+60% engajamento de clientes</span>
+						</div>
+						<div class="portfolio-testimonial">
+							<p>"Site profissional que aumentou nossas conversiones."</p>
+							<span>— Cliente Home Vantagens</span>
+						</div>
+						<div class="portfolio-footer">
+							<div class="tags">
+								<span class="tag">Institucional</span>
+								<span class="tag">Web App</span>
+							</div>
+							<span class="visit-btn">Visitar →</span>
+						</div>
+					</div>
+				</a>
+				<a href="https://driffercvo.com.br" target="_blank" class="portfolio-card animate-on-scroll">
+					<div class="portfolio-image">
+						<img src="/driffer.png" alt="Driffer" loading="lazy" width="600" height="400">
+						<div class="portfolio-overlay">
+							<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+								<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+								<polyline points="15 3 21 3 21 9"/>
+								<line x1="10" y1="14" x2="21" y2="3"/>
+							</svg>
+						</div>
+						<span class="portfolio-year">2025</span>
+					</div>
+					<div class="portfolio-info">
+						<div class="portfolio-header">
+							<h3>Driffer</h3>
+						</div>
+						<p>Gestão de frotas com tecnologia de ponta.</p>
+						<div class="portfolio-metric">
+							<span class="metric-icon">⏱️</span>
+							<span>100% tempo de carregamento</span>
+						</div>
+						<div class="portfolio-testimonial">
+							<p>"Site rápido e moderno, exatamente o que precisávamos."</p>
+							<span>— Cliente Driffer</span>
+						</div>
+						<div class="portfolio-footer">
+							<div class="tags">
+								<span class="tag">Institucional</span>
+								<span class="tag">SEO</span>
+							</div>
+							<span class="visit-btn">Visitar →</span>
+						</div>
+					</div>
+				</a>
+				<a href="https://rgeenergia.pages.dev" target="_blank" class="portfolio-card animate-on-scroll">
+					<div class="portfolio-image">
+						<img src="/rge.png" alt="RGE Energia" loading="lazy" width="600" height="400">
+						<div class="portfolio-overlay">
+							<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+								<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+								<polyline points="15 3 21 3 21 9"/>
+								<line x1="10" y1="14" x2="21" y2="3"/>
+							</svg>
+						</div>
+						<span class="portfolio-year">2026</span>
+					</div>
+					<div class="portfolio-info">
+						<div class="portfolio-header">
+							<h3>RGE Energia</h3>
+							<span class="portfolio-badge">Novo</span>
+						</div>
+						<p>Energia solar com design que converte.</p>
+						<div class="portfolio-metric">
+							<span class="metric-icon">💰</span>
+							<span>+45% leads qualificados</span>
+						</div>
+						<div class="portfolio-testimonial">
+							<p>"As vendas aumentaram depois do novo site."</p>
+							<span>— Cliente RGE Energia</span>
+						</div>
+						<div class="portfolio-footer">
+							<div class="tags">
+								<span class="tag">Landing Page</span>
+								<span class="tag">Conversão</span>
+							</div>
+							<span class="visit-btn">Visitar →</span>
+						</div>
+					</div>
+				</a>
+				<a href="https://coenergy-testando.pages.dev" target="_blank" class="portfolio-card animate-on-scroll">
+					<div class="portfolio-image">
+						<img src="/coenergy.png" alt="CoEnergy" loading="lazy" width="600" height="400">
+						<div class="portfolio-overlay">
+							<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+								<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+								<polyline points="15 3 21 3 21 9"/>
+								<line x1="10" y1="14" x2="21" y2="3"/>
+							</svg>
+						</div>
+						<span class="portfolio-year">2026</span>
+					</div>
+					<div class="portfolio-info">
+						<div class="portfolio-header">
+							<h3>CoEnergy</h3>
+							<span class="portfolio-badge">Novo</span>
+						</div>
+						<p>Soluções energéticas modernas e sustentáveis.</p>
+						<div class="portfolio-metric">
+							<span class="metric-icon">🌱</span>
+							<span>Zero burocracia no cadastro</span>
+						</div>
+						<div class="portfolio-testimonial">
+							<p>"Design clean que transmite confiança."</p>
+							<span>— Cliente CoEnergy</span>
+						</div>
+						<div class="portfolio-footer">
+							<div class="tags">
+								<span class="tag">Landing Page</span>
+								<span class="tag">Em teste</span>
+							</div>
+							<span class="visit-btn">Visitar →</span>
+						</div>
+					</div>
+				</a>
+				<a href="https://somar-agrotech-teste.pages.dev" target="_blank" class="portfolio-card animate-on-scroll">
+					<div class="portfolio-image">
+						<img src="/somar.png" alt="Somar Agrotech" loading="lazy" width="600" height="400">
+						<div class="portfolio-overlay">
+							<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+								<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+								<polyline points="15 3 21 3 21 9"/>
+								<line x1="10" y1="14" x2="21" y2="3"/>
+							</svg>
+						</div>
+						<span class="portfolio-year">2025</span>
+					</div>
+					<div class="portfolio-info">
+						<div class="portfolio-header">
+							<h3>Somar Agrotech</h3>
+						</div>
+						<p>Tecnologia aplicada ao agronegócio.</p>
+						<div class="portfolio-metric">
+							<span class="metric-icon">🌾</span>
+							<span>+35% demandas online</span>
+						</div>
+						<div class="portfolio-testimonial">
+							<p>"Site moderno que mostrou nossa evolução."</p>
+							<span>— Cliente Somar</span>
+						</div>
+						<div class="portfolio-footer">
+							<div class="tags">
+								<span class="tag">Institucional</span>
+								<span class="tag">Agronegócio</span>
+							</div>
+							<span class="visit-btn">Visitar →</span>
+						</div>
+					</div>
+				</a>
+				<a href="https://wallacydesigner.com.br" target="_blank" class="portfolio-card animate-on-scroll">
+					<div class="portfolio-image">
+						<img src="/wallacy.png" alt="Wallacy Designer" loading="lazy" width="600" height="400">
+						<div class="portfolio-overlay">
+							<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+								<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+								<polyline points="15 3 21 3 21 9"/>
+								<line x1="10" y1="14" x2="21" y2="3"/>
+							</svg>
+						</div>
+						<span class="portfolio-year">2025</span>
+					</div>
+					<div class="portfolio-info">
+						<div class="portfolio-header">
+							<h3>Wallacy Designer</h3>
+						</div>
+						<p>Portfólio de design gráfico e web.</p>
+						<div class="portfolio-metric">
+							<span class="metric-icon">🎨</span>
+							<span>100% responsivo</span>
+						</div>
+						<div class="portfolio-testimonial">
+							<p>"Portfólio que impressiona e converte."</p>
+							<span>— Wallacy Designer</span>
+						</div>
+						<div class="portfolio-footer">
+							<div class="tags">
+								<span class="tag">Portfólio</span>
+								<span class="tag">Design</span>
+							</div>
+							<span class="visit-btn">Visitar →</span>
+						</div>
+					</div>
+				</a>
+				<a href="https://santo-antonio-teste.pages.dev" target="_blank" class="portfolio-card animate-on-scroll">
+					<div class="portfolio-image">
+						<img src="/santo-antonio.png" alt="Hospital Santo Antônio" loading="lazy" width="600" height="400">
+						<div class="portfolio-overlay">
+							<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+								<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+								<polyline points="15 3 21 3 21 9"/>
+								<line x1="10" y1="14" x2="21" y2="3"/>
+							</svg>
+						</div>
+						<span class="portfolio-year">2026</span>
+					</div>
+					<div class="portfolio-info">
+						<div class="portfolio-header">
+							<h3>Hospital Santo Antônio</h3>
+							<span class="portfolio-badge">Novo</span>
+						</div>
+						<p>Site institucional para hospital.</p>
+						<div class="portfolio-metric">
+							<span class="metric-icon">🏥</span>
+							<span>+50% agendamentos online</span>
+						</div>
+						<div class="portfolio-testimonial">
+							<p>"Site que passa confiança e facilita o acesso."</p>
+							<span>— Hospital Santo Antônio</span>
+						</div>
+						<div class="portfolio-footer">
+							<div class="tags">
+								<span class="tag">Institucional</span>
+								<span class="tag">Saúde</span>
+							</div>
+							<span class="visit-btn">Visitar →</span>
+						</div>
+					</div>
+				</a>
+				<a href="https://rznet-teste.pages.dev" target="_blank" class="portfolio-card animate-on-scroll">
+					<div class="portfolio-image">
+						<img src="/rznet.png" alt="Rz Net" loading="lazy" width="600" height="400">
+						<div class="portfolio-overlay">
+							<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+								<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+								<polyline points="15 3 21 3 21 9"/>
+								<line x1="10" y1="14" x2="21" y2="3"/>
+							</svg>
+						</div>
+						<span class="portfolio-year">2026</span>
+					</div>
+					<div class="portfolio-info">
+						<div class="portfolio-header">
+							<h3>Rz Net</h3>
+							<span class="portfolio-badge">Novo</span>
+						</div>
+						<p>Provedor de internet e soluções digitais.</p>
+						<div class="portfolio-metric">
+							<span class="metric-icon">🌐</span>
+							<span>+70% pedidos de plano</span>
+						</div>
+						<div class="portfolio-testimonial">
+							<p>"Site que gerou mais assinaturas que o esperado."</p>
+							<span>— Cliente Rz Net</span>
+						</div>
+						<div class="portfolio-footer">
+							<div class="tags">
+								<span class="tag">Institucional</span>
+								<span class="tag">ISP</span>
+							</div>
+							<span class="visit-btn">Visitar →</span>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<section class="process">
+		<div class="container">
+			<span class="section-tag">Como Funciona</span>
+			<h2>Do zero ao site no ar</h2>
+			<p class="section-subtitle">Um processo simples e transparente para você</p>
+			<div class="process-grid">
+				<div class="process-step animate-on-scroll">
+					<div class="step-number">01</div>
+					<div class="step-icon">
+						<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+							<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+						</svg>
+					</div>
+					<h3>Briefing</h3>
+					<p>Conversamos sobre seu negócio, objetivos e público-alvo. Entendo sua necessidade antes de criar.</p>
+				</div>
+				<div class="process-step animate-on-scroll">
+					<div class="step-number">02</div>
+					<div class="step-icon">
+						<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+							<rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+							<circle cx="8.5" cy="8.5" r="1.5"/>
+							<polyline points="21 15 16 10 5 21"/>
+						</svg>
+					</div>
+					<h3>Design</h3>
+					<p>Crio o layout moderno e profissional focado em converter visitantes em clientes.</p>
+				</div>
+				<div class="process-step animate-on-scroll">
+					<div class="step-number">03</div>
+					<div class="step-icon">
+						<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+							<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+							<polyline points="22 4 12 14.01 9 11.01"/>
+						</svg>
+					</div>
+					<h3>Lançamento</h3>
+					<p>Seu site no ar, otimizado para Google e pronto para gerar resultados reais.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="contato" class="cta">
+		<div class="cta-bg">
+			<div class="cta-orb cta-orb-1"></div>
+			<div class="cta-orb cta-orb-2"></div>
+		</div>
+		<div class="container">
+			<div class="cta-content">
+				<span class="section-tag">Contato</span>
+				<h2>Pronto Para Decolar?</h2>
+				<p class="cta-subtitle">Vamos criar o site que vai levar seu negócio para o próximo nível. Fale comigo agora mesmo!</p>
+				
+				<div class="cta-features">
+					<div class="cta-feature">
+						<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+							<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+							<polyline points="22 4 12 14.01 9 11.01"/>
+						</svg>
+						<span>Design moderno e profissional</span>
+					</div>
+					<div class="cta-feature">
+						<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+							<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+							<polyline points="22 4 12 14.01 9 11.01"/>
+						</svg>
+						<span>100% responsivo para qualquer dispositivo</span>
+					</div>
+					<div class="cta-feature">
+						<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+							<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+							<polyline points="22 4 12 14.01 9 11.01"/>
+						</svg>
+						<span>Entrega rápida e suporte contínuo</span>
+					</div>
+					<div class="cta-feature">
+						<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+							<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+							<polyline points="22 4 12 14.01 9 11.01"/>
+						</svg>
+						<span>Otimizado para Google (SEO)</span>
+					</div>
+				</div>
+
+				<a href="https://wa.me/5538998894811" class="btn btn-primary btn-large">
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+						<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+					</svg>
+					Quero Meu Site Agora
+				</a>
+				
+				<div class="cta-guarantee">
+					<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+						<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+					</svg>
+					<span>Resposta em até 24 horas • Sem compromisso</span>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer>
+		<div class="container">
+			<div class="footer-logo">Dev<span>Iury</span></div>
+			<p>Transformando ideias em sites que vendem.</p>
+			<div class="footer-line"></div>
+			<p class="copyright">&copy; 2026 DevIury. Todos os direitos reservados.</p>
+		</div>
+	</footer>
+
+	<div class="mobile-cta-bar">
+		<a href="https://wa.me/5538998894811" class="mobile-cta-btn">
+			<svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+				<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+			</svg>
+			<span>Fale no WhatsApp</span>
+		</a>
+	</div>
+</Layout>
+
+<style>
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	:root {
+		--primary: #00E676;
+		--bg: #0a0a0a;
+		--card: #111;
+		--text: #fff;
+		--text-muted: #888;
+		--border: #222;
+	}
+
+	html {
+		scroll-behavior: smooth;
+	}
+
+	body {
+		font-family: 'Inter', -apple-system, sans-serif;
+		background: var(--bg);
+		color: var(--text);
+		line-height: 1.6;
+	}
+
+	.container {
+		max-width: 1100px;
+		margin: 0 auto;
+		padding: 0 1.5rem;
+	}
+
+	.header {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 100;
+		background: rgba(10, 10, 10, 0.7);
+		backdrop-filter: blur(20px);
+		-webkit-backdrop-filter: blur(20px);
+		border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+	}
+
+	.nav {
+		max-width: 1100px;
+		margin: 0 auto;
+		padding: 0.85rem 1.5rem;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.logo {
+		font-size: 1.5rem;
+		font-weight: 800;
+		color: #fff;
+		text-decoration: none;
+		letter-spacing: -0.5px;
+	}
+
+	.logo span {
+		color: var(--primary);
+		background: linear-gradient(135deg, #00C853, #00E676);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
+
+	.nav-links {
+		display: flex;
+		gap: 2rem;
+		list-style: none;
+	}
+
+	.nav-links a {
+		color: var(--text-muted);
+		text-decoration: none;
+		font-size: 0.9rem;
+		font-weight: 500;
+		transition: color 0.2s;
+		position: relative;
+	}
+
+	.nav-links a::after {
+		content: '';
+		position: absolute;
+		bottom: -4px;
+		left: 0;
+		width: 0;
+		height: 2px;
+		background: linear-gradient(90deg, #00C853, #00E676);
+		border-radius: 2px;
+		transition: width 0.3s;
+	}
+
+	.nav-links a:hover {
+		color: #fff;
+	}
+
+	.nav-links a:hover::after {
+		width: 100%;
+	}
+
+	.nav-cta {
+		padding: 0.65rem 1.4rem;
+		background: linear-gradient(135deg, #00C853, #00E676, #69F0AE);
+		color: #fff;
+		text-decoration: none;
+		border-radius: 10px;
+		font-size: 0.85rem;
+		font-weight: 600;
+		transition: all 0.3s;
+		box-shadow: 0 2px 15px rgba(0, 230, 118, 0.2);
+	}
+
+	.nav-cta:hover {
+		background: linear-gradient(135deg, #00E676, #69F0AE, #B9F6CA);
+		box-shadow: 0 4px 25px rgba(0, 230, 118, 0.5);
+		transform: translateY(-1px);
+	}
+
+	.menu-btn {
+		display: none;
+		flex-direction: column;
+		gap: 6px;
+		background: none;
+		border: none;
+		cursor: pointer;
+		padding: 8px;
+		z-index: 300;
+	}
+
+	.menu-btn__line {
+		width: 24px;
+		height: 2px;
+		background: #fff;
+		border-radius: 2px;
+		transition: all 0.3s ease;
+		transform-origin: center;
+	}
+
+	.menu-btn.active .menu-btn__line:nth-child(1) {
+		transform: translateY(8px) rotate(45deg);
+	}
+
+	.menu-btn.active .menu-btn__line:nth-child(2) {
+		opacity: 0;
+		transform: scaleX(0);
+	}
+
+	.menu-btn.active .menu-btn__line:nth-child(3) {
+		transform: translateY(-8px) rotate(-45deg);
+	}
+
+	.overlay {
+		position: fixed;
+		inset: 0;
+		background: rgba(0, 0, 0, 0.85);
+		backdrop-filter: blur(8px);
+		-webkit-backdrop-filter: blur(8px);
+		z-index: 150;
+		opacity: 0;
+		pointer-events: none;
+		transition: opacity 0.4s ease;
+	}
+
+	.overlay.active {
+		opacity: 1;
+		pointer-events: all;
+	}
+
+	.sidebar {
+		position: fixed;
+		top: 0;
+		right: 0;
+		width: 85%;
+		max-width: 340px;
+		height: 100dvh;
+		height: 100vh;
+		background: #0a0a0a;
+		z-index: 200;
+		transform: translateX(100%);
+		transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+		display: flex;
+		flex-direction: column;
+		padding: 1.5rem;
+		border-left: 1px solid rgba(0, 230, 118, 0.1);
+	}
+
+	.sidebar.active {
+		transform: translateX(0);
+	}
+
+	.sidebar__close {
+		position: absolute;
+		top: 1.25rem;
+		right: 1.25rem;
+		background: rgba(255, 255, 255, 0.05);
+		border: 1px solid rgba(255, 255, 255, 0.08);
+		color: #fff;
+		cursor: pointer;
+		width: 44px;
+		height: 44px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 12px;
+		transition: all 0.25s;
+	}
+
+	.sidebar__close:hover {
+		background: rgba(255, 255, 255, 0.1);
+		border-color: rgba(255, 255, 255, 0.15);
+		transform: rotate(90deg);
+	}
+
+	.sidebar__nav {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		margin-top: 3rem;
+	}
+
+	.sidebar__label {
+		font-size: 0.7rem;
+		font-weight: 600;
+		color: rgba(255, 255, 255, 0.25);
+		text-transform: uppercase;
+		letter-spacing: 1.5px;
+		padding: 0 1.25rem;
+		margin-bottom: 0.5rem;
+	}
+
+	.sidebar__link {
+		color: rgba(255, 255, 255, 0.6);
+		text-decoration: none;
+		font-size: 1.25rem;
+		font-weight: 600;
+		padding: 1.1rem 1.25rem;
+		border-radius: 14px;
+		transition: all 0.3s;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.sidebar__link::before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(90deg, rgba(0, 230, 118, 0.1), transparent);
+		opacity: 0;
+		transition: opacity 0.3s;
+	}
+
+	.sidebar__link:hover {
+		color: #fff;
+		background: rgba(0, 230, 118, 0.08);
+	}
+
+	.sidebar__link:hover::before {
+		opacity: 1;
+	}
+
+	.sidebar__cta {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.75rem;
+		margin-top: auto;
+		padding: 1.2rem;
+		background: linear-gradient(135deg, #00C853, #00E676, #69F0AE);
+		color: #fff;
+		text-decoration: none;
+		border-radius: 16px;
+		font-size: 1.05rem;
+		font-weight: 700;
+		transition: all 0.3s;
+		box-shadow: 0 4px 25px rgba(0, 230, 118, 0.3);
+		position: relative;
+		overflow: hidden;
+	}
+
+	.sidebar__cta::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+		transition: left 0.5s;
+	}
+
+	.sidebar__cta:hover {
+		box-shadow: 0 8px 40px rgba(0, 230, 118, 0.5);
+		transform: translateY(-2px);
+	}
+
+	.sidebar__cta:hover::before {
+		left: 100%;
+	}
+
+	.hero {
+		padding: 8rem 1.5rem 4rem;
+	}
+
+	.hero-content {
+		max-width: 1100px;
+		margin: 0 auto;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 4rem;
+		align-items: center;
+	}
+
+	.badge {
+		display: inline-block;
+		padding: 0.4rem 0.9rem;
+		background: rgba(0, 230, 118, 0.1);
+		border: 1px solid rgba(0, 230, 118, 0.25);
+		border-radius: 100px;
+		font-size: 0.8rem;
+		color: var(--primary);
+		font-weight: 500;
+		margin-bottom: 1.5rem;
+	}
+
+	.hero-text h1 {
+		font-size: 3rem;
+		font-weight: 800;
+		line-height: 1.15;
+		margin-bottom: 1.25rem;
+		letter-spacing: -0.5px;
+	}
+
+	.hero-text h1 span {
+		color: var(--primary);
+	}
+
+	.hero-text p {
+		font-size: 1.05rem;
+		color: var(--text-muted);
+		margin-bottom: 2rem;
+		max-width: 460px;
+		line-height: 1.7;
+	}
+
+	.stats {
+		display: flex;
+		gap: 2.5rem;
+		margin-bottom: 2rem;
+	}
+
+	.stat strong {
+		display: block;
+		font-size: 2.2rem;
+		font-weight: 800;
+		color: var(--text);
+	}
+
+	.stat span {
+		font-size: 0.8rem;
+		color: var(--text-muted);
+	}
+
+	.cta-group {
+		display: flex;
+		gap: 1rem;
+	}
+
+	.btn {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		padding: 0.85rem 1.5rem;
+		border-radius: 10px;
+		font-size: 0.9rem;
+		font-weight: 600;
+		text-decoration: none;
+		cursor: pointer;
+		border: none;
+		transition: all 0.2s;
+		color: #fff;
+	}
+
+	.btn-primary {
+		background: linear-gradient(135deg, #00C853, #00E676, #69F0AE);
+		color: #fff;
+		font-weight: 700;
+	}
+
+	.btn-primary:hover {
+		background: linear-gradient(135deg, #00E676, #69F0AE, #B9F6CA);
+		transform: translateY(-1px);
+		box-shadow: 0 8px 30px rgba(0, 230, 118, 0.4);
+	}
+
+	.btn-secondary {
+		background: transparent;
+		color: #fff;
+		border: 1px solid rgba(255, 255, 255, 0.2);
+	}
+
+	.btn-secondary:hover {
+		border-color: rgba(255, 255, 255, 0.4);
+		background: rgba(255, 255, 255, 0.05);
+	}
+
+	.btn-large {
+		padding: 1rem 2rem;
+		font-size: 1rem;
+	}
+
+	.hero-image {
+		position: relative;
+		display: flex;
+		justify-content: center;
+	}
+
+	.hero-image img {
+		width: 100%;
+		max-width: 380px;
+		height: auto;
+		aspect-ratio: 3/4;
+		object-fit: cover;
+		mask-image: radial-gradient(circle at center, black 45%, transparent 75%);
+		-webkit-mask-image: radial-gradient(circle at center, black 45%, transparent 75%);
+	}
+
+	.services, .portfolio {
+		padding: 5rem 0;
+	}
+
+	.section-tag {
+		display: block;
+		text-align: center;
+		font-size: 0.75rem;
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		color: var(--primary);
+		margin-bottom: 0.75rem;
+	}
+
+	section h2 {
+		font-size: 2.2rem;
+		font-weight: 800;
+		text-align: center;
+		margin-bottom: 0.5rem;
+	}
+
+	.section-subtitle {
+		text-align: center;
+		color: var(--text-muted);
+		margin-bottom: 3rem;
+		max-width: 500px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.services-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1.5rem;
+	}
+
+	.card {
+		background: var(--card);
+		padding: 2rem;
+		border-radius: 16px;
+		border: 1px solid var(--border);
+		transition: all 0.4s ease;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.card::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 2px;
+		background: linear-gradient(90deg, transparent, var(--primary), transparent);
+		opacity: 0;
+		transition: opacity 0.4s;
+	}
+
+	.card:hover {
+		border-color: rgba(0, 230, 118, 0.3);
+		transform: translateY(-6px);
+		box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+	}
+
+	.card:hover::before {
+		opacity: 1;
+	}
+
+	.card-featured {
+		border-color: rgba(0, 230, 118, 0.2);
+		background: linear-gradient(135deg, rgba(0, 230, 118, 0.05) 0%, var(--card) 100%);
+	}
+
+	.card-number {
+		font-size: 4rem;
+		font-weight: 800;
+		color: rgba(255, 255, 255, 0.03);
+		position: absolute;
+		top: 1rem;
+		right: 1.5rem;
+		line-height: 1;
+	}
+
+	.card-icon {
+		width: 52px;
+		height: 52px;
+		background: rgba(0, 230, 118, 0.1);
+		border-radius: 12px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: var(--primary);
+		margin-bottom: 1.25rem;
+		transition: all 0.3s;
+	}
+
+	.card:hover .card-icon {
+		background: var(--primary);
+		color: var(--bg);
+	}
+
+	.card h3 {
+		font-size: 1.15rem;
+		margin-bottom: 0.5rem;
+		font-weight: 700;
+	}
+
+	.card p {
+		color: var(--text-muted);
+		font-size: 0.9rem;
+		line-height: 1.6;
+		margin-bottom: 1.25rem;
+	}
+
+	.portfolio-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1.75rem;
+	}
+
+	.portfolio-card {
+		background: linear-gradient(160deg, rgba(30, 30, 30, 0.6) 0%, rgba(18, 18, 18, 0.8) 100%);
+		border-radius: 24px;
+		overflow: hidden;
+		border: 1px solid rgba(255, 255, 255, 0.05);
+		transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+		text-decoration: none;
+		color: inherit;
+		display: block;
+		backdrop-filter: blur(20px);
+		position: relative;
+	}
+
+	.portfolio-card::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 3px;
+		background: linear-gradient(90deg, transparent, var(--primary), transparent);
+		opacity: 0;
+		transition: opacity 0.4s;
+	}
+
+	.portfolio-card:hover::before {
+		opacity: 1;
+	}
+
+	.portfolio-card:hover {
+		border-color: rgba(0, 230, 118, 0.25);
+		transform: translateY(-12px);
+		box-shadow: 
+			0 30px 60px rgba(0, 0, 0, 0.6),
+			0 0 40px rgba(0, 230, 118, 0.08),
+			inset 0 1px 0 rgba(255, 255, 255, 0.08);
+	}
+
+	.portfolio-image {
+		height: 230px;
+		background: linear-gradient(135deg, #1a1a1a, #0d0d0d);
+		position: relative;
+		overflow: hidden;
+	}
+
+	.portfolio-image::before {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background: radial-gradient(circle at 50% 0%, rgba(0, 230, 118, 0.1) 0%, transparent 50%);
+		z-index: 1;
+		opacity: 0;
+		transition: opacity 0.4s;
+	}
+
+	.portfolio-card:hover .portfolio-image::before {
+		opacity: 1;
+	}
+
+	.portfolio-image::after {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(180deg, transparent 40%, rgba(0, 0, 0, 0.5) 100%);
+		pointer-events: none;
+		z-index: 1;
+	}
+
+	.portfolio-image img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: top center;
+		transition: transform 0.7s cubic-bezier(0.23, 1, 0.32, 1), filter 0.5s;
+	}
+
+	.portfolio-card:hover .portfolio-image img {
+		transform: scale(1.12);
+		filter: brightness(1.1) contrast(1.05);
+	}
+
+	.portfolio-overlay {
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(135deg, rgba(0, 230, 118, 0.95) 0%, rgba(0, 180, 70, 0.9) 100%);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		opacity: 0;
+		transition: opacity 0.4s;
+		z-index: 2;
+	}
+
+	.portfolio-card:hover .portfolio-overlay {
+		opacity: 1;
+	}
+
+	.portfolio-overlay svg {
+		color: var(--bg);
+		width: 55px;
+		height: 55px;
+		transform: scale(0.4) rotate(-45deg);
+		transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+		filter: drop-shadow(0 8px 25px rgba(0, 0, 0, 0.4));
+		background: rgba(255, 255, 255, 0.2);
+		padding: 15px;
+		border-radius: 50%;
+		box-sizing: content-box;
+	}
+
+	.portfolio-card:hover .portfolio-overlay svg {
+		transform: scale(1) rotate(0deg);
+	}
+
+	.portfolio-year {
+		position: absolute;
+		top: 1rem;
+		left: 1rem;
+		padding: 0.35rem 0.8rem;
+		background: rgba(0, 0, 0, 0.75);
+		color: var(--text);
+		border-radius: 10px;
+		font-size: 0.7rem;
+		font-weight: 700;
+		backdrop-filter: blur(15px);
+		z-index: 3;
+		border: 1px solid rgba(255, 255, 255, 0.12);
+		letter-spacing: 1.5px;
+		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+	}
+
+	.portfolio-info {
+		padding: 1.75rem;
+	}
+
+	.portfolio-header {
+		display: flex;
+		align-items: center;
+		gap: 0.7rem;
+		margin-bottom: 0.6rem;
+	}
+
+	.portfolio-info h3 {
+		font-size: 1.25rem;
+		font-weight: 800;
+		letter-spacing: -0.5px;
+		background: linear-gradient(135deg, #fff 0%, rgba(255, 255, 255, 0.8) 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
+
+	.portfolio-badge {
+		padding: 0.25rem 0.7rem;
+		background: linear-gradient(135deg, var(--primary) 0%, #00C853 100%);
+		color: var(--bg);
+		border-radius: 8px;
+		font-size: 0.55rem;
+		font-weight: 800;
+		text-transform: uppercase;
+		letter-spacing: 1.2px;
+		box-shadow: 0 4px 15px rgba(0, 230, 118, 0.4);
+		animation: pulse-badge 2s infinite;
+	}
+
+	@keyframes pulse-badge {
+		0%, 100% { box-shadow: 0 4px 15px rgba(0, 230, 118, 0.4); }
+		50% { box-shadow: 0 4px 25px rgba(0, 230, 118, 0.6); }
+	}
+
+	.portfolio-info > p {
+		color: var(--text-muted);
+		font-size: 0.9rem;
+		margin-bottom: 1.25rem;
+		line-height: 1.7;
+	}
+
+	.portfolio-metric {
+		display: flex;
+		align-items: center;
+		gap: 0.6rem;
+		padding: 0.75rem 1rem;
+		background: linear-gradient(135deg, rgba(0, 230, 118, 0.1) 0%, rgba(0, 230, 118, 0.03) 100%);
+		border: 1px solid rgba(0, 230, 118, 0.12);
+		border-radius: 14px;
+		margin-bottom: 1.25rem;
+		font-size: 0.85rem;
+		color: var(--primary);
+		font-weight: 600;
+	}
+
+	.metric-icon {
+		font-size: 1.1rem;
+	}
+
+	.portfolio-testimonial {
+		padding: 1.1rem 1.25rem;
+		background: linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.01) 100%);
+		border-left: 3px solid;
+		border-image: linear-gradient(180deg, var(--primary), rgba(0, 230, 118, 0.3)) 1;
+		border-radius: 0 16px 16px 0;
+		margin-bottom: 1.5rem;
+	}
+
+	.portfolio-testimonial p {
+		font-size: 0.85rem;
+		font-style: italic;
+		color: rgba(255, 255, 255, 0.95);
+		margin-bottom: 0.5rem;
+		line-height: 1.6;
+	}
+
+	.portfolio-testimonial span {
+		font-size: 0.7rem;
+		color: var(--text-muted);
+		font-weight: 500;
+	}
+
+	.portfolio-footer {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding-top: 1.25rem;
+		border-top: 1px solid rgba(255, 255, 255, 0.06);
+	}
+
+	.tags {
+		display: flex;
+		gap: 0.5rem;
+	}
+
+	.tag {
+		padding: 0.35rem 0.75rem;
+		background: rgba(255, 255, 255, 0.05);
+		color: rgba(255, 255, 255, 0.65);
+		border-radius: 8px;
+		font-size: 0.65rem;
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		border: 1px solid rgba(255, 255, 255, 0.08);
+		transition: all 0.3s;
+	}
+
+	.portfolio-card:hover .tag {
+		background: rgba(0, 230, 118, 0.1);
+		color: var(--primary);
+		border-color: rgba(0, 230, 118, 0.2);
+	}
+
+	.visit-btn {
+		padding: 0.5rem 1.2rem;
+		background: linear-gradient(135deg, #00C853 0%, #00E676 50%, #69F0AE 100%);
+		color: #fff;
+		border-radius: 10px;
+		font-size: 0.8rem;
+		font-weight: 700;
+		transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+		box-shadow: 0 4px 20px rgba(0, 230, 118, 0.3);
+		letter-spacing: 0.5px;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.visit-btn::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+		transition: left 0.5s;
+	}
+
+	.portfolio-card:hover .visit-btn::before {
+		left: 100%;
+	}
+
+	.portfolio-card:hover .visit-btn {
+		box-shadow: 0 8px 30px rgba(0, 230, 118, 0.5);
+		transform: translateX(5px);
+	}
+
+	.animate-on-scroll {
+		opacity: 0;
+		transform: translateY(30px);
+		transition: all 0.6s ease;
+	}
+
+	.animate-on-scroll.visible {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	.about {
+		padding: 6rem 0;
+	}
+
+	.about-content {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 4rem;
+		align-items: center;
+	}
+
+	.about-text h2 {
+		text-align: left;
+		margin-bottom: 1rem;
+	}
+
+	.about-text p {
+		color: var(--text-muted);
+		font-size: 1rem;
+		line-height: 1.8;
+		margin-bottom: 1.5rem;
+	}
+
+	.about-highlights {
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+		margin-top: 1.5rem;
+	}
+
+	.highlight-item {
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+		padding: 0.6rem 0;
+		font-size: 0.9rem;
+		color: rgba(255, 255, 255, 0.9);
+	}
+
+	.highlight-item svg {
+		color: var(--primary);
+		flex-shrink: 0;
+	}
+
+	.about-stats {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1rem;
+	}
+
+	.about-stat {
+		text-align: center;
+		padding: 2rem 1.5rem;
+		background: linear-gradient(160deg, rgba(25, 25, 25, 0.9) 0%, rgba(15, 15, 15, 0.7) 100%);
+		border-radius: 20px;
+		border: 1px solid rgba(255, 255, 255, 0.06);
+		transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+		position: relative;
+		overflow: hidden;
+		backdrop-filter: blur(10px);
+	}
+
+	.about-stat::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 3px;
+		background: linear-gradient(90deg, transparent, var(--primary), transparent);
+		opacity: 0;
+		transition: opacity 0.3s;
+	}
+
+	.about-stat:hover {
+		border-color: rgba(0, 230, 118, 0.3);
+		transform: translateY(-5px);
+		box-shadow: 0 10px 40px rgba(0, 230, 118, 0.15);
+	}
+
+	.about-stat:hover::before {
+		opacity: 1;
+	}
+
+	.stat-icon {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 50px;
+		height: 50px;
+		background: linear-gradient(135deg, rgba(0, 230, 118, 0.15) 0%, rgba(0, 200, 83, 0.05) 100%);
+		border-radius: 14px;
+		margin-bottom: 1rem;
+		border: 1px solid rgba(0, 230, 118, 0.1);
+	}
+
+	.stat-icon svg {
+		color: var(--primary);
+	}
+
+	.about-stat strong {
+		display: block;
+		font-size: 2.2rem;
+		font-weight: 800;
+		background: linear-gradient(135deg, #00C853, #00E676, #69F0AE);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		margin-bottom: 0.3rem;
+	}
+
+	.about-stat span {
+		font-size: 0.85rem;
+		color: var(--text-muted);
+		font-weight: 500;
+	}
+
+	.cta {
+		padding: 6rem 0;
+		text-align: center;
+		background: linear-gradient(160deg, rgba(30, 30, 30, 0.6) 0%, rgba(18, 18, 18, 0.8) 100%);
+		margin: 0 1.5rem;
+		border-radius: 32px;
+		position: relative;
+		overflow: hidden;
+		border: 1px solid rgba(255, 255, 255, 0.05);
+	}
+
+	.cta-bg {
+		position: absolute;
+		inset: 0;
+		overflow: hidden;
+		pointer-events: none;
+	}
+
+	.cta-orb {
+		position: absolute;
+		border-radius: 50%;
+		filter: blur(80px);
+	}
+
+	.cta-orb-1 {
+		width: 400px;
+		height: 400px;
+		background: rgba(0, 230, 118, 0.12);
+		top: -150px;
+		right: -100px;
+	}
+
+	.cta-orb-2 {
+		width: 300px;
+		height: 300px;
+		background: rgba(0, 230, 118, 0.08);
+		bottom: -100px;
+		left: -50px;
+	}
+
+	.cta-content {
+		position: relative;
+		z-index: 1;
+		max-width: 600px;
+		margin: 0 auto;
+		padding: 0 1.5rem;
+	}
+
+	.cta h2 {
+		font-size: 2.5rem;
+		font-weight: 800;
+		margin-bottom: 1rem;
+		letter-spacing: -0.5px;
+	}
+
+	.cta-subtitle {
+		color: var(--text-muted);
+		margin-bottom: 2rem;
+		font-size: 1.1rem;
+		line-height: 1.7;
+	}
+
+	.cta-features {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 0.75rem;
+		margin-bottom: 2.5rem;
+		text-align: left;
+	}
+
+	.cta-feature {
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+		padding: 0.85rem 1rem;
+		background: linear-gradient(160deg, rgba(25, 25, 25, 0.8) 0%, rgba(15, 15, 15, 0.6) 100%);
+		border: 1px solid rgba(255, 255, 255, 0.06);
+		border-radius: 12px;
+		font-size: 0.85rem;
+		color: rgba(255, 255, 255, 0.95);
+		transition: all 0.3s;
+		backdrop-filter: blur(10px);
+	}
+
+	.cta-feature:hover {
+		border-color: rgba(0, 230, 118, 0.25);
+		background: linear-gradient(160deg, rgba(30, 30, 30, 0.9) 0%, rgba(20, 20, 20, 0.7) 100%);
+		transform: translateY(-2px);
+	}
+
+	.cta-feature svg {
+		color: var(--primary);
+		flex-shrink: 0;
+		filter: drop-shadow(0 0 6px rgba(0, 230, 118, 0.4));
+	}
+
+	.cta-guarantee {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		margin-top: 1.5rem;
+		padding: 0.5rem 1rem;
+		background: rgba(255, 255, 255, 0.04);
+		border-radius: 50px;
+		font-size: 0.75rem;
+		color: var(--text-muted);
+		border: 1px solid rgba(255, 255, 255, 0.06);
+	}
+
+	.cta-guarantee svg {
+		color: var(--primary);
+	}
+
+	.process {
+		padding: 6rem 0;
+		text-align: center;
+	}
+
+	.process-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 2rem;
+		margin-top: 3rem;
+	}
+
+	.process-step {
+		padding: 2rem;
+		background: linear-gradient(160deg, rgba(25, 25, 25, 0.8) 0%, rgba(15, 15, 15, 0.6) 100%);
+		border-radius: 20px;
+		border: 1px solid rgba(255, 255, 255, 0.05);
+		position: relative;
+		transition: all 0.4s;
+	}
+
+	.process-step:hover {
+		border-color: rgba(0, 230, 118, 0.2);
+		transform: translateY(-5px);
+		box-shadow: 0 10px 40px rgba(0, 230, 118, 0.1);
+	}
+
+	.step-number {
+		position: absolute;
+		top: 1rem;
+		right: 1.5rem;
+		font-size: 3rem;
+		font-weight: 800;
+		color: rgba(255, 255, 255, 0.03);
+		line-height: 1;
+	}
+
+	.step-icon {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 60px;
+		height: 60px;
+		background: linear-gradient(135deg, rgba(0, 230, 118, 0.15) 0%, rgba(0, 200, 83, 0.05) 100%);
+		border-radius: 16px;
+		margin-bottom: 1.25rem;
+		border: 1px solid rgba(0, 230, 118, 0.1);
+	}
+
+	.step-icon svg {
+		color: var(--primary);
+	}
+
+	.process-step h3 {
+		font-size: 1.2rem;
+		font-weight: 700;
+		margin-bottom: 0.75rem;
+	}
+
+	.process-step p {
+		color: var(--text-muted);
+		font-size: 0.9rem;
+		line-height: 1.6;
+	}
+
+	.typing-text {
+		color: var(--primary);
+		background: linear-gradient(135deg, #00C853, #00E676, #69F0AE);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
+
+	.typing-cursor {
+		color: var(--primary);
+		animation: blink 1s infinite;
+	}
+
+	@keyframes blink {
+		0%, 50% { opacity: 1; }
+		51%, 100% { opacity: 0; }
+	}
+
+	.mobile-cta-bar {
+		display: none;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		padding: 0.75rem 1.5rem;
+		background: rgba(10, 10, 10, 0.95);
+		backdrop-filter: blur(20px);
+		border-top: 1px solid rgba(255, 255, 255, 0.05);
+		z-index: 100;
+	}
+
+	.mobile-cta-btn {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.5rem;
+		width: 100%;
+		padding: 0.85rem;
+		background: linear-gradient(135deg, #00C853, #00E676, #69F0AE);
+		color: #fff;
+		text-decoration: none;
+		border-radius: 10px;
+		font-size: 0.95rem;
+		font-weight: 700;
+		transition: all 0.3s;
+	}
+
+	.mobile-cta-btn:hover {
+		background: linear-gradient(135deg, #00E676, #69F0AE, #B9F6CA);
+		box-shadow: 0 4px 25px rgba(0, 230, 118, 0.5);
+	}
+
+	.animate-on-scroll {
+		opacity: 0;
+		transform: translateY(30px);
+		transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+	}
+
+	.animate-on-scroll.visible {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	.process-step:nth-child(1) { transition-delay: 0s; }
+	.process-step:nth-child(2) { transition-delay: 0.15s; }
+	.process-step:nth-child(3) { transition-delay: 0.3s; }
+
+	.portfolio-card:nth-child(1) { transition-delay: 0s; }
+	.portfolio-card:nth-child(2) { transition-delay: 0.1s; }
+	.portfolio-card:nth-child(3) { transition-delay: 0.2s; }
+	.portfolio-card:nth-child(4) { transition-delay: 0.3s; }
+	.portfolio-card:nth-child(5) { transition-delay: 0.4s; }
+	.portfolio-card:nth-child(6) { transition-delay: 0.5s; }
+	.portfolio-card:nth-child(7) { transition-delay: 0.6s; }
+	.portfolio-card:nth-child(8) { transition-delay: 0.7s; }
+
+	footer {
+		padding: 3rem 0;
+		text-align: center;
+		border-top: 1px solid var(--border);
+		padding-bottom: 5rem;
+	}
+
+	.footer-logo {
+		font-size: 1.3rem;
+		font-weight: 800;
+		margin-bottom: 0.5rem;
+	}
+
+	.footer-logo span {
+		color: var(--primary);
+	}
+
+	footer > .container > p {
+		color: var(--text-muted);
+		font-size: 0.9rem;
+	}
+
+	.footer-line {
+		width: 40px;
+		height: 2px;
+		background: var(--primary);
+		margin: 1.5rem auto;
+	}
+
+	.copyright {
+		font-size: 0.8rem;
+		color: var(--text-muted);
+	}
+
+	@media (max-width: 768px) {
+		.nav-links {
+			display: none;
+		}
+
+		.nav-cta {
+			display: none;
+		}
+
+		.menu-btn {
+			display: flex;
+		}
+
+		.mobile-cta-bar {
+			display: block;
+		}
+
+		.hero-content {
+			grid-template-columns: 1fr;
+			text-align: center;
+			gap: 2.5rem;
+		}
+
+		.hero-image {
+			order: -1;
+		}
+
+		.hero-image img {
+			max-width: 220px;
+		}
+
+		.hero-text h1 {
+			font-size: 2rem;
+		}
+
+		.hero-text p {
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.stats {
+			justify-content: center;
+		}
+
+		.cta-group {
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+
+		.services-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.process-grid {
+			grid-template-columns: 1fr;
+			gap: 1.5rem;
+		}
+
+		.portfolio-grid {
+			grid-template-columns: 1fr;
+			gap: 1.5rem;
+		}
+
+		section h2 {
+			font-size: 1.75rem;
+		}
+
+		.cta {
+			margin: 0 1rem;
+			padding: 4rem 1.5rem;
+			border-radius: 24px;
+		}
+
+		.cta h2 {
+			font-size: 1.75rem;
+		}
+
+		.cta-subtitle {
+			font-size: 1rem;
+		}
+
+		.cta-features {
+			grid-template-columns: 1fr;
+		}
+
+		.about-content {
+			grid-template-columns: 1fr;
+			gap: 2rem;
+			text-align: center;
+		}
+
+		.about-text h2 {
+			text-align: center;
+		}
+
+		.about-stats {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		.portfolio-testimonial {
+			display: none;
+		}
+	}
+</style>
+
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const observer = new IntersectionObserver((entries) => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					entry.target.classList.add('visible');
+				}
+			});
+		}, { threshold: 0.1 });
+
+		document.querySelectorAll('.animate-on-scroll').forEach(el => {
+			observer.observe(el);
+		});
+
+		const menuBtn = document.getElementById('menu-btn');
+		const sidebar = document.getElementById('sidebar');
+		const overlay = document.getElementById('overlay');
+		const sidebarClose = document.getElementById('sidebar-close');
+
+		function openMenu() {
+			menuBtn.classList.add('active');
+			sidebar.classList.add('active');
+			overlay.classList.add('active');
+			document.body.style.overflow = 'hidden';
+		}
+
+		function closeMenu() {
+			menuBtn.classList.remove('active');
+			sidebar.classList.remove('active');
+			overlay.classList.remove('active');
+			document.body.style.overflow = '';
+		}
+
+		if (menuBtn && sidebar && overlay) {
+			menuBtn.addEventListener('click', () => {
+				if (sidebar.classList.contains('active')) {
+					closeMenu();
+				} else {
+					openMenu();
+				}
+			});
+
+			overlay.addEventListener('click', closeMenu);
+			sidebarClose.addEventListener('click', closeMenu);
+
+			sidebar.querySelectorAll('.sidebar__link').forEach(link => {
+				link.addEventListener('click', closeMenu);
+			});
+		}
+
+		const typingText = document.getElementById('typing-text');
+		if (typingText) {
+			const texts = ['sites que vendem', 'landing pages que convertem', 'presença digital de impacto'];
+			let textIndex = 0;
+			let charIndex = 0;
+			let isDeleting = false;
+			let typingDelay = 100;
+
+			function type() {
+				const currentText = texts[textIndex];
+				
+				if (isDeleting) {
+					typingText.textContent = currentText.substring(0, charIndex - 1);
+					charIndex--;
+					typingDelay = 50;
+				} else {
+					typingText.textContent = currentText.substring(0, charIndex + 1);
+					charIndex++;
+					typingDelay = 100;
+				}
+
+				if (!isDeleting && charIndex === currentText.length) {
+					typingDelay = 2000;
+					isDeleting = true;
+				} else if (isDeleting && charIndex === 0) {
+					isDeleting = false;
+					textIndex = (textIndex + 1) % texts.length;
+					typingDelay = 500;
+				}
+
+				setTimeout(type, typingDelay);
+			}
+
+			setTimeout(type, 1000);
+		}
+	});
+</script>
