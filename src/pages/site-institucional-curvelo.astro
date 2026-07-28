@@ -1,0 +1,604 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Site Institucional em Curvelo/MG | Sua Empresa Online - DevIury">
+	<header class="header">
+		<nav class="nav">
+			<a href="/" class="logo"><img src="/logo-deviury.png" alt="DevIury" height="82"></a>
+			<ul class="nav-links">
+				<li><a href="/#servicos">Serviços</a></li>
+				<li><a href="/#portfolio">Portfólio</a></li>
+				<li><a href="/#contato">Contato</a></li>
+			</ul>
+			<a href="https://wa.me/5538998894811?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento%20para%20site%20institucional." target="_blank" rel="noopener noreferrer" class="nav-cta">Fale Comigo</a>
+			<button class="menu-btn" id="menu-btn" aria-label="Abrir menu de navegação">
+				<span class="menu-btn__line"></span>
+				<span class="menu-btn__line"></span>
+				<span class="menu-btn__line"></span>
+			</button>
+		</nav>
+	</header>
+
+	<div class="overlay" id="overlay"></div>
+	<aside class="sidebar" id="sidebar">
+		<button class="sidebar__close" id="sidebar-close" aria-label="Fechar menu de navegação">
+			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+				<path d="M18 6L6 18M6 6l12 12"/>
+			</svg>
+		</button>
+		<a href="/" class="sidebar__logo"><img src="/logo-deviury.png" alt="DevIury - Página inicial" height="60"></a>
+		<nav class="sidebar__nav" aria-label="Menu de navegação mobile">
+			<span class="sidebar__label">Navegação</span>
+			<a href="/#servicos" class="sidebar__link">Serviços</a>
+			<a href="/#portfolio" class="sidebar__link">Portfólio</a>
+			<a href="/#contato" class="sidebar__link">Contato</a>
+		</nav>
+		<a href="https://wa.me/5538998894811?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento%20para%20site%20institucional." target="_blank" rel="noopener noreferrer" class="sidebar__cta">
+			<svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+				<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+			</svg>
+			Fale Comigo
+		</a>
+	</aside>
+
+	<section class="hero">
+		<div class="hero-content">
+			<div class="hero-text">
+				<span class="badge">Site Institucional em Curvelo/MG</span>
+				<h1>Site Institucional Profissional Para Sua Empresa</h1>
+				<p>Crio sites institucionais que transmitem credibilidade e profissionalismo, fortalecendo a presença online da sua empresa em Curvelo.</p>
+				<div class="cta-group">
+					<a href="/#portfolio" class="btn btn-secondary">Ver Projetos</a>
+					<a href="https://wa.me/5538998894811?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento%20para%20site%20institucional." target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+						<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+							<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+						</svg>
+						Fale no WhatsApp
+					</a>
+				</div>
+			</div>
+			<div class="hero-image">
+				<img src="/iury-profissional.jpeg" alt="DevIury - Web Designer profissional em Curvelo/MG" width="400" height="500">
+			</div>
+		</div>
+	</section>
+
+	<section class="content-seo">
+		<div class="container">
+			<h2>Por Que um Site Institucional?</h2>
+			<p>Um site institucional é o cartão de visita digital da sua empresa. Diferente de um site focado em vendas, ele apresenta sua empresa de forma completa: história, equipe, serviços e valores. É essencial para quem quer passar credibilidade e ser encontrado no Google.</p>
+			
+			<h3>Vantagens de um Site Institucional</h3>
+			<ul class="service-list">
+				<li>Presência profissional no Google - Seja encontrado por clientes em Curvelo</li>
+				<li>Credibilidade - Empresa com site transmite mais confiança</li>
+				<li>Informações completas - Apresente sua equipe, história e diferenciais</li>
+				<li>WhatsApp integrado - Clientes entram em contato facilmente</li>
+				<li>SEO otimizado - Apareça nas buscas locais por "seu serviço em Curvelo"</li>
+			</ul>
+
+			<h3>Ideal Para Qualquer Empresa</h3>
+			<p>Clínicas, escritórios, lojas, restaurantes, salões, oficinas, agências — qualquer negócio que queira ter uma presença profissional online. Se sua empresa atende clientes em Curvelo e região, um site institucional é investimento essencial para crescer.</p>
+		</div>
+	</section>
+
+	<section id="contato" class="cta">
+		<div class="cta-bg">
+			<div class="cta-orb cta-orb-1"></div>
+			<div class="cta-orb cta-orb-2"></div>
+		</div>
+		<div class="container">
+			<div class="cta-content">
+				<span class="section-tag">Contato</span>
+				<h2>Quero um Site Institucional</h2>
+				<p class="cta-subtitle">Fale comigo e receba um orçamento para seu site institucional em Curvelo!</p>
+				<div class="cta-buttons">
+					<a href="https://wa.me/5538998894811?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento%20para%20site%20institucional." target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+						<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+							<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+						</svg>
+						Orçamento Grátis
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer>
+		<div class="container">
+			<p class="copyright">&copy; 2026 DevIury - Web Designer em Curvelo/MG. Todos os direitos reservados.</p>
+		</div>
+	</footer>
+
+	<a href="https://wa.me/5538998894811?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento%20para%20site%20institucional." target="_blank" rel="noopener noreferrer" class="floating-whatsapp" aria-label="Fale comigo no WhatsApp">
+		<svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+			<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+		</svg>
+	</a>
+
+	<script>
+		const menuBtn = document.getElementById('menu-btn');
+		const sidebar = document.getElementById('sidebar');
+		const overlay = document.getElementById('overlay');
+		const sidebarClose = document.getElementById('sidebar-close');
+
+		function openMenu() {
+			sidebar?.classList.add('open');
+			overlay?.classList.add('visible');
+			document.body.style.overflow = 'hidden';
+		}
+
+		function closeMenu() {
+			sidebar?.classList.remove('open');
+			overlay?.classList.remove('visible');
+			document.body.style.overflow = '';
+		}
+
+		menuBtn?.addEventListener('click', openMenu);
+		overlay?.addEventListener('click', closeMenu);
+		sidebarClose?.addEventListener('click', closeMenu);
+
+		document.querySelectorAll('.sidebar__link').forEach(link => {
+			link.addEventListener('click', closeMenu);
+		});
+	</script>
+</Layout>
+
+<style>
+	.hero {
+		padding: 8rem 1.5rem 4rem;
+	}
+
+	.hero-content {
+		max-width: 1100px;
+		margin: 0 auto;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 4rem;
+		align-items: center;
+	}
+
+	.hero-text {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+
+	.badge {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		padding: 0.5rem 1rem;
+		background: rgba(0, 230, 118, 0.1);
+		border: 1px solid rgba(0, 230, 118, 0.2);
+		border-radius: 50px;
+		font-size: 0.85rem;
+		font-weight: 500;
+		color: var(--primary);
+		width: fit-content;
+	}
+
+	.hero-text h1 {
+		font-size: 3rem;
+		font-weight: 800;
+		line-height: 1.1;
+		letter-spacing: -1px;
+	}
+
+	.hero-text p {
+		font-size: 1.1rem;
+		color: var(--text-gray);
+		max-width: 500px;
+	}
+
+	.hero-image img {
+		width: 100%;
+		max-width: 400px;
+		border-radius: 24px;
+		border: 2px solid var(--border);
+	}
+
+	.cta-group {
+		display: flex;
+		gap: 1rem;
+	}
+
+	.cta-group .btn {
+		flex: 1;
+		justify-content: center;
+		padding: 0.85rem 1.5rem;
+		min-width: 0;
+	}
+
+	.btn {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		padding: 0.85rem 1.5rem;
+		border-radius: 10px;
+		font-size: 0.9rem;
+		font-weight: 600;
+		text-decoration: none;
+		cursor: pointer;
+		border: none;
+		transition: all 0.2s;
+	}
+
+	.btn-primary {
+		background: linear-gradient(135deg, #00C853, #00E676, #69F0AE);
+		color: #fff;
+	}
+
+	.btn-secondary {
+		background: transparent;
+		color: #fff;
+		border: 1px solid rgba(255, 255, 255, 0.2);
+	}
+
+	.content-seo {
+		padding: 4rem 1.5rem;
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	.content-seo h2 {
+		font-size: 1.75rem;
+		margin-bottom: 1rem;
+	}
+
+	.content-seo h3 {
+		font-size: 1.25rem;
+		margin-top: 2rem;
+		margin-bottom: 0.75rem;
+		color: var(--primary);
+	}
+
+	.content-seo p {
+		color: var(--text-gray);
+		line-height: 1.8;
+		margin-bottom: 1rem;
+	}
+
+	.service-list {
+		list-style: none;
+		padding: 0;
+	}
+
+	.service-list li {
+		padding: 0.5rem 0;
+		color: var(--text-gray);
+		border-bottom: 1px solid var(--border);
+	}
+
+	.service-list li::before {
+		content: "✓ ";
+		color: var(--primary);
+		font-weight: 700;
+	}
+
+	.cta {
+		margin: 0 1rem;
+		padding: 4rem 1.5rem;
+		border-radius: 24px;
+		background: var(--bg-card);
+		border: 1px solid var(--border);
+		text-align: center;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.cta-bg {
+		position: absolute;
+		inset: 0;
+		pointer-events: none;
+	}
+
+	.cta-orb {
+		position: absolute;
+		border-radius: 50%;
+		filter: blur(80px);
+	}
+
+	.cta-orb-1 {
+		width: 300px;
+		height: 300px;
+		background: rgba(0, 230, 118, 0.15);
+		top: -100px;
+		right: -100px;
+	}
+
+	.cta-orb-2 {
+		width: 200px;
+		height: 200px;
+		background: rgba(0, 200, 83, 0.1);
+		bottom: -50px;
+		left: -50px;
+	}
+
+	.cta-content {
+		position: relative;
+		z-index: 1;
+	}
+
+	.section-tag {
+		display: inline-block;
+		padding: 0.4rem 1rem;
+		background: rgba(0, 230, 118, 0.1);
+		border: 1px solid rgba(0, 230, 118, 0.2);
+		border-radius: 50px;
+		font-size: 0.8rem;
+		font-weight: 600;
+		color: var(--primary);
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		margin-bottom: 1rem;
+	}
+
+	.cta h2 {
+		font-size: 2rem;
+		margin-bottom: 1rem;
+	}
+
+	.cta-subtitle {
+		color: var(--text-gray);
+		margin-bottom: 2rem;
+	}
+
+	.floating-whatsapp {
+		position: fixed;
+		bottom: 1.5rem;
+		right: 1.5rem;
+		width: 60px;
+		height: 60px;
+		background: linear-gradient(135deg, #00C853, #00E676, #69F0AE);
+		color: #fff;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		box-shadow: 0 4px 25px rgba(0, 230, 118, 0.5);
+		text-decoration: none;
+		animation: pulse-whatsapp 2s infinite;
+	}
+
+	@keyframes pulse-whatsapp {
+		0% { box-shadow: 0 0 0 0 rgba(0, 230, 118, 0.4); }
+		70% { box-shadow: 0 0 0 15px rgba(0, 230, 118, 0); }
+		100% { box-shadow: 0 0 0 0 rgba(0, 230, 118, 0); }
+	}
+
+	footer {
+		padding: 1.2rem 0;
+		text-align: center;
+		border-top: 1px solid var(--border);
+		margin-top: 20px;
+	}
+
+	.copyright {
+		font-size: 0.8rem;
+		color: var(--text-gray);
+	}
+
+	.header {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 100;
+		background: rgba(10, 10, 10, 0.8);
+		backdrop-filter: blur(20px);
+		border-bottom: 1px solid var(--border);
+	}
+
+	.nav {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 1rem 1.5rem;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.logo {
+		display: flex;
+		align-items: center;
+		text-decoration: none;
+	}
+
+	.logo img {
+		height: 82px;
+		width: auto;
+	}
+
+	.nav-links {
+		display: flex;
+		gap: 2rem;
+		list-style: none;
+	}
+
+	.nav-links a {
+		color: var(--text-gray);
+		text-decoration: none;
+		font-size: 0.9rem;
+		font-weight: 500;
+		transition: color 0.3s;
+	}
+
+	.nav-links a:hover {
+		color: var(--primary);
+	}
+
+	.nav-cta {
+		padding: 0.6rem 1.2rem;
+		background: var(--primary);
+		color: #000;
+		text-decoration: none;
+		border-radius: 8px;
+		font-weight: 600;
+		font-size: 0.9rem;
+		transition: all 0.3s;
+	}
+
+	.menu-btn {
+		display: none;
+		flex-direction: column;
+		gap: 5px;
+		background: none;
+		border: none;
+		cursor: pointer;
+		padding: 5px;
+	}
+
+	.menu-btn__line {
+		width: 24px;
+		height: 2px;
+		background: #fff;
+	}
+
+	.overlay {
+		display: none;
+		position: fixed;
+		inset: 0;
+		background: rgba(0, 0, 0, 0.7);
+		z-index: 200;
+	}
+
+	.overlay.visible {
+		display: block;
+	}
+
+	.sidebar {
+		position: fixed;
+		top: 0;
+		right: -300px;
+		width: 300px;
+		height: 100vh;
+		background: #111;
+		z-index: 300;
+		padding: 1.5rem;
+		transition: right 0.3s ease;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.sidebar.open {
+		right: 0;
+	}
+
+	.sidebar__close {
+		position: absolute;
+		top: 1.25rem;
+		right: 1.25rem;
+		background: rgba(255, 255, 255, 0.05);
+		border: 1px solid rgba(255, 255, 255, 0.08);
+		color: #fff;
+		cursor: pointer;
+		width: 44px;
+		height: 44px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 12px;
+	}
+
+	.sidebar__logo {
+		display: flex;
+		justify-content: center;
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+	}
+
+	.sidebar__nav {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		margin-top: 2rem;
+	}
+
+	.sidebar__label {
+		font-size: 0.7rem;
+		font-weight: 600;
+		color: rgba(255, 255, 255, 0.25);
+		text-transform: uppercase;
+		letter-spacing: 1.5px;
+		padding: 0 1.25rem;
+		margin-bottom: 0.5rem;
+	}
+
+	.sidebar__link {
+		display: block;
+		padding: 0.75rem 1.25rem;
+		color: #fff;
+		text-decoration: none;
+		font-size: 1rem;
+		font-weight: 500;
+		border-radius: 8px;
+	}
+
+	.sidebar__cta {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.75rem;
+		margin-top: 2rem;
+		padding: 1.4rem 1.5rem;
+		background: linear-gradient(135deg, #00C853, #00E676, #69F0AE);
+		color: #fff;
+		text-decoration: none;
+		border-radius: 16px;
+		font-size: 1.15rem;
+		font-weight: 700;
+	}
+
+	@media (max-width: 768px) {
+		.nav-links {
+			display: none;
+		}
+
+		.nav-cta {
+			display: none;
+		}
+
+		.menu-btn {
+			display: flex;
+		}
+
+		.hero-content {
+			grid-template-columns: 1fr;
+			text-align: center;
+			gap: 2.5rem;
+		}
+
+		.hero-image {
+			order: -1;
+		}
+
+		.hero-image img {
+			max-width: 220px;
+		}
+
+		.hero-text h1 {
+			font-size: 2rem;
+		}
+
+		.cta-group {
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+
+		.cta-group .btn {
+			width: 100%;
+		}
+
+		.cta {
+			margin: 0 1rem;
+			padding: 4rem 1.5rem;
+			border-radius: 24px;
+		}
+
+		.cta h2 {
+			font-size: 1.75rem;
+		}
+	}
+</style>
