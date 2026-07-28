@@ -702,6 +702,13 @@ import Layout from '../layouts/Layout.astro';
 		</svg>
 	</a>
 
+	<button class="back-to-top" id="back-to-top" aria-label="Voltar ao topo">
+		<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+			<line x1="12" y1="19" x2="12" y2="5"/>
+			<polyline points="5 12 12 5 19 12"/>
+		</svg>
+	</button>
+
 	<div class="mobile-cta-bar">
 		<a href="https://wa.me/5538998894811?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento%20para%20cria%C3%A7%C3%A3o%20de%20site." class="mobile-cta-btn">
 			<svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
@@ -1612,12 +1619,12 @@ import Layout from '../layouts/Layout.astro';
 	}
 
 	.faq-accordion {
-		max-width: 700px;
-		margin: 2rem auto 0;
+		max-width: 720px;
+		margin: 2.5rem auto 0;
 	}
 
 	.faq-item {
-		margin-bottom: 0.75rem;
+		margin-bottom: 0.5rem;
 	}
 
 	.faq-question {
@@ -1625,59 +1632,65 @@ import Layout from '../layouts/Layout.astro';
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		padding: 1.25rem 1.5rem;
-		background: var(--bg-card);
-		border: 1px solid var(--border);
-		border-radius: 12px;
+		padding: 1.4rem 1.75rem;
+		background: transparent;
+		border: none;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 		color: var(--text-white);
 		font-size: 1rem;
-		font-weight: 600;
+		font-weight: 500;
 		text-align: left;
 		cursor: pointer;
-		transition: all 0.3s;
+		transition: all 0.3s ease;
 	}
 
 	.faq-question:hover {
-		border-color: var(--primary);
-		background: rgba(0, 230, 118, 0.05);
+		color: var(--primary);
+		padding-left: 2rem;
 	}
 
 	.faq-icon {
 		flex-shrink: 0;
+		width: 32px;
+		height: 32px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 50%;
+		background: rgba(0, 230, 118, 0.1);
 		color: var(--primary);
-		transition: transform 0.3s;
+		transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+	}
+
+	.faq-question:hover .faq-icon {
+		background: rgba(0, 230, 118, 0.2);
 	}
 
 	.faq-item.active .faq-icon {
 		transform: rotate(45deg);
+		background: var(--primary);
+		color: #0a0a0a;
 	}
 
 	.faq-item.active .faq-question {
-		border-color: var(--primary);
-		border-bottom-left-radius: 0;
-		border-bottom-right-radius: 0;
+		color: var(--primary);
 	}
 
 	.faq-answer {
 		max-height: 0;
 		overflow: hidden;
-		transition: max-height 0.3s ease, padding 0.3s ease;
-		background: var(--bg-card);
-		border: 1px solid var(--primary);
-		border-top: none;
-		border-bottom-left-radius: 12px;
-		border-bottom-right-radius: 12px;
+		transition: max-height 0.4s cubic-bezier(0.23, 1, 0.32, 1);
 	}
 
 	.faq-item.active .faq-answer {
-		max-height: 200px;
+		max-height: 300px;
 	}
 
 	.faq-answer p {
-		padding: 1.25rem 1.5rem;
+		padding: 1rem 1.75rem 1.5rem;
 		color: var(--text-muted);
 		font-size: 0.95rem;
-		line-height: 1.7;
+		line-height: 1.8;
 		margin: 0;
 	}
 
@@ -2017,6 +2030,34 @@ import Layout from '../layouts/Layout.astro';
 		box-shadow: 0 8px 40px rgba(0, 230, 118, 0.7);
 	}
 
+	.back-to-top {
+		position: fixed;
+		bottom: 5.5rem;
+		right: 1.5rem;
+		width: 48px;
+		height: 48px;
+		background: var(--bg-card);
+		border: 1px solid var(--border);
+		color: var(--text-white);
+		border-radius: 50%;
+		display: none;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		z-index: 90;
+		transition: all 0.3s;
+	}
+
+	.back-to-top:hover {
+		border-color: var(--primary);
+		color: var(--primary);
+		transform: translateY(-3px);
+	}
+
+	.back-to-top.visible {
+		display: flex;
+	}
+
 	@keyframes float-pulse {
 		0%, 100% { box-shadow: 0 4px 25px rgba(0, 230, 118, 0.5); }
 		50% { box-shadow: 0 4px 35px rgba(0, 230, 118, 0.8); }
@@ -2279,6 +2320,21 @@ import Layout from '../layouts/Layout.astro';
 				}
 			});
 		});
+
+		const backToTop = document.getElementById('back-to-top');
+		if (backToTop) {
+			window.addEventListener('scroll', () => {
+				if (window.scrollY > 500) {
+					backToTop.classList.add('visible');
+				} else {
+					backToTop.classList.remove('visible');
+				}
+			});
+
+			backToTop.addEventListener('click', () => {
+				window.scrollTo({ top: 0, behavior: 'smooth' });
+			});
+		}
 
 		const typingText = document.getElementById('typing-text');
 		if (typingText) {
