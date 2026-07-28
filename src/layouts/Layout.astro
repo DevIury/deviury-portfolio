@@ -1,35 +1,89 @@
 ---
 interface Props {
 	title: string;
+	description?: string;
 }
 
-const { title } = Astro.props;
+const { title, description = "DevIury - Web Designer profissional em Curvelo/MG. Crio sites modernos, rápidos e otimizados para converter visitantes em clientes. Orçamento grátis." } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, 'https://deviury.com');
 ---
 
 <!doctype html>
 <html lang="pt-BR">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="DevIury - Web Designer profissional. Crio sites modernos, rápidos e otimizados para converter visitantes em clientes." />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/png" href="/favicon-deviury.png" />
 		<meta name="generator" content={Astro.generator} />
 		<meta name="theme-color" content="#00E676" />
+
+		<!-- SEO Principal -->
 		<title>{title}</title>
+		<meta name="description" content={description} />
+		<meta name="keywords" content="web designer curvelo, criar site curvelo, desenvolvedor web curvelo, landing page curvelo, site institucional curvelo, design web minas gerais, criar site barato curvelo, agência web curvelo" />
+		<meta name="robots" content="index, follow" />
+		<meta name="author" content="DevIury" />
+		<link rel="canonical" href={canonicalURL} />
+
+		<!-- Geo Meta -->
+		<meta name="geo.region" content="MG" />
+		<meta name="geo.placename" content="Curvelo" />
+		<meta name="geo.position" content="-18.7553;-44.4297" />
+		<meta name="ICBM" content="-18.7553, -44.4297" />
 
 		<!-- Open Graph -->
 		<meta property="og:type" content="website" />
-		<meta property="og:title" content="DevIury | Web Designer" />
-		<meta property="og:description" content="Crio sites modernos, rápidos e otimizados para converter visitantes em clientes. Seu negócio merece presença digital de alto nível." />
+		<meta property="og:title" content="DevIury | Web Designer em Curvelo/MG" />
+		<meta property="og:description" content="Web Designer profissional em Curvelo/MG. Crio sites modernos, rápidos e otimizados para converter visitantes em clientes." />
 		<meta property="og:url" content="https://deviury.com" />
 		<meta property="og:image" content="https://deviury.com/og-image.png" />
 		<meta property="og:locale" content="pt_BR" />
+		<meta property="og:site_name" content="DevIury - Web Designer em Curvelo" />
 
 		<!-- Twitter Card -->
 		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="twitter:title" content="DevIury | Web Designer" />
-		<meta name="twitter:description" content="Crio sites modernos, rápidos e otimizados para converter visitantes em clientes." />
+		<meta name="twitter:title" content="DevIury | Web Designer em Curvelo/MG" />
+		<meta name="twitter:description" content="Web Designer profissional em Curvelo/MG. Crio sites modernos, rápidos e otimizados para converter visitantes em clientes." />
 		<meta name="twitter:image" content="https://deviury.com/og-image.png" />
+
+		<!-- JSON-LD LocalBusiness -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "ProfessionalService",
+			"name": "DevIury - Web Designer",
+			"description": "Web Designer profissional em Curvelo/MG. Crio sites modernos, rápidos e otimizados para converter visitantes em clientes.",
+			"url": "https://deviury.com",
+			"image": "https://deviury.com/iury-profissional.jpeg",
+			"telephone": "+5538998894811",
+			"email": "contato@deviury.com",
+			"address": {
+				"@type": "PostalAddress",
+				"addressLocality": "Curvelo",
+				"addressRegion": "MG",
+				"addressCountry": "BR"
+			},
+			"geo": {
+				"@type": "GeoCoordinates",
+				"latitude": -18.7553,
+				"longitude": -44.4297
+			},
+			"areaServed": {
+				"@type": "City",
+				"name": "Curvelo",
+				"containedInPlace": {
+					"@type": "State",
+					"name": "Minas Gerais"
+				}
+			},
+			"serviceType": ["Web Design", "Criação de Sites", "Landing Page", "Site Institucional", "Desenvolvimento Web"],
+			"priceRange": "$$",
+			"openingHours": "Mo-Su 08:00-20:00",
+			"sameAs": [
+				"https://wa.me/5538998894811"
+			]
+		}
+		</script>
 
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
