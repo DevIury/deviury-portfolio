@@ -532,6 +532,74 @@ import Layout from '../layouts/Layout.astro';
 		</div>
 	</section>
 
+	<section class="testimonials">
+		<div class="container">
+			<span class="section-tag">Depoimentos</span>
+			<h2>O Que Meus Clientes Dizem</h2>
+			<p class="section-subtitle">Feedback de empresas que confiaram no meu trabalho</p>
+			<div class="testimonials-grid">
+				<div class="testimonial-card">
+					<div class="testimonial-stars">★★★★★</div>
+					<p>"O DevIury transformou completamente a presença digital da nossa empresa. O site ficou profissional e as vendas aumentaram depois do lançamento."</p>
+					<div class="testimonial-author">
+						<strong>Home Vantagens</strong>
+						<span>Plataforma de Benefícios</span>
+					</div>
+				</div>
+				<div class="testimonial-card">
+					<div class="testimonial-stars">★★★★★</div>
+					<p>"Excelente profissional! Entregou antes do prazo e o site ficou exatamente como eu imaginava. Recomendo para qualquer negócio em Curvelo."</p>
+					<div class="testimonial-author">
+						<strong>Wallacy Designer</strong>
+						<span>Design Gráfico</span>
+					</div>
+				</div>
+				<div class="testimonial-card">
+					<div class="testimonial-stars">★★★★★</div>
+					<p>"O site institucional que o DevIury criou para nosso hospital transmitiu exatamente a confiança que precisávamos. Profissionalismo do início ao fim."</p>
+					<div class="testimonial-author">
+						<strong>Hospital Santo Antônio</strong>
+						<span>Saúde</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="faq">
+		<div class="container">
+			<span class="section-tag">Perguntas Frequentes</span>
+			<h2>Dúvidas Sobre Criação de Sites em Curvelo</h2>
+			<p class="section-subtitle">Respostas para as perguntas mais comuns sobre desenvolvimento web</p>
+			<div class="faq-grid">
+				<div class="faq-item">
+					<h3>Quanto custa criar um site em Curvelo?</h3>
+					<p>O investimento varia conforme a necessidade. Sites institucionais começam a partir de R$ 800. Landing pages a partir de R$ 500. Orçamento personalizado e sem compromisso pelo WhatsApp.</p>
+				</div>
+				<div class="faq-item">
+					<h3>Quanto tempo leva para criar um site?</h3>
+					<p>Um site institucional leva de 5 a 10 dias úteis. Landing pages de 3 a 5 dias. Projetos maiores com funcionalidades específicas podem levar de 2 a 4 semanas.</p>
+				</div>
+				<div class="faq-item">
+					<h3>Você atende empresas de outras cidades?</h3>
+					<p>Sim! Atendo empresas de Curvelo, Belo Horizonte, Betim, Divinópolis e todo o estado de Minas Gerais. Atendimento 100% online disponível.</p>
+				</div>
+				<div class="faq-item">
+					<h3>O site fica otimizado para o Google?</h3>
+					<p>Sim! Todos os sites são desenvolvidos com SEO básico e avançado, incluindo otimização de velocidade, meta tags, estrutura semântica e Google Search Console.</p>
+				</div>
+				<div class="faq-item">
+					<h3>Você faz manutenção do site após o lançamento?</h3>
+					<p>Sim! Ofereço suporte contínuo para atualizações, correções e melhorias. Pacotes de manutenção mensal disponíveis.</p>
+				</div>
+				<div class="faq-item">
+					<h3>Como faço para contratar seus serviços?</h3>
+					<p>É simples! Entre em contato pelo WhatsApp, conversemos sobre sua necessidade e eu envio uma proposta personalizada. Sem compromisso.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
 	<section id="contato" class="cta">
 		<div class="cta-bg">
 			<div class="cta-orb cta-orb-1"></div>
@@ -1458,6 +1526,91 @@ import Layout from '../layouts/Layout.astro';
 		font-size: 0.9rem;
 	}
 
+	.testimonials {
+		padding: 6rem 0;
+	}
+
+	.testimonials-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1.5rem;
+		margin-top: 3rem;
+	}
+
+	.testimonial-card {
+		background: var(--bg-card);
+		border: 1px solid var(--border);
+		border-radius: 16px;
+		padding: 2rem;
+		transition: all 0.3s;
+	}
+
+	.testimonial-card:hover {
+		border-color: var(--primary);
+		transform: translateY(-5px);
+	}
+
+	.testimonial-stars {
+		color: #FFD700;
+		font-size: 1.2rem;
+		margin-bottom: 1rem;
+		letter-spacing: 2px;
+	}
+
+	.testimonial-card p {
+		color: var(--text-muted);
+		font-size: 0.95rem;
+		line-height: 1.7;
+		margin-bottom: 1.5rem;
+		font-style: italic;
+	}
+
+	.testimonial-author strong {
+		display: block;
+		color: var(--text-white);
+		font-size: 1rem;
+	}
+
+	.testimonial-author span {
+		color: var(--text-muted);
+		font-size: 0.85rem;
+	}
+
+	.faq {
+		padding: 6rem 0;
+	}
+
+	.faq-grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1.5rem;
+		margin-top: 3rem;
+	}
+
+	.faq-item {
+		background: var(--bg-card);
+		border: 1px solid var(--border);
+		border-radius: 16px;
+		padding: 2rem;
+		transition: all 0.3s;
+	}
+
+	.faq-item:hover {
+		border-color: var(--primary);
+	}
+
+	.faq-item h3 {
+		font-size: 1.1rem;
+		margin-bottom: 0.75rem;
+		color: var(--primary);
+	}
+
+	.faq-item p {
+		color: var(--text-muted);
+		font-size: 0.95rem;
+		line-height: 1.7;
+	}
+
 	.about {
 		padding: 6rem 0;
 	}
@@ -1948,6 +2101,14 @@ import Layout from '../layouts/Layout.astro';
 		.area-grid {
 			grid-template-columns: 1fr 1fr;
 			gap: 1rem;
+		}
+
+		.faq-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.testimonials-grid {
+			grid-template-columns: 1fr;
 		}
 
 		section h2 {
