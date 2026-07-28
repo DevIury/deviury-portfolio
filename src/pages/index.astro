@@ -554,31 +554,78 @@ import Layout from '../layouts/Layout.astro';
 		<div class="container">
 			<span class="section-tag">Perguntas Frequentes</span>
 			<h2>Dúvidas Sobre Criação de Sites em Curvelo</h2>
-			<p class="section-subtitle">Respostas para as perguntas mais comuns sobre desenvolvimento web</p>
-			<div class="faq-grid">
+			<div class="faq-accordion">
 				<div class="faq-item">
-					<h3>Quanto custa criar um site em Curvelo?</h3>
-					<p>O investimento varia conforme a necessidade. Sites institucionais começam a partir de R$ 800. Landing pages a partir de R$ 500. Orçamento personalizado e sem compromisso pelo WhatsApp.</p>
+					<button class="faq-question">
+						<span>Quanto custa criar um site em Curvelo?</span>
+						<svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+							<line x1="12" y1="5" x2="12" y2="19"/>
+							<line x1="5" y1="12" x2="19" y2="12"/>
+						</svg>
+					</button>
+					<div class="faq-answer">
+						<p>O investimento varia conforme a necessidade. Sites institucionais começam a partir de R$ 800. Landing pages a partir de R$ 500. Orçamento personalizado e sem compromisso pelo WhatsApp.</p>
+					</div>
 				</div>
 				<div class="faq-item">
-					<h3>Quanto tempo leva para criar um site?</h3>
-					<p>Um site institucional leva de 5 a 10 dias úteis. Landing pages de 3 a 5 dias. Projetos maiores com funcionalidades específicas podem levar de 2 a 4 semanas.</p>
+					<button class="faq-question">
+						<span>Quanto tempo leva para criar um site?</span>
+						<svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+							<line x1="12" y1="5" x2="12" y2="19"/>
+							<line x1="5" y1="12" x2="19" y2="12"/>
+						</svg>
+					</button>
+					<div class="faq-answer">
+						<p>Um site institucional leva de 5 a 10 dias úteis. Landing pages de 3 a 5 dias. Projetos maiores com funcionalidades específicas podem levar de 2 a 4 semanas.</p>
+					</div>
 				</div>
 				<div class="faq-item">
-					<h3>Você atende empresas de outras cidades?</h3>
-					<p>Sim! Atendo empresas de Curvelo, Belo Horizonte, Betim, Divinópolis e todo o estado de Minas Gerais. Atendimento 100% online disponível.</p>
+					<button class="faq-question">
+						<span>Você atende empresas de outras cidades?</span>
+						<svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+							<line x1="12" y1="5" x2="12" y2="19"/>
+							<line x1="5" y1="12" x2="19" y2="12"/>
+						</svg>
+					</button>
+					<div class="faq-answer">
+						<p>Sim! Atendo empresas de Curvelo presencialmente e de qualquer lugar do Brasil online. Belo Horizonte, Betim, Divinópolis e todo o estado de Minas Gerais.</p>
+					</div>
 				</div>
 				<div class="faq-item">
-					<h3>O site fica otimizado para o Google?</h3>
-					<p>Sim! Todos os sites são desenvolvidos com SEO básico e avançado, incluindo otimização de velocidade, meta tags, estrutura semântica e Google Search Console.</p>
+					<button class="faq-question">
+						<span>O site fica otimizado para o Google?</span>
+						<svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+							<line x1="12" y1="5" x2="12" y2="19"/>
+							<line x1="5" y1="12" x2="19" y2="12"/>
+						</svg>
+					</button>
+					<div class="faq-answer">
+						<p>Sim! Todos os sites são desenvolvidos com SEO básico e avançado, incluindo otimização de velocidade, meta tags, estrutura semântica e Google Search Console.</p>
+					</div>
 				</div>
 				<div class="faq-item">
-					<h3>Você faz manutenção do site após o lançamento?</h3>
-					<p>Sim! Ofereço suporte contínuo para atualizações, correções e melhorias. Pacotes de manutenção mensal disponíveis.</p>
+					<button class="faq-question">
+						<span>Você faz manutenção do site após o lançamento?</span>
+						<svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+							<line x1="12" y1="5" x2="12" y2="19"/>
+							<line x1="5" y1="12" x2="19" y2="12"/>
+						</svg>
+					</button>
+					<div class="faq-answer">
+						<p>Sim! Ofereço suporte contínuo para atualizações, correções e melhorias. Pacotes de manutenção mensal disponíveis.</p>
+					</div>
 				</div>
 				<div class="faq-item">
-					<h3>Como faço para contratar seus serviços?</h3>
-					<p>É simples! Entre em contato pelo WhatsApp, conversemos sobre sua necessidade e eu envio uma proposta personalizada. Sem compromisso.</p>
+					<button class="faq-question">
+						<span>Como faço para contratar seus serviços?</span>
+						<svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+							<line x1="12" y1="5" x2="12" y2="19"/>
+							<line x1="5" y1="12" x2="19" y2="12"/>
+						</svg>
+					</button>
+					<div class="faq-answer">
+						<p>É simples! Entre em contato pelo WhatsApp, conversemos sobre sua necessidade e eu envio uma proposta personalizada. Sem compromisso.</p>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -1564,35 +1611,74 @@ import Layout from '../layouts/Layout.astro';
 		padding: 6rem 0;
 	}
 
-	.faq-grid {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		gap: 1.5rem;
-		margin-top: 3rem;
+	.faq-accordion {
+		max-width: 700px;
+		margin: 2rem auto 0;
 	}
 
 	.faq-item {
+		margin-bottom: 0.75rem;
+	}
+
+	.faq-question {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 1.25rem 1.5rem;
 		background: var(--bg-card);
 		border: 1px solid var(--border);
-		border-radius: 16px;
-		padding: 2rem;
+		border-radius: 12px;
+		color: var(--text-white);
+		font-size: 1rem;
+		font-weight: 600;
+		text-align: left;
+		cursor: pointer;
 		transition: all 0.3s;
 	}
 
-	.faq-item:hover {
+	.faq-question:hover {
 		border-color: var(--primary);
+		background: rgba(0, 230, 118, 0.05);
 	}
 
-	.faq-item h3 {
-		font-size: 1.1rem;
-		margin-bottom: 0.75rem;
+	.faq-icon {
+		flex-shrink: 0;
 		color: var(--primary);
+		transition: transform 0.3s;
 	}
 
-	.faq-item p {
+	.faq-item.active .faq-icon {
+		transform: rotate(45deg);
+	}
+
+	.faq-item.active .faq-question {
+		border-color: var(--primary);
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+
+	.faq-answer {
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 0.3s ease, padding 0.3s ease;
+		background: var(--bg-card);
+		border: 1px solid var(--primary);
+		border-top: none;
+		border-bottom-left-radius: 12px;
+		border-bottom-right-radius: 12px;
+	}
+
+	.faq-item.active .faq-answer {
+		max-height: 200px;
+	}
+
+	.faq-answer p {
+		padding: 1.25rem 1.5rem;
 		color: var(--text-muted);
 		font-size: 0.95rem;
 		line-height: 1.7;
+		margin: 0;
 	}
 
 	.about {
@@ -2087,10 +2173,6 @@ import Layout from '../layouts/Layout.astro';
 			gap: 1rem;
 		}
 
-		.faq-grid {
-			grid-template-columns: 1fr;
-		}
-
 		.testimonials-grid {
 			grid-template-columns: 1fr;
 		}
@@ -2182,6 +2264,21 @@ import Layout from '../layouts/Layout.astro';
 				link.addEventListener('click', closeMenu);
 			});
 		}
+
+		document.querySelectorAll('.faq-question').forEach(button => {
+			button.addEventListener('click', () => {
+				const item = button.parentElement;
+				const isActive = item.classList.contains('active');
+				
+				document.querySelectorAll('.faq-item').forEach(faqItem => {
+					faqItem.classList.remove('active');
+				});
+				
+				if (!isActive) {
+					item.classList.add('active');
+				}
+			});
+		});
 
 		const typingText = document.getElementById('typing-text');
 		if (typingText) {
