@@ -4,19 +4,12 @@
       <stop offset="0%" style="stop-color:#0a0a0a"/>
       <stop offset="100%" style="stop-color:#1a1a1a"/>
     </linearGradient>
-    <linearGradient id="green" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#00C853"/>
-      <stop offset="100%" style="stop-color:#00E676"/>
-    </linearGradient>
   </defs>
   <rect width="800" height="450" fill="url(#bg)"/>
   <circle cx="650" cy="100" r="150" fill="#00E676" opacity="0.08"/>
   <circle cx="700" cy="350" r="100" fill="#00C853" opacity="0.05"/>
-  <rect x="60" y="120" width="80" height="4" rx="2" fill="url(#green)"/>
-  <text x="60" y="180" font-family="Arial, sans-serif" font-size="42" font-weight="bold" fill="white">Como Escolher</text>
-  <text x="60" y="235" font-family="Arial, sans-serif" font-size="42" font-weight="bold" fill="white">o Melhor Web</text>
-  <text x="60" y="290" font-family="Arial, sans-serif" font-size="42" font-weight="bold" fill="white">Designer em Curvelo</text>
-  <text x="60" y="350" font-family="Arial, sans-serif" font-size="18" fill="#a0a0a0">Guia completo para escolher o profissional certo</text>
-  <rect x="60" y="390" width="120" height="36" rx="18" fill="url(#green)"/>
-  <text x="120" y="413" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#0a0a0a" text-anchor="middle">LER ARTIGO</text>
+  <rect x="60" y="120" width="60" height="4" rx="2" fill="#00E676"/>
+  <text x="60" y="190" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="white">Como Escolher</text>
+  <text x="60" y="255" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="white">o Melhor Web</text>
+  <text x="60" y="320" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="white">Designer em Curvelo</text>
 </svg>
