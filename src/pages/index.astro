@@ -205,7 +205,7 @@ import Layout from '../layouts/Layout.astro';
 		<div class="container">
 			<span class="section-tag">Portfólio</span>
 			<h2>Projetos em Destaque</h2>
-			<p class="section-subtitle">Sites reais e protótipos desenvolvidos por mim</p>
+			<p class="section-subtitle">Sites reais e novos desenvolvidos por mim</p>
 			<div class="portfolio-grid">
 				<a href="https://homevantagens.com.br" target="_blank" class="portfolio-card animate-on-scroll">
 					<div class="portfolio-image">
@@ -278,7 +278,7 @@ import Layout from '../layouts/Layout.astro';
 				<div class="portfolio-info">
 					<div class="portfolio-header">
 						<h3>Driffer</h3>
-						<span class="portfolio-badge portfolio-badge-prototype">Protótipo</span>
+						<span class="portfolio-badge portfolio-badge-new">Novo</span>
 					</div>
 					<p>Plataforma de gestão de frotas veiculares com rastreamento em tempo real, relatórios inteligentes e otimização de rotas por IA.</p>
 					<div class="portfolio-tech">
@@ -1467,9 +1467,15 @@ import Layout from '../layouts/Layout.astro';
 		animation: pulse-badge 2s infinite;
 	}
 
+	.portfolio-badge-new {
+		background: linear-gradient(135deg, var(--primary) 0%, #00C853 100%);
+		box-shadow: 0 4px 15px rgba(0, 230, 118, 0.4);
+		animation: pulse-badge 2s infinite;
+	}
+
 	.portfolio-badge-prototype {
-		background: linear-gradient(135deg, #FF6B35, #FF8C42);
-		box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+		background: linear-gradient(135deg, #9E9E9E, #BDBDBD);
+		box-shadow: 0 4px 15px rgba(158, 158, 158, 0.4);
 		animation: none;
 	}
 
