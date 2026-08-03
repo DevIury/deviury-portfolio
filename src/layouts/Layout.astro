@@ -196,6 +196,23 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://deviury.com');
 				localStorage.setItem('cookieConsent', 'rejected');
 				cookieConsent?.classList.remove('visible');
 			});
+
+			document.querySelectorAll('a[href^="#"]').forEach(link => {
+				link.addEventListener('click', (e) => {
+					const href = link.getAttribute('href');
+					if (href === '#') return;
+					const target = document.querySelector(href);
+					if (!target) return;
+					e.preventDefault();
+					document.body.classList.add('section-transition');
+					setTimeout(() => {
+						target.scrollIntoView({ behavior: 'smooth' });
+						setTimeout(() => {
+							document.body.classList.remove('section-transition');
+						}, 200);
+					}, 150);
+				});
+			});
 		</script>
 	</body>
 </html>
@@ -328,6 +345,15 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://deviury.com');
 	}
 
 	::view-transition-new(root) {
+		animation: fade-in 0.2s ease-out;
+	}
+
+	/* Section navigation transitions */
+	body.section-transition {
+		animation: fade-out 0.15s ease-in forwards;
+	}
+
+	body:not(.section-transition) {
 		animation: fade-in 0.2s ease-out;
 	}
 </style>
