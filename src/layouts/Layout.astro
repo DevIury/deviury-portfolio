@@ -209,8 +209,8 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://deviury.com');
 						target.scrollIntoView({ behavior: 'smooth' });
 						setTimeout(() => {
 							document.body.classList.remove('section-transition');
-						}, 200);
-					}, 150);
+						}, 120);
+					}, 100);
 				});
 			});
 		</script>
@@ -341,19 +341,19 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://deviury.com');
 	}
 
 	::view-transition-old(root) {
-		animation: fade-out 0.15s ease-in forwards;
+		animation: fade-out 0.1s ease-in forwards;
 	}
 
 	::view-transition-new(root) {
-		animation: fade-in 0.2s ease-out;
+		animation: fade-in 0.12s ease-out;
 	}
 
 	/* Section navigation transitions */
 	body.section-transition {
-		animation: fade-out 0.15s ease-in forwards;
+		animation: fade-out 0.1s ease-in forwards;
 	}
 
 	body:not(.section-transition) {
-		animation: fade-in 0.2s ease-out;
+		animation: fade-in 0.12s ease-out;
 	}
 </style>
