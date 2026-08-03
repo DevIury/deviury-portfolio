@@ -2407,7 +2407,7 @@ import Layout from '../layouts/Layout.astro';
 </style>
 
 <script>
-	document.addEventListener('DOMContentLoaded', () => {
+	function initAnimations() {
 		const observer = new IntersectionObserver((entries) => {
 			entries.forEach(entry => {
 				if (entry.isIntersecting) {
@@ -2419,6 +2419,10 @@ import Layout from '../layouts/Layout.astro';
 		document.querySelectorAll('.animate-on-scroll').forEach(el => {
 			observer.observe(el);
 		});
+	}
+
+	document.addEventListener('DOMContentLoaded', initAnimations);
+	document.addEventListener('astro:page-load', initAnimations);
 
 		const menuBtn = document.getElementById('menu-btn');
 		const sidebar = document.getElementById('sidebar');
