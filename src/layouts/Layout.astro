@@ -1,6 +1,4 @@
 ---
-import { ViewTransitions } from 'astro:transitions';
-
 interface Props {
 	title: string;
 	description?: string;
@@ -164,8 +162,6 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://deviury.com');
 			gtag('js', new Date());
 			gtag('config', 'G-NSWZ3EKZX9');
 		</script>
-
-		<ViewTransitions />
 	</head>
 	<body>
 		<slot />
@@ -312,30 +308,5 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://deviury.com');
 		.cookie-btn {
 			flex: 1;
 		}
-	}
-
-	/* View Transitions */
-	@keyframes fade-in {
-		from { opacity: 0; }
-	}
-
-	@keyframes fade-out {
-		to { opacity: 0; }
-	}
-
-	@keyframes slide-from-right {
-		from { transform: translateX(30px); opacity: 0; }
-	}
-
-	@keyframes slide-to-left {
-		to { transform: translateX(-30px); opacity: 0; }
-	}
-
-	::view-transition-old(root) {
-		animation: fade-out 0.2s ease-in forwards;
-	}
-
-	::view-transition-new(root) {
-		animation: slide-from-right 0.3s ease-out;
 	}
 </style>
