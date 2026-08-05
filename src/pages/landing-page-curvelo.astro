@@ -1,45 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import CtaSection from '../components/CtaSection.astro';
+import FloatingWhatsApp from '../components/FloatingWhatsApp.astro';
 import WhatsAppIcon from '../components/WhatsAppIcon.astro';
 ---
 
 <Layout title="Landing Page em Curvelo/MG | Páginas que Convertem - DevIury">
-	<header class="header">
-		<nav class="nav">
-			<a href="/" class="logo"><img src="/logo-deviury.webp" alt="DevIury" height="82"></a>
-			<ul class="nav-links">
-				<li><a href="/#servicos">Serviços</a></li>
-				<li><a href="/#portfolio">Portfólio</a></li>
-				<li><a href="/#contato">Contato</a></li>
-			</ul>
-			<a href="https://wa.me/5538998894811?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento%20para%20landing%20page." target="_blank" rel="noopener noreferrer" class="nav-cta">Fale Comigo</a>
-			<button class="menu-btn" id="menu-btn" aria-label="Abrir menu">
-				<span class="menu-btn__line"></span>
-				<span class="menu-btn__line"></span>
-				<span class="menu-btn__line"></span>
-			</button>
-		</nav>
-	</header>
-
-	<div class="overlay" id="overlay"></div>
-	<aside class="sidebar" id="sidebar">
-		<button class="sidebar__close" id="sidebar-close" aria-label="Fechar menu">
-			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-				<path d="M18 6L6 18M6 6l12 12"/>
-			</svg>
-		</button>
-		<a href="/" class="sidebar__logo"><img src="/logo-deviury.webp" alt="DevIury" height="60"></a>
-		<nav class="sidebar__nav">
-			<span class="sidebar__label">Navegação</span>
-			<a href="/#servicos" class="sidebar__link">Serviços</a>
-			<a href="/#portfolio" class="sidebar__link">Portfólio</a>
-			<a href="/#contato" class="sidebar__link">Contato</a>
-		</nav>
-		<a href="https://wa.me/5538998894811?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento%20para%20landing%20page." target="_blank" rel="noopener noreferrer" class="sidebar__cta">
-			<WhatsAppIcon size={22} />
-			Fale Comigo
-		</a>
-	</aside>
+	<Header whatsappMessage="Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento%20para%20landing%20page." />
 
 	<section class="hero">
 		<div class="hero-content">
@@ -65,7 +34,7 @@ import WhatsAppIcon from '../components/WhatsAppIcon.astro';
 		<div class="container">
 			<h2>Por Que Uma Landing Page?</h2>
 			<p>Uma landing page é diferente de um site institucional. Ela é criada com um único objetivo: converter visitantes em leads ou vendas. Se você quer divulgar um serviço, produto ou promoção específica, uma landing page é a melhor escolha.</p>
-			
+
 			<h3>Vantagens de uma Landing Page</h3>
 			<ul class="service-list">
 				<li>Foco em conversão - Uma única ação que o visitante deve tomar</li>
@@ -77,78 +46,124 @@ import WhatsAppIcon from '../components/WhatsAppIcon.astro';
 
 			<h3>Ideal Para</h3>
 			<p>Landing pages são perfeitas para <strong>promoções sazonais</strong>, <strong>lançamentos de produtos</strong>, <strong>captação de leads</strong>, <strong>agendamentos</strong> e <strong>eventos</strong>. Se você precisa de uma página focada em um objetivo específico, entre em contato.</p>
+
+			<p>Saiba mais: <a href="/blog/landing-page-site-institucional">Diferença entre Landing Page e Site Institucional</a> e <a href="/blog/quanto-custa-site-profissional">Quanto custa um site profissional</a>.</p>
 		</div>
 	</section>
 
-	<section id="contato" class="cta">
-		<div class="cta-bg">
-			<div class="cta-orb cta-orb-1"></div>
-			<div class="cta-orb cta-orb-2"></div>
-		</div>
+	<section class="faq">
 		<div class="container">
-			<div class="cta-content">
-				<span class="section-tag">Contato</span>
-				<h2>Quero Uma Landing Page</h2>
-				<p class="cta-subtitle">Fale comigo e receba um orçamento para sua landing page em Curvelo!</p>
-				<div class="cta-buttons">
-					<a href="https://wa.me/5538998894811?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento%20para%20landing%20page." target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-						<WhatsAppIcon size={20} />
-						Orçamento Grátis
-					</a>
+			<span class="section-tag">Perguntas Frequentes</span>
+			<h2>Dúvidas Sobre Landing Pages em Curvelo</h2>
+			<div class="faq-accordion">
+				<div class="faq-item">
+					<button class="faq-question" aria-expanded="false" aria-controls="faq-answer-1">
+						<span class="faq-number">01</span>
+						<span class="faq-title">Quanto custa uma landing page?</span>
+						<svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+							<polyline points="6 9 12 15 18 9"/>
+						</svg>
+					</button>
+					<div class="faq-answer" id="faq-answer-1" role="region">
+						<div class="faq-answer-inner">
+							<p>O investimento para uma landing page profissional em Curvelo começa a partir de R$ 500. O valor varia conforme as funcionalidades e o design desejado. Orçamento sem compromisso pelo WhatsApp.</p>
+						</div>
+					</div>
+				</div>
+				<div class="faq-item">
+					<button class="faq-question" aria-expanded="false" aria-controls="faq-answer-2">
+						<span class="faq-number">02</span>
+						<span class="faq-title">Quanto tempo leva para criar uma landing page?</span>
+						<svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+							<polyline points="6 9 12 15 18 9"/>
+						</svg>
+					</button>
+					<div class="faq-answer" id="faq-answer-2" role="region">
+						<div class="faq-answer-inner">
+							<p>Uma landing page leva de 3 a 5 dias úteis para ficar pronta. O prazo depende da complexidade do design e do conteúdo fornecido.</p>
+						</div>
+					</div>
+				</div>
+				<div class="faq-item">
+					<button class="faq-question" aria-expanded="false" aria-controls="faq-answer-3">
+						<span class="faq-number">03</span>
+						<span class="faq-title">Uma landing page aparece no Google?</span>
+						<svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+							<polyline points="6 9 12 15 18 9"/>
+						</svg>
+					</button>
+					<div class="faq-answer" id="faq-answer-3" role="region">
+						<div class="faq-answer-inner">
+							<p>Sim! A landing page é desenvolvida com SEO otimizado, incluindo meta tags, velocidade e estrutura semântica para ranquear nas buscas.</p>
+						</div>
+					</div>
+				</div>
+				<div class="faq-item">
+					<button class="faq-question" aria-expanded="false" aria-controls="faq-answer-4">
+						<span class="faq-number">04</span>
+						<span class="faq-title">Posso usar para anúncios no Google Ads e Facebook?</span>
+						<svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+							<polyline points="6 9 12 15 18 9"/>
+						</svg>
+					</button>
+					<div class="faq-answer" id="faq-answer-4" role="region">
+						<div class="faq-answer-inner">
+							<p>Sim! A landing page é ideal para tráfego pago, com design focado em conversão e carregamento rápido para maximizar seus resultados.</p>
+						</div>
+					</div>
+				</div>
+				<div class="faq-item">
+					<button class="faq-question" aria-expanded="false" aria-controls="faq-answer-5">
+						<span class="faq-number">05</span>
+						<span class="faq-title">A landing page funciona bem no celular?</span>
+						<svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+							<polyline points="6 9 12 15 18 9"/>
+						</svg>
+					</button>
+					<div class="faq-answer" id="faq-answer-5" role="region">
+						<div class="faq-answer-inner">
+							<p>Sim! Design 100% responsivo, otimizado para dispositivos móveis onde a maioria dos acessos acontece.</p>
+						</div>
+					</div>
+				</div>
+				<div class="faq-item">
+					<button class="faq-question" aria-expanded="false" aria-controls="faq-answer-6">
+						<span class="faq-number">06</span>
+						<span class="faq-title">Vocês fazem a landing page do zero?</span>
+						<svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+							<polyline points="6 9 12 15 18 9"/>
+						</svg>
+					</button>
+					<div class="faq-answer" id="faq-answer-6" role="region">
+						<div class="faq-answer-inner">
+							<p>Sim! Crio a landing page completa, desde o design até a publicação, incluindo copy, imagens e configuração de tracking.</p>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<footer>
-		<div class="container">
-			<p class="copyright">&copy; 2026 DevIury - Web Designer em Curvelo/MG. Todos os direitos reservados.</p>
-		</div>
-	</footer>
+	<CtaSection title="Quer uma Landing Page que Converte?" subtitle="Fale comigo e receba um orçamento personalizado!" message="Ol%C3%A1!%20Vim%20pelo%20site%20de%20landing%20page%20e%20gostaria%20de%20um%20or%C3%A7amento." />
+	<Footer />
+	<FloatingWhatsApp message="Ol%C3%A1!%20Vim%20pelo%20site%20de%20landing%20page%20e%20gostaria%20de%20um%20or%C3%A7amento." />
 
-	<a href="https://wa.me/5538998894811?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento%20para%20landing%20page." target="_blank" rel="noopener noreferrer" class="floating-whatsapp" aria-label="WhatsApp">
-		<WhatsAppIcon size={28} />
-	</a>
+	<script is:inline>
+		document.querySelectorAll('.faq-question').forEach(button => {
+			button.addEventListener('click', () => {
+				const item = button.parentElement;
+				const isActive = item.classList.contains('active');
 
-	<script>
-		const menuBtn = document.getElementById('menu-btn');
-		const sidebar = document.getElementById('sidebar');
-		const overlay = document.getElementById('overlay');
-		const sidebarClose = document.getElementById('sidebar-close');
+				document.querySelectorAll('.faq-item').forEach(faqItem => {
+					faqItem.classList.remove('active');
+					faqItem.querySelector('.faq-question')?.setAttribute('aria-expanded', 'false');
+				});
 
-		function openMenu() {
-			sidebar?.classList.add('open');
-			overlay?.classList.add('visible');
-			document.body.style.overflow = 'hidden';
-			sidebarClose?.focus();
-		}
-
-		function closeMenu() {
-			sidebar?.classList.remove('open');
-			overlay?.classList.remove('visible');
-			document.body.style.overflow = '';
-			menuBtn?.focus();
-		}
-
-		menuBtn?.addEventListener('click', openMenu);
-		overlay?.addEventListener('click', closeMenu);
-		sidebarClose?.addEventListener('click', closeMenu);
-
-		sidebar?.addEventListener('keydown', (e) => {
-			if (e.key === 'Escape') { closeMenu(); return; }
-			if (e.key !== 'Tab' || !sidebar) return;
-			const focusable = sidebar.querySelectorAll('a[href], button, [tabindex]:not([tabindex="-1"])');
-			const first = focusable[0];
-			const last = focusable[focusable.length - 1];
-			if (e.shiftKey) {
-				if (document.activeElement === first) { e.preventDefault(); last.focus(); }
-			} else {
-				if (document.activeElement === last) { e.preventDefault(); first.focus(); }
-			}
-		});
-
-		document.querySelectorAll('.sidebar__link').forEach(link => {
-			link.addEventListener('click', closeMenu);
+				if (!isActive) {
+					item.classList.add('active');
+					button.setAttribute('aria-expanded', 'true');
+				}
+			});
 		});
 	</script>
 
@@ -279,6 +294,17 @@ import WhatsAppIcon from '../components/WhatsAppIcon.astro';
 		margin-bottom: 1rem;
 	}
 
+	.content-seo a {
+		color: var(--primary);
+		text-decoration: none;
+		font-weight: 600;
+		transition: opacity 0.3s;
+	}
+
+	.content-seo a:hover {
+		opacity: 0.8;
+	}
+
 	.service-list {
 		list-style: none;
 		padding: 0;
@@ -291,53 +317,9 @@ import WhatsAppIcon from '../components/WhatsAppIcon.astro';
 	}
 
 	.service-list li::before {
-		content: "✓ ";
+		content: "\2713 ";
 		color: var(--primary);
 		font-weight: 700;
-	}
-
-	.cta {
-		margin: 0 1rem;
-		padding: 4rem 1.5rem;
-		border-radius: 24px;
-		background: var(--bg-card);
-		border: 1px solid var(--border);
-		text-align: center;
-		position: relative;
-		overflow: hidden;
-	}
-
-	.cta-bg {
-		position: absolute;
-		inset: 0;
-		pointer-events: none;
-	}
-
-	.cta-orb {
-		position: absolute;
-		border-radius: 50%;
-		filter: blur(80px);
-	}
-
-	.cta-orb-1 {
-		width: 300px;
-		height: 300px;
-		background: rgba(0, 230, 118, 0.15);
-		top: -100px;
-		right: -100px;
-	}
-
-	.cta-orb-2 {
-		width: 200px;
-		height: 200px;
-		background: rgba(0, 200, 83, 0.1);
-		bottom: -50px;
-		left: -50px;
-	}
-
-	.cta-content {
-		position: relative;
-		z-index: 1;
 	}
 
 	.section-tag {
@@ -354,235 +336,134 @@ import WhatsAppIcon from '../components/WhatsAppIcon.astro';
 		margin-bottom: 1rem;
 	}
 
-	.cta h2 {
-		font-size: 2rem;
-		margin-bottom: 1rem;
+	.faq {
+		padding: 6rem 0;
 	}
 
-	.cta-subtitle {
-		color: var(--text-gray);
-		margin-bottom: 2rem;
+	.faq h2 {
+		font-size: 1.75rem;
+		text-align: center;
+		margin-bottom: 0;
 	}
 
-	.floating-whatsapp {
-		position: fixed;
-		bottom: 1.5rem;
-		right: 1.5rem;
-		width: 60px;
-		height: 60px;
-		background: linear-gradient(135deg, #00C853, #00E676, #69F0AE);
+	.faq-accordion {
+		max-width: 750px;
+		margin: 3rem auto 0;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	.faq-item {
+		background: linear-gradient(135deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%);
+		border: 1px solid rgba(255,255,255,0.06);
+		border-radius: 16px;
+		transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+	}
+
+	.faq-item:hover {
+		border-color: rgba(0, 230, 118, 0.2);
+		background: linear-gradient(135deg, rgba(0,230,118,0.04) 0%, rgba(255,255,255,0.02) 100%);
+	}
+
+	.faq-item.active {
+		border-color: rgba(0, 230, 118, 0.3);
+		background: linear-gradient(135deg, rgba(0,230,118,0.06) 0%, rgba(255,255,255,0.02) 100%);
+		box-shadow: 0 8px 32px rgba(0, 230, 118, 0.08);
+	}
+
+	.faq-question {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		gap: 1.25rem;
+		padding: 1.5rem 1.75rem;
+		background: transparent;
+		border: none;
+		color: var(--text-white);
+		font-size: 1.05rem;
+		font-weight: 500;
+		text-align: left;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		touch-action: manipulation;
+		-webkit-tap-highlight-color: transparent;
+		position: relative;
+		z-index: 1;
+	}
+
+	.faq-question:hover {
 		color: #fff;
-		border-radius: 50%;
+	}
+
+	.faq-number {
+		flex-shrink: 0;
+		width: 36px;
+		height: 36px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		box-shadow: 0 4px 25px rgba(0, 230, 118, 0.5);
-		text-decoration: none;
-		animation: pulse-whatsapp 2s infinite;
+		border-radius: 10px;
+		background: rgba(0, 230, 118, 0.1);
+		color: var(--primary);
+		font-size: 0.85rem;
+		font-weight: 700;
+		transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
 	}
 
-	@keyframes pulse-whatsapp {
-		0% { box-shadow: 0 0 0 0 rgba(0, 230, 118, 0.4); }
-		70% { box-shadow: 0 0 0 15px rgba(0, 230, 118, 0); }
-		100% { box-shadow: 0 0 0 0 rgba(0, 230, 118, 0); }
+	.faq-item.active .faq-number {
+		background: var(--primary);
+		color: #0a0a0a;
+		transform: scale(1.1);
 	}
 
-	footer {
-		padding: 1.2rem 0;
-		text-align: center;
-		border-top: 1px solid var(--border);
-		margin-top: 20px;
+	.faq-title {
+		flex: 1;
 	}
 
-	.copyright {
-		font-size: 0.8rem;
-		color: var(--text-gray);
-	}
-
-	.header {
-		position: fixed;
-		top: 0;
-		left: 0;
-		right: 0;
-		z-index: 100;
-		background: rgba(10, 10, 10, 0.8);
-		backdrop-filter: blur(20px);
-		border-bottom: 1px solid var(--border);
-	}
-
-	.nav {
-		max-width: 1200px;
-		margin: 0 auto;
-		padding: 1rem 1.5rem;
+	.faq-icon {
+		flex-shrink: 0;
+		width: 28px;
+		height: 28px;
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
+		justify-content: center;
+		transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+		color: rgba(255,255,255,0.3);
 	}
 
-	.logo {
-		display: flex;
-		align-items: center;
-		text-decoration: none;
-	}
-
-	.logo img {
-		height: 82px;
-		width: auto;
-	}
-
-	.nav-links {
-		display: flex;
-		gap: 2rem;
-		list-style: none;
-	}
-
-	.nav-links a {
-		color: var(--text-gray);
-		text-decoration: none;
-		font-size: 0.9rem;
-		font-weight: 500;
-		transition: color 0.3s;
-	}
-
-	.nav-links a:hover {
+	.faq-item:hover .faq-icon {
 		color: var(--primary);
 	}
 
-	.nav-cta {
-		padding: 0.6rem 1.2rem;
-		background: var(--primary);
-		color: #000;
-		text-decoration: none;
-		border-radius: 8px;
-		font-weight: 600;
-		font-size: 0.9rem;
-		transition: all 0.3s;
+	.faq-item.active .faq-icon {
+		transform: rotate(180deg);
+		color: var(--primary);
 	}
 
-	.menu-btn {
-		display: none;
-		flex-direction: column;
-		gap: 5px;
-		background: none;
-		border: none;
-		cursor: pointer;
-		padding: 5px;
+	.faq-answer {
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+		will-change: max-height;
 	}
 
-	.menu-btn__line {
-		width: 24px;
-		height: 2px;
-		background: #fff;
+	.faq-item.active .faq-answer {
+		max-height: 300px;
 	}
 
-	.overlay {
-		display: none;
-		position: fixed;
-		inset: 0;
-		background: rgba(0, 0, 0, 0.7);
-		z-index: 200;
+	.faq-answer-inner {
+		padding: 0 1.75rem 1.75rem 4.5rem;
 	}
 
-	.overlay.visible {
-		display: block;
-	}
-
-	.sidebar {
-		position: fixed;
-		top: 0;
-		right: -300px;
-		width: 300px;
-		height: 100vh;
-		background: #111;
-		z-index: 300;
-		padding: 1.5rem;
-		transition: right 0.3s ease;
-		display: flex;
-		flex-direction: column;
-	}
-
-	.sidebar.open {
-		right: 0;
-	}
-
-	.sidebar__close {
-		position: absolute;
-		top: 1.25rem;
-		right: 1.25rem;
-		background: rgba(255, 255, 255, 0.05);
-		border: 1px solid rgba(255, 255, 255, 0.08);
-		color: #fff;
-		cursor: pointer;
-		width: 44px;
-		height: 44px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		border-radius: 12px;
-	}
-
-	.sidebar__logo {
-		display: flex;
-		justify-content: center;
-		margin-top: 1rem;
-		margin-bottom: 1rem;
-	}
-
-	.sidebar__nav {
-		display: flex;
-		flex-direction: column;
-		gap: 0.5rem;
-		margin-top: 2rem;
-	}
-
-	.sidebar__label {
-		font-size: 0.7rem;
-		font-weight: 600;
-		color: rgba(255, 255, 255, 0.25);
-		text-transform: uppercase;
-		letter-spacing: 1.5px;
-		padding: 0 1.25rem;
-		margin-bottom: 0.5rem;
-	}
-
-	.sidebar__link {
-		display: block;
-		padding: 0.75rem 1.25rem;
-		color: #fff;
-		text-decoration: none;
-		font-size: 1rem;
-		font-weight: 500;
-		border-radius: 8px;
-	}
-
-	.sidebar__cta {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: 0.75rem;
-		margin-top: 2rem;
-		padding: 1.4rem 1.5rem;
-		background: linear-gradient(135deg, #00C853, #00E676, #69F0AE);
-		color: #fff;
-		text-decoration: none;
-		border-radius: 16px;
-		font-size: 1.15rem;
-		font-weight: 700;
+	.faq-answer p {
+		color: var(--text-muted);
+		font-size: 0.95rem;
+		line-height: 1.8;
+		margin: 0;
 	}
 
 	@media (max-width: 768px) {
-		.nav-links {
-			display: none;
-		}
-
-		.nav-cta {
-			display: none;
-		}
-
-		.menu-btn {
-			display: flex;
-		}
-
 		.hero-content {
 			grid-template-columns: 1fr;
 			text-align: center;
@@ -610,20 +491,40 @@ import WhatsAppIcon from '../components/WhatsAppIcon.astro';
 			width: 100%;
 		}
 
-		.cta {
-			margin: 0 1rem;
-			padding: 4rem 1.5rem;
-			border-radius: 24px;
+		.faq-question {
+			padding: 1.25rem 1.25rem;
+			font-size: 0.95rem;
+			gap: 1rem;
 		}
 
-		.cta h2 {
-			font-size: 1.75rem;
+		.faq-number {
+			width: 32px;
+			height: 32px;
+			font-size: 0.8rem;
+		}
+
+		.faq-icon {
+			width: 24px;
+			height: 24px;
+		}
+
+		.faq-answer-inner {
+			padding: 0 1.25rem 1.5rem 3.5rem;
+		}
+
+		.faq-answer p {
+			font-size: 0.9rem;
+			line-height: 1.7;
 		}
 	}
 
 	@media (prefers-reduced-motion: reduce) {
-		.floating-whatsapp {
-			animation: none;
+		.faq-item.active .faq-number {
+			transform: none;
+		}
+
+		.faq-item.active .faq-icon {
+			transform: rotate(180deg);
 		}
 	}
 </style>

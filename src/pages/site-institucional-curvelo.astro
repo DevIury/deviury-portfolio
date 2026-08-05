@@ -1,45 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import CtaSection from '../components/CtaSection.astro';
+import FloatingWhatsApp from '../components/FloatingWhatsApp.astro';
 import WhatsAppIcon from '../components/WhatsAppIcon.astro';
 ---
 
 <Layout title="Site Institucional em Curvelo/MG | Sua Empresa Online - DevIury">
-	<header class="header">
-		<nav class="nav">
-			<a href="/" class="logo"><img src="/logo-deviury.webp" alt="DevIury" height="82"></a>
-			<ul class="nav-links">
-				<li><a href="/#servicos">Serviços</a></li>
-				<li><a href="/#portfolio">Portfólio</a></li>
-				<li><a href="/#contato">Contato</a></li>
-			</ul>
-			<a href="https://wa.me/5538998894811?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento%20para%20site%20institucional." target="_blank" rel="noopener noreferrer" class="nav-cta">Fale Comigo</a>
-			<button class="menu-btn" id="menu-btn" aria-label="Abrir menu de navegação">
-				<span class="menu-btn__line"></span>
-				<span class="menu-btn__line"></span>
-				<span class="menu-btn__line"></span>
-			</button>
-		</nav>
-	</header>
-
-	<div class="overlay" id="overlay"></div>
-	<aside class="sidebar" id="sidebar">
-		<button class="sidebar__close" id="sidebar-close" aria-label="Fechar menu de navegação">
-			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-				<path d="M18 6L6 18M6 6l12 12"/>
-			</svg>
-		</button>
-		<a href="/" class="sidebar__logo"><img src="/logo-deviury.webp" alt="DevIury - Página inicial" height="60"></a>
-		<nav class="sidebar__nav" aria-label="Menu de navegação mobile">
-			<span class="sidebar__label">Navegação</span>
-			<a href="/#servicos" class="sidebar__link">Serviços</a>
-			<a href="/#portfolio" class="sidebar__link">Portfólio</a>
-			<a href="/#contato" class="sidebar__link">Contato</a>
-		</nav>
-		<a href="https://wa.me/5538998894811?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento%20para%20site%20institucional." target="_blank" rel="noopener noreferrer" class="sidebar__cta">
-			<WhatsAppIcon size={22} />
-			Fale Comigo
-		</a>
-	</aside>
+	<Header whatsappMessage="Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento%20para%20site%20institucional." />
 
 	<section class="hero">
 		<div class="hero-content">
@@ -50,9 +19,9 @@ import WhatsAppIcon from '../components/WhatsAppIcon.astro';
 				<div class="cta-group">
 					<a href="/#portfolio" class="btn btn-secondary">Ver Projetos</a>
 				<a href="https://wa.me/5538998894811?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento%20para%20site%20institucional." target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-					<WhatsAppIcon size={20} />
-					Fale no WhatsApp
-				</a>
+						<WhatsAppIcon size={20} />
+						Fale no WhatsApp
+					</a>
 				</div>
 			</div>
 			<div class="hero-image">
@@ -68,7 +37,7 @@ import WhatsAppIcon from '../components/WhatsAppIcon.astro';
 			
 			<h3>Vantagens de um Site Institucional</h3>
 			<ul class="service-list">
-				<li>Presência profissional no Google - Seja encontrado por clientes em Curvelo</li>
+				<li>Presença profissional no Google - Seja encontrado por clientes em Curvelo</li>
 				<li>Credibilidade - Empresa com site transmite mais confiança</li>
 				<li>Informações completas - Apresente sua equipe, história e diferenciais</li>
 				<li>WhatsApp integrado - Clientes entram em contato facilmente</li>
@@ -77,38 +46,46 @@ import WhatsAppIcon from '../components/WhatsAppIcon.astro';
 
 			<h3>Ideal Para Qualquer Empresa</h3>
 			<p>Clínicas, escritórios, lojas, restaurantes, salões, oficinas, agências — qualquer negócio que queira ter uma presença profissional online. Se sua empresa atende clientes em Curvelo e região, um site institucional é investimento essencial para crescer.</p>
+
+			<p>Leia mais: <a href="/blog/7-motivos-empresa-ter-site">7 motivos para sua empresa ter um site</a> e <a href="/blog/quanto-custa-site-profissional">Quanto custa um site profissional</a>.</p>
 		</div>
 	</section>
 
-	<section id="contato" class="cta">
-		<div class="cta-bg">
-			<div class="cta-orb cta-orb-1"></div>
-			<div class="cta-orb cta-orb-2"></div>
-		</div>
+	<section class="faq-section">
 		<div class="container">
-			<div class="cta-content">
-				<span class="section-tag">Contato</span>
-				<h2>Quero um Site Institucional</h2>
-				<p class="cta-subtitle">Fale comigo e receba um orçamento para seu site institucional em Curvelo!</p>
-				<div class="cta-buttons">
-				<a href="https://wa.me/5538998894811?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento%20para%20site%20institucional." target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-					<WhatsAppIcon size={20} />
-					Orçamento Grátis
-				</a>
-				</div>
+			<h2>Perguntas Frequentes sobre Site Institucional</h2>
+			<div class="faq-list">
+				<details class="faq-item">
+					<summary>Quanto custa um site institucional?</summary>
+					<p>O investimento para um site institucional em Curvelo começa a partir de R$ 800. O valor final depende das páginas, funcionalidades e design customizado. Orçamento sem compromisso.</p>
+				</details>
+				<details class="faq-item">
+					<summary>Quanto tempo leva para criar o site?</summary>
+					<p>Um site institucional leva de 5 a 10 dias úteis para ficar pronto. Projetos maiores podem levar de 2 a 4 semanas.</p>
+				</details>
+				<details class="faq-item">
+					<summary>O que é um site institucional?</summary>
+					<p>Um site institucional é a presença digital da sua empresa. Ele apresenta seus serviços, diferenciais e formas de contato, passando credibilidade e profissionalismo para seus clientes.</p>
+				</details>
+				<details class="faq-item">
+					<summary>O site fica otimizado para o Google?</summary>
+					<p>Sim! SEO completo incluído: meta tags, velocidade, estrutura semântica, sitemap e Google Search Console configurado.</p>
+				</details>
+				<details class="faq-item">
+					<summary>Preciso fornecer o conteúdo?</summary>
+					<p>Posso ajudar com a criação do conteúdo (copywriting) ou usar o conteúdo que você já possui. O ideal é alinhar as informações antes do início do projeto.</p>
+				</details>
+				<details class="faq-item">
+					<summary>Vocês fazem a manutenção do site?</summary>
+					<p>Sim! Ofereço pacotes de manutenção mensal para atualizações, correções, backups e melhorias contínuas.</p>
+				</details>
 			</div>
 		</div>
 	</section>
 
-	<footer>
-		<div class="container">
-			<p class="copyright">&copy; 2026 DevIury - Web Designer em Curvelo/MG. Todos os direitos reservados.</p>
-		</div>
-	</footer>
-
-	<a href="https://wa.me/5538998894811?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento%20para%20site%20institucional." target="_blank" rel="noopener noreferrer" class="floating-whatsapp" aria-label="Fale comigo no WhatsApp">
-		<WhatsAppIcon size={28} />
-	</a>
+	<CtaSection title="Precisa de um Site Institucional?" subtitle="Fale comigo e receba um orçamento personalizado!" message="Ol%C3%A1!%20Vim%20pelo%20site%20institucional%20e%20gostaria%20de%20um%20or%C3%A7amento." />
+	<Footer />
+	<FloatingWhatsApp message="Ol%C3%A1!%20Vim%20pelo%20site%20institucional%20e%20gostaria%20de%20um%20or%C3%A7amento." />
 
 	<script type="application/ld+json">
 	{
@@ -119,47 +96,6 @@ import WhatsAppIcon from '../components/WhatsAppIcon.astro';
 			{ "@type": "ListItem", "position": 2, "name": "Site Institucional em Curvelo" }
 		]
 	}
-	</script>
-	<script>
-		const menuBtn = document.getElementById('menu-btn');
-		const sidebar = document.getElementById('sidebar');
-		const overlay = document.getElementById('overlay');
-		const sidebarClose = document.getElementById('sidebar-close');
-
-		function openMenu() {
-			sidebar?.classList.add('open');
-			overlay?.classList.add('visible');
-			document.body.style.overflow = 'hidden';
-			sidebarClose?.focus();
-		}
-
-		function closeMenu() {
-			sidebar?.classList.remove('open');
-			overlay?.classList.remove('visible');
-			document.body.style.overflow = '';
-			menuBtn?.focus();
-		}
-
-		menuBtn?.addEventListener('click', openMenu);
-		overlay?.addEventListener('click', closeMenu);
-		sidebarClose?.addEventListener('click', closeMenu);
-
-		sidebar?.addEventListener('keydown', (e) => {
-			if (e.key === 'Escape') { closeMenu(); return; }
-			if (e.key !== 'Tab' || !sidebar) return;
-			const focusable = sidebar.querySelectorAll('a[href], button, [tabindex]:not([tabindex="-1"])');
-			const first = focusable[0];
-			const last = focusable[focusable.length - 1];
-			if (e.shiftKey) {
-				if (document.activeElement === first) { e.preventDefault(); last.focus(); }
-			} else {
-				if (document.activeElement === last) { e.preventDefault(); first.focus(); }
-			}
-		});
-
-		document.querySelectorAll('.sidebar__link').forEach(link => {
-			link.addEventListener('click', closeMenu);
-		});
 	</script>
 </Layout>
 
@@ -229,31 +165,6 @@ import WhatsAppIcon from '../components/WhatsAppIcon.astro';
 		min-width: 0;
 	}
 
-	.btn {
-		display: inline-flex;
-		align-items: center;
-		gap: 0.5rem;
-		padding: 0.85rem 1.5rem;
-		border-radius: 10px;
-		font-size: 0.9rem;
-		font-weight: 600;
-		text-decoration: none;
-		cursor: pointer;
-		border: none;
-		transition: all 0.2s;
-	}
-
-	.btn-primary {
-		background: linear-gradient(135deg, #00C853, #00E676, #69F0AE);
-		color: #fff;
-	}
-
-	.btn-secondary {
-		background: transparent;
-		color: #fff;
-		border: 1px solid rgba(255, 255, 255, 0.2);
-	}
-
 	.content-seo {
 		padding: 4rem 1.5rem;
 		max-width: 800px;
@@ -295,293 +206,61 @@ import WhatsAppIcon from '../components/WhatsAppIcon.astro';
 		font-weight: 700;
 	}
 
-	.cta {
-		margin: 0 1rem;
+	.faq-section {
 		padding: 4rem 1.5rem;
-		border-radius: 24px;
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	.faq-section h2 {
+		font-size: 1.75rem;
+		margin-bottom: 2rem;
+		text-align: center;
+	}
+
+	.faq-list {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	.faq-item {
 		background: var(--bg-card);
 		border: 1px solid var(--border);
-		text-align: center;
-		position: relative;
+		border-radius: 12px;
 		overflow: hidden;
 	}
 
-	.cta-bg {
-		position: absolute;
-		inset: 0;
-		pointer-events: none;
-	}
-
-	.cta-orb {
-		position: absolute;
-		border-radius: 50%;
-		filter: blur(80px);
-	}
-
-	.cta-orb-1 {
-		width: 300px;
-		height: 300px;
-		background: rgba(0, 230, 118, 0.15);
-		top: -100px;
-		right: -100px;
-	}
-
-	.cta-orb-2 {
-		width: 200px;
-		height: 200px;
-		background: rgba(0, 200, 83, 0.1);
-		bottom: -50px;
-		left: -50px;
-	}
-
-	.cta-content {
-		position: relative;
-		z-index: 1;
-	}
-
-	.section-tag {
-		display: inline-block;
-		padding: 0.4rem 1rem;
-		background: rgba(0, 230, 118, 0.1);
-		border: 1px solid rgba(0, 230, 118, 0.2);
-		border-radius: 50px;
-		font-size: 0.8rem;
-		font-weight: 600;
-		color: var(--primary);
-		text-transform: uppercase;
-		letter-spacing: 1px;
-		margin-bottom: 1rem;
-	}
-
-	.cta h2 {
-		font-size: 2rem;
-		margin-bottom: 1rem;
-	}
-
-	.cta-subtitle {
-		color: var(--text-gray);
-		margin-bottom: 2rem;
-	}
-
-	.floating-whatsapp {
-		position: fixed;
-		bottom: 1.5rem;
-		right: 1.5rem;
-		width: 60px;
-		height: 60px;
-		background: linear-gradient(135deg, #00C853, #00E676, #69F0AE);
-		color: #fff;
-		border-radius: 50%;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		box-shadow: 0 4px 25px rgba(0, 230, 118, 0.5);
-		text-decoration: none;
-		animation: pulse-whatsapp 2s infinite;
-	}
-
-	@keyframes pulse-whatsapp {
-		0% { box-shadow: 0 0 0 0 rgba(0, 230, 118, 0.4); }
-		70% { box-shadow: 0 0 0 15px rgba(0, 230, 118, 0); }
-		100% { box-shadow: 0 0 0 0 rgba(0, 230, 118, 0); }
-	}
-
-	footer {
-		padding: 1.2rem 0;
-		text-align: center;
-		border-top: 1px solid var(--border);
-		margin-top: 20px;
-	}
-
-	.copyright {
-		font-size: 0.8rem;
-		color: var(--text-gray);
-	}
-
-	.header {
-		position: fixed;
-		top: 0;
-		left: 0;
-		right: 0;
-		z-index: 100;
-		background: rgba(10, 10, 10, 0.8);
-		backdrop-filter: blur(20px);
-		border-bottom: 1px solid var(--border);
-	}
-
-	.nav {
-		max-width: 1200px;
-		margin: 0 auto;
-		padding: 1rem 1.5rem;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-	}
-
-	.logo {
-		display: flex;
-		align-items: center;
-		text-decoration: none;
-	}
-
-	.logo img {
-		height: 82px;
-		width: auto;
-	}
-
-	.nav-links {
-		display: flex;
-		gap: 2rem;
-		list-style: none;
-	}
-
-	.nav-links a {
-		color: var(--text-gray);
-		text-decoration: none;
-		font-size: 0.9rem;
-		font-weight: 500;
-		transition: color 0.3s;
-	}
-
-	.nav-links a:hover {
-		color: var(--primary);
-	}
-
-	.nav-cta {
-		padding: 0.6rem 1.2rem;
-		background: var(--primary);
-		color: #000;
-		text-decoration: none;
-		border-radius: 8px;
-		font-weight: 600;
-		font-size: 0.9rem;
-		transition: all 0.3s;
-	}
-
-	.menu-btn {
-		display: none;
-		flex-direction: column;
-		gap: 5px;
-		background: none;
-		border: none;
+	.faq-item summary {
+		padding: 1.25rem 1.5rem;
 		cursor: pointer;
-		padding: 5px;
-	}
-
-	.menu-btn__line {
-		width: 24px;
-		height: 2px;
-		background: #fff;
-	}
-
-	.overlay {
-		display: none;
-		position: fixed;
-		inset: 0;
-		background: rgba(0, 0, 0, 0.7);
-		z-index: 200;
-	}
-
-	.overlay.visible {
-		display: block;
-	}
-
-	.sidebar {
-		position: fixed;
-		top: 0;
-		right: -300px;
-		width: 300px;
-		height: 100vh;
-		background: #111;
-		z-index: 300;
-		padding: 1.5rem;
-		transition: right 0.3s ease;
-		display: flex;
-		flex-direction: column;
-	}
-
-	.sidebar.open {
-		right: 0;
-	}
-
-	.sidebar__close {
-		position: absolute;
-		top: 1.25rem;
-		right: 1.25rem;
-		background: rgba(255, 255, 255, 0.05);
-		border: 1px solid rgba(255, 255, 255, 0.08);
-		color: #fff;
-		cursor: pointer;
-		width: 44px;
-		height: 44px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		border-radius: 12px;
-	}
-
-	.sidebar__logo {
-		display: flex;
-		justify-content: center;
-		margin-top: 1rem;
-		margin-bottom: 1rem;
-	}
-
-	.sidebar__nav {
-		display: flex;
-		flex-direction: column;
-		gap: 0.5rem;
-		margin-top: 2rem;
-	}
-
-	.sidebar__label {
-		font-size: 0.7rem;
 		font-weight: 600;
-		color: rgba(255, 255, 255, 0.25);
-		text-transform: uppercase;
-		letter-spacing: 1.5px;
-		padding: 0 1.25rem;
-		margin-bottom: 0.5rem;
-	}
-
-	.sidebar__link {
-		display: block;
-		padding: 0.75rem 1.25rem;
-		color: #fff;
-		text-decoration: none;
 		font-size: 1rem;
-		font-weight: 500;
-		border-radius: 8px;
+		color: #fff;
+		list-style: none;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 	}
 
-	.sidebar__cta {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: 0.75rem;
-		margin-top: 2rem;
-		padding: 1.4rem 1.5rem;
-		background: linear-gradient(135deg, #00C853, #00E676, #69F0AE);
-		color: #fff;
-		text-decoration: none;
-		border-radius: 16px;
-		font-size: 1.15rem;
-		font-weight: 700;
+	.faq-item summary::after {
+		content: "+";
+		font-size: 1.5rem;
+		color: var(--primary);
+		transition: transform 0.2s;
+	}
+
+	.faq-item[open] summary::after {
+		transform: rotate(45deg);
+	}
+
+	.faq-item p {
+		padding: 0 1.5rem 1.25rem;
+		color: var(--text-gray);
+		line-height: 1.7;
 	}
 
 	@media (max-width: 768px) {
-		.nav-links {
-			display: none;
-		}
-
-		.nav-cta {
-			display: none;
-		}
-
-		.menu-btn {
-			display: flex;
-		}
-
 		.hero-content {
 			grid-template-columns: 1fr;
 			text-align: center;
@@ -607,22 +286,6 @@ import WhatsAppIcon from '../components/WhatsAppIcon.astro';
 
 		.cta-group .btn {
 			width: 100%;
-		}
-
-		.cta {
-			margin: 0 1rem;
-			padding: 4rem 1.5rem;
-			border-radius: 24px;
-		}
-
-		.cta h2 {
-			font-size: 1.75rem;
-		}
-	}
-
-	@media (prefers-reduced-motion: reduce) {
-		.floating-whatsapp {
-			animation: none;
 		}
 	}
 </style>
