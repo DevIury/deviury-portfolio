@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import WhatsAppIcon from '../../components/WhatsAppIcon.astro';
 import { getCollection, render } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -12,9 +13,70 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const { Content } = await render(post);
+
+const wordCount = post.body?.split(/\s+/).length ?? 0;
+const readingTime = Math.max(1, Math.ceil(wordCount / 200));
+
+const articleSchema = {
+	"@context": "https://schema.org",
+	"@type": "BlogPosting",
+	"headline": post.data.title,
+	"description": post.data.description,
+	"datePublished": post.data.date.toISOString(),
+	"author": {
+		"@type": "Person",
+		"name": "DevIury",
+		"url": "https://deviury.com"
+	},
+	"publisher": {
+		"@type": "Organization",
+		"name": "DevIury - Web Designer",
+		"logo": {
+			"@type": "ImageObject",
+			"url": "https://deviury.com/logo-deviury.webp"
+		}
+	},
+	"image": post.data.image ? `https://deviury.com${post.data.image}` : "https://deviury.com/og-image.png",
+	"mainEntityOfPage": {
+		"@type": "WebPage",
+		"@id": `https://deviury.com/blog/${post.id.replace(/\.md$/, '')}`
+	}
+};
+
+const breadcrumbSchema = {
+	"@context": "https://schema.org",
+	"@type": "BreadcrumbList",
+	"itemListElement": [
+		{
+			"@type": "ListItem",
+			"position": 1,
+			"name": "Home",
+			"item": "https://deviury.com"
+		},
+		{
+			"@type": "ListItem",
+			"position": 2,
+			"name": "Blog",
+			"item": "https://deviury.com/blog"
+		},
+		{
+			"@type": "ListItem",
+			"position": 3,
+			"name": post.data.title
+		}
+	]
+};
 ---
 
-<Layout title={`${post.data.title} | Blog - DevIury`}>
+<Layout
+	title={`${post.data.title} | Blog - DevIury`}
+	description={post.data.description}
+	ogImage={post.data.image}
+	ogType="article"
+>
+	<script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+	<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
 	<header class="header">
 		<nav class="nav">
 			<a href="/" class="logo"><img src="/logo-deviury.webp" alt="DevIury" height="82"></a>
@@ -35,14 +97,14 @@ const { Content } = await render(post);
 	</header>
 
 	<div class="overlay" id="overlay"></div>
-	<aside class="sidebar" id="sidebar">
+	<aside class="sidebar" id="sidebar" aria-label="Menu de navegação mobile">
 		<button class="sidebar__close" id="sidebar-close" aria-label="Fechar menu de navegação">
 			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
 				<path d="M18 6L6 18M6 6l12 12"/>
 			</svg>
 		</button>
 		<a href="/" class="sidebar__logo"><img src="/logo-deviury.webp" alt="DevIury - Página inicial" height="60"></a>
-		<nav class="sidebar__nav" aria-label="Menu de navegação mobile">
+		<nav class="sidebar__nav">
 			<span class="sidebar__label">Navegação</span>
 			<a href="/#servicos" class="sidebar__link">Serviços</a>
 			<a href="/#sobre" class="sidebar__link">Sobre</a>
@@ -51,23 +113,36 @@ const { Content } = await render(post);
 			<a href="/#contato" class="sidebar__link">Contato</a>
 		</nav>
 		<a href="https://wa.me/5538998894811?text=Ol%C3%A1!%20Vim%20pelo%20blog%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer" class="sidebar__cta">
-			<svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-				<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-			</svg>
+			<WhatsAppIcon size={22} />
 			Fale Comigo
 		</a>
 	</aside>
 
 	<article class="post-page">
 		<div class="container">
-			<a href="/blog" class="back-link">← Voltar ao blog</a>
+			<nav class="breadcrumbs" aria-label="Breadcrumb">
+				<ol>
+					<li><a href="/">Home</a></li>
+					<li><a href="/blog">Blog</a></li>
+					<li aria-current="page">{post.data.title}</li>
+				</ol>
+			</nav>
 
 			<div class="post-header">
+				{post.data.image && (
+					<img class="post-featured-image" src={post.data.image} alt={post.data.title} width="800" height="400" loading="eager" />
+				)}
 				<div class="post-meta">
 					<time datetime={post.data.date.toISOString()}>
 						{post.data.date.toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric' })}
 					</time>
-					<span class="post-tags">{post.data.tags.join(' · ')}</span>
+					<span class="post-separator">·</span>
+					<span>{readingTime} min de leitura</span>
+					<span class="post-separator">·</span>
+					<span class="post-author">DevIury</span>
+				</div>
+				<div class="post-tags">
+					{post.data.tags.map(tag => <span class="tag">{tag}</span>)}
 				</div>
 				<h1>{post.data.title}</h1>
 				<p class="post-description">{post.data.description}</p>
@@ -91,9 +166,7 @@ const { Content } = await render(post);
 				<p class="cta-subtitle">Fale comigo e receba um orçamento para seu site em Curvelo!</p>
 				<div class="cta-buttons">
 					<a href="https://wa.me/5538998894811?text=Ol%C3%A1!%20Vim%20pelo%20blog%20e%20gostaria%20de%20um%20or%C3%A7amento%20para%20cria%C3%A7%C3%A3o%20de%20site." target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-						<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-							<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-						</svg>
+						<WhatsAppIcon size={20} />
 						Fale no WhatsApp
 					</a>
 				</div>
@@ -108,9 +181,7 @@ const { Content } = await render(post);
 	</footer>
 
 	<a href="https://wa.me/5538998894811?text=Ol%C3%A1!%20Vim%20pelo%20blog%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer" class="floating-whatsapp" aria-label="Fale comigo no WhatsApp">
-		<svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-			<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-		</svg>
+		<WhatsAppIcon size={28} />
 	</a>
 
 	<script>
@@ -123,17 +194,41 @@ const { Content } = await render(post);
 			sidebar?.classList.add('open');
 			overlay?.classList.add('visible');
 			document.body.style.overflow = 'hidden';
+			sidebarClose?.focus();
 		}
 
 		function closeMenu() {
 			sidebar?.classList.remove('open');
 			overlay?.classList.remove('visible');
 			document.body.style.overflow = '';
+			menuBtn?.focus();
 		}
 
 		menuBtn?.addEventListener('click', openMenu);
 		overlay?.addEventListener('click', closeMenu);
 		sidebarClose?.addEventListener('click', closeMenu);
+
+		sidebar?.addEventListener('keydown', (e) => {
+			if (e.key === 'Escape') {
+				closeMenu();
+				return;
+			}
+			if (e.key !== 'Tab' || !sidebar) return;
+			const focusable = sidebar.querySelectorAll('a[href], button, [tabindex]:not([tabindex="-1"])');
+			const first = focusable[0];
+			const last = focusable[focusable.length - 1];
+			if (e.shiftKey) {
+				if (document.activeElement === first) {
+					e.preventDefault();
+					last.focus();
+				}
+			} else {
+				if (document.activeElement === last) {
+					e.preventDefault();
+					first.focus();
+				}
+			}
+		});
 
 		document.querySelectorAll('.sidebar__link').forEach(link => {
 			link.addEventListener('click', closeMenu);
@@ -144,6 +239,40 @@ const { Content } = await render(post);
 <style>
 	.post-page {
 		padding: 8rem 1.5rem 4rem;
+	}
+
+	.breadcrumbs {
+		max-width: 800px;
+		margin: 0 auto 2rem;
+	}
+
+	.breadcrumbs ol {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+		list-style: none;
+		padding: 0;
+		font-size: 0.85rem;
+	}
+
+	.breadcrumbs li:not(:last-child)::after {
+		content: '/';
+		margin-left: 0.5rem;
+		color: var(--text-gray);
+	}
+
+	.breadcrumbs a {
+		color: var(--text-gray);
+		text-decoration: none;
+		transition: color 0.2s;
+	}
+
+	.breadcrumbs a:hover {
+		color: var(--primary);
+	}
+
+	.breadcrumbs [aria-current="page"] {
+		color: var(--text-white);
 	}
 
 	.back-link {
@@ -161,6 +290,15 @@ const { Content } = await render(post);
 		color: var(--primary);
 	}
 
+	.post-featured-image {
+		width: 100%;
+		height: auto;
+		border-radius: 16px;
+		margin-bottom: 2rem;
+		object-fit: cover;
+		max-height: 400px;
+	}
+
 	.post-header {
 		max-width: 800px;
 		margin: 0 auto 3rem;
@@ -169,14 +307,37 @@ const { Content } = await render(post);
 	.post-meta {
 		display: flex;
 		align-items: center;
-		gap: 1rem;
+		flex-wrap: wrap;
+		gap: 0.5rem;
 		font-size: 0.85rem;
 		color: var(--text-gray);
 		margin-bottom: 1rem;
 	}
 
-	.post-tags {
+	.post-separator {
+		opacity: 0.4;
+	}
+
+	.post-author {
 		color: var(--primary);
+		font-weight: 500;
+	}
+
+	.post-tags {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+		margin-bottom: 1rem;
+	}
+
+	.tag {
+		padding: 0.25rem 0.75rem;
+		background: rgba(0, 230, 118, 0.1);
+		border: 1px solid rgba(0, 230, 118, 0.2);
+		border-radius: 50px;
+		font-size: 0.75rem;
+		color: var(--primary);
+		font-weight: 500;
 	}
 
 	.post-header h1 {
@@ -312,45 +473,6 @@ const { Content } = await render(post);
 	.cta-subtitle {
 		color: var(--text-gray);
 		margin-bottom: 2rem;
-	}
-
-	.btn {
-		display: inline-flex;
-		align-items: center;
-		gap: 0.5rem;
-		padding: 0.85rem 1.5rem;
-		border-radius: 10px;
-		font-size: 0.9rem;
-		font-weight: 600;
-		text-decoration: none;
-		cursor: pointer;
-		border: none;
-		transition: all 0.2s;
-	}
-
-	.btn-primary {
-		background: linear-gradient(135deg, #00C853, #00E676, #69F0AE);
-		color: #fff;
-	}
-
-	.post-cta {
-		max-width: 800px;
-		margin: 3rem auto;
-		padding: 2.5rem;
-		background: var(--bg-card);
-		border: 1px solid var(--border);
-		border-radius: 16px;
-		text-align: center;
-	}
-
-	.post-cta h2 {
-		font-size: 1.5rem;
-		margin-bottom: 0.75rem;
-	}
-
-	.post-cta p {
-		color: var(--text-gray);
-		margin-bottom: 1.5rem;
 	}
 
 	.btn {
@@ -576,6 +698,12 @@ const { Content } = await render(post);
 		border-radius: 16px;
 		font-size: 1.15rem;
 		font-weight: 700;
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.floating-whatsapp {
+			animation: none;
+		}
 	}
 
 	@media (max-width: 768px) {

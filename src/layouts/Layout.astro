@@ -4,10 +4,18 @@ import { ViewTransitions } from 'astro:transitions';
 interface Props {
 	title: string;
 	description?: string;
+	ogImage?: string;
+	ogType?: string;
 }
 
-const { title, description = "DevIury - Web Designer profissional em Curvelo/MG. Crio sites modernos, rápidos e otimizados para converter visitantes em clientes. Orçamento grátis." } = Astro.props;
+const {
+	title,
+	description = "DevIury - Web Designer profissional em Curvelo/MG. Crio sites modernos, rápidos e otimizados para converter visitantes em clientes. Orçamento grátis.",
+	ogImage = "/og-image.png",
+	ogType = "website"
+} = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, 'https://deviury.com');
+const ogImageURL = ogImage.startsWith('http') ? ogImage : `https://deviury.com${ogImage}`;
 ---
 
 <!doctype html>
@@ -26,6 +34,7 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://deviury.com');
 		<meta name="robots" content="index, follow" />
 		<meta name="author" content="DevIury" />
 		<link rel="canonical" href={canonicalURL} />
+		<link rel="alternate" hreflang="pt-BR" href={canonicalURL.href} />
 
 		<!-- Geo Meta -->
 		<meta name="geo.region" content="MG" />
@@ -34,19 +43,19 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://deviury.com');
 		<meta name="ICBM" content="-18.7553, -44.4297" />
 
 		<!-- Open Graph -->
-		<meta property="og:type" content="website" />
-		<meta property="og:title" content="DevIury | Web Designer em Curvelo/MG" />
-		<meta property="og:description" content="Web Designer profissional em Curvelo/MG. Crio sites modernos, rápidos e otimizados para converter visitantes em clientes." />
-		<meta property="og:url" content="https://deviury.com" />
-		<meta property="og:image" content="https://deviury.com/og-image.png" />
+		<meta property="og:type" content={ogType} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:url" content={canonicalURL.href} />
+		<meta property="og:image" content={ogImageURL} />
 		<meta property="og:locale" content="pt_BR" />
 		<meta property="og:site_name" content="DevIury - Web Designer em Curvelo" />
 
 		<!-- Twitter Card -->
 		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="twitter:title" content="DevIury | Web Designer em Curvelo/MG" />
-		<meta name="twitter:description" content="Web Designer profissional em Curvelo/MG. Crio sites modernos, rápidos e otimizados para converter visitantes em clientes." />
-		<meta name="twitter:image" content="https://deviury.com/og-image.png" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={ogImageURL} />
 
 		<!-- JSON-LD LocalBusiness -->
 		<script type="application/ld+json">
@@ -56,7 +65,7 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://deviury.com');
 			"name": "DevIury - Web Designer",
 			"description": "Web Designer profissional em Curvelo/MG. Crio sites modernos, rápidos e otimizados para converter visitantes em clientes.",
 			"url": "https://deviury.com",
-			"image": "https://deviury.com/iury-profissional.jpeg",
+			"image": "https://deviury.com/iury-profissional.webp",
 			"telephone": "+5538998894811",
 			"email": "contato@deviury.com",
 			"address": {
@@ -148,21 +157,32 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://deviury.com');
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-		
+
 		<!-- Performance: Preload critical resources -->
-		<link rel="preload" href="/iury-profissional.jpeg" as="image" fetchpriority="high">
-		<link rel="preload" href="/logo-deviury.png" as="image">
-		
+		<link rel="preload" href="/iury-profissional.webp" as="image" fetchpriority="high">
+		<link rel="preload" href="/logo-deviury.webp" as="image">
+
 		<!-- DNS Prefetch for external resources -->
 		<link rel="dns-prefetch" href="https://wa.me">
 
-		<!-- Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-NSWZ3EKZX9"></script>
-		<script>
+		<!-- Google Analytics (gated by cookie consent) -->
+		<script is:inline>
 			window.dataLayer = window.dataLayer || [];
 			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
-			gtag('config', 'G-NSWZ3EKZX9');
+
+			function initGA() {
+				if (document.querySelector('script[src*="googletagmanager"]')) return;
+				const s = document.createElement('script');
+				s.async = true;
+				s.src = 'https://www.googletagmanager.com/gtag/js?id=G-NSWZ3EKZX9';
+				document.head.appendChild(s);
+				gtag('js', new Date());
+				gtag('config', 'G-NSWZ3EKZX9');
+			}
+
+			if (localStorage.getItem('cookieConsent') === 'accepted') {
+				initGA();
+			}
 		</script>
 
 		<ViewTransitions />
@@ -190,6 +210,7 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://deviury.com');
 			cookieAccept?.addEventListener('click', () => {
 				localStorage.setItem('cookieConsent', 'accepted');
 				cookieConsent?.classList.remove('visible');
+				if (typeof initGA === 'function') initGA();
 			});
 
 			cookieReject?.addEventListener('click', () => {
@@ -355,5 +376,25 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://deviury.com');
 
 	body:not(.section-transition) {
 		animation: fade-in 0.12s ease-out;
+	}
+
+	/* Reduced motion */
+	@media (prefers-reduced-motion: reduce) {
+		*, *::before, *::after {
+			animation-duration: 0.01ms !important;
+			animation-iteration-count: 1 !important;
+			transition-duration: 0.01ms !important;
+			scroll-behavior: auto !important;
+		}
+
+		::view-transition-old(root),
+		::view-transition-new(root) {
+			animation: none;
+		}
+
+		body.section-transition,
+		body:not(.section-transition) {
+			animation: none;
+		}
 	}
 </style>

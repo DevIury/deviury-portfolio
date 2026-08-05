@@ -58,7 +58,7 @@ Isso dá autonomia e segurança para sua estratégia de marketing digital. Você
 
 ## 7. Investimento com Retorno Comprovado
 
-Um site profissional é um investimento que se paga rapidamente. Com mais clientes encontrando você online, o retorno financeiro vem em poucos meses. Diferente de其他 investimentos que demoram para gerar resultado, o site trabalha imediatamente.
+Um site profissional é um investimento que se paga rapidamente. Com mais clientes encontrando você online, o retorno financeiro vem em poucos meses. Diferente de outros investimentos que demoram para gerar resultado, o site trabalha imediatamente.
 
 Além disso, um site bem feito dura anos. Com manutenção adequada, ele continua gerando resultados por muito tempo, sem necessidade de grandes investimentos adicionais.
 
