@@ -1,0 +1,85 @@
+---
+---
+
+<script is:inline>
+(function() {
+	if (localStorage.getItem('cookieConsent') !== 'accepted') return;
+	if (typeof gtag !== 'function') return;
+
+	var firedEvents = {};
+	var scrollFired = {};
+	var timeFired = {};
+
+	function track(name, params) {
+		if (firedEvents[name]) return;
+		firedEvents[name] = true;
+		gtag('event', name, params || {});
+	}
+
+	document.addEventListener('click', function(e) {
+		var el = e.target.closest('a, button');
+		if (!el) return;
+
+		var href = el.getAttribute('href') || '';
+
+		if (href.indexOf('wa.me') !== -1) {
+			track('whatsapp_click', { link_url: href });
+		} else if (href.indexOf('tel:') === 0) {
+			track('phone_click', { link_url: href });
+		} else if (href.indexOf('mailto:') === 0) {
+			track('email_click', { link_url: href });
+		} else if (el.closest('.faq-question')) {
+			setTimeout(function() {
+				var expanded = el.getAttribute('aria-expanded');
+				if (expanded === 'true') {
+					var title = el.querySelector('.faq-title');
+					gtag('event', 'faq_open', {
+						question_text: title ? title.textContent.trim() : ''
+					});
+				}
+			}, 50);
+		} else if (el.classList.contains('btn-primary')) {
+			track('cta_click', { link_url: href });
+		} else if (el.classList.contains('portfolio-card')) {
+			track('portfolio_view', { link_url: href });
+		}
+	});
+
+	function onScroll() {
+		var scrollPct = Math.round(
+			(window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100
+		);
+		var depths = [25, 50, 75, 100];
+		for (var i = 0; i < depths.length; i++) {
+			var d = depths[i];
+			if (scrollPct >= d && !scrollFired[d]) {
+				scrollFired[d] = true;
+				gtag('event', 'scroll_depth', { percent: d });
+			}
+		}
+	}
+
+	var scrollTimer;
+	window.addEventListener('scroll', function() {
+		clearTimeout(scrollTimer);
+		scrollTimer = setTimeout(onScroll, 200);
+	}, { passive: true });
+
+	var startTime = Date.now();
+	var intervals = [
+		{ seconds: 30, fired: false },
+		{ seconds: 60, fired: false },
+		{ seconds: 120, fired: false }
+	];
+
+	setInterval(function() {
+		var elapsed = Math.floor((Date.now() - startTime) / 1000);
+		for (var i = 0; i < intervals.length; i++) {
+			if (!intervals[i].fired && elapsed >= intervals[i].seconds) {
+				intervals[i].fired = true;
+				gtag('event', 'time_on_page', { seconds: intervals[i].seconds });
+			}
+		}
+	}, 5000);
+})();
+</script>
