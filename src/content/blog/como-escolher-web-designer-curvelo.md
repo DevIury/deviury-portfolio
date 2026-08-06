@@ -62,6 +62,13 @@ Se possível, entre em contato com clientes anteriores e pergunte sobre a experi
 
 Escolher o web designer certo em Curvelo é um investimento que vai gerar retorno para o seu negócio. Não tenha pressa, pesquise, faça as perguntas certas e escolha um profissional que entenda suas necessidades e que demonstre experiência com projetos similares ao seu.
 
-Um bom web designer não é apenas alguém que sabe criar sites bonitos. É alguém que entende de estratégia, de conversão, de SEO e de experiência do usuário. É alguém que pensa no seu negócio como um todo e não apenas na estética da página.
+Um bom web designer não é apenas alguém que sabe criar sites bonitos. É alguém que entende de [estratégia, de conversão](/blog/landing-page-site-institucional), de SEO e de experiência do usuário. É alguém que pensa no seu negócio como um todo e não apenas na estética da página.
 
-Lembre-se: seu site é frequentemente o primeiro contato que um cliente tem com sua empresa. Faça dele uma experiência positiva, rápida e profissional. Isso faz toda a diferença entre um visitante que vira cliente e um que vai para a concorrência.
+Lembre-se: seu site é frequentemente o primeiro contato que um cliente tem com sua empresa. Faça dele uma experiência positiva, rápida e profissional. Isso faz toda a diferença entre um visitante que vira cliente e um que vai para a concorrência. Saiba mais sobre [criação de sites profissionais em Curvelo](/criacao-de-sites-curvelo) e como posso ajudar sua empresa.
+
+---
+
+**Leia também:**
+- [Quanto custa um site profissional em Curvelo?](/blog/quanto-custa-site-profissional)
+- [7 motivos para sua empresa ter um site](/blog/7-motivos-empresa-ter-site)
+- [Site lento faz você perder clientes](/blog/site-lento-perde-clientes)

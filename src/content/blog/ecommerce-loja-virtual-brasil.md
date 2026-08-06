@@ -35,7 +35,7 @@ Cartão de débito e carteiras digitais como PicPay e Mercado Pago também são 
 
 ## Integração com WhatsApp
 
-O WhatsApp é a principal ferramenta de comunicação do brasileiro, com mais de 200 milhões de usuários. Integrar sua loja virtual com o WhatsApp é praticamente obrigatório. Isso inclui botão de WhatsApp no site, notificações de pedidos via WhatsApp e atendimento ao cliente pelo aplicativo.
+O WhatsApp é a principal ferramenta de comunicação do brasileiro, com mais de 200 milhões de usuários. Integrar sua loja virtual com o WhatsApp é praticamente obrigatório. Isso inclui [botão de WhatsApp no site](/servico-de-site-para-whatsapp), notificações de pedidos via WhatsApp e atendimento ao cliente pelo aplicativo.
 
 Muitas plataformas oferecem integração nativa com WhatsApp Business. Isso permite enviar confirmações de pedido, atualizações de envio e até mesmo oferecer suporte técnico diretamente pelo aplicativo. A experiência do cliente melhora significativamente e a taxa de satisfação aumenta.
 
@@ -81,4 +81,11 @@ O retorno sobre investimento pode ser significativo. Uma loja virtual bem gerida
 
 Criar uma loja virtual no Brasil é uma oportunidade real de crescimento para qualquer empresa. O mercado de e-commerce está em constante expansão, o consumidor brasileiro está cada vez mais acostumado a comprar online e as ferramentas disponíveis são acessíveis e eficientes.
 
-Escolha a plataforma certa, integre os meios de pagamento brasileiros, ofereça opções de frete adequadas, invista em marketing digital e gerencie sua loja com profissionalismo. Com estratégia e execução correta, sua loja virtual pode se tornar um canal de vendas poderoso e lucrativo. O momento para vender online no Brasil é agora.
+Escolha a plataforma certa, integre os meios de pagamento brasileiros, ofereça opções de frete adequadas, invista em marketing digital e gerencie sua loja com profissionalismo. Com estratégia e execução correta, sua loja virtual pode se tornar um canal de vendas poderoso e lucrativo. Saiba mais sobre [criação de loja virtual](/loja-virtual-ecommerce) e comece a vender online agora.
+
+---
+
+**Leia também:**
+- [Quanto custa um site profissional em Curvelo?](/blog/quanto-custa-site-profissional)
+- [Site lento faz você perder clientes](/blog/site-lento-perde-clientes)
+- [7 motivos para sua empresa ter um site](/blog/7-motivos-empresa-ter-site)

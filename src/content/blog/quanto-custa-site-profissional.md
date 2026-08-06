@@ -32,7 +32,7 @@ Pense no site como um investimento. Um site bem feito retorna o investimento rap
 
 ## O Que Está Incluído em um Site Profissional
 
-Quando você contrata um profissional para criar seu site, deve esperar muito mais do que apenas páginas bonitas. Um site profissional inclui design personalizado, otimização para celular, configuração de velocidade, integração com WhatsApp, formulários de contato, SEO básico, certificado de segurança e suporte pós-entrega.
+Quando você contrata um profissional para criar seu site, deve esperar muito mais do que apenas páginas bonitas. Um site profissional inclui design personalizado, [otimização para celular](/blog/site-lento-perde-clientes), configuração de velocidade, [integração com WhatsApp](/servico-de-site-para-whatsapp), formulários de contato, SEO básico, certificado de segurança e suporte pós-entrega.
 
 Tudo isso faz parte de um projeto completo. Se o profissional não oferece esses serviços, ele não está entregando um site profissional de verdade.
 
@@ -48,4 +48,11 @@ Considere o retorno do investimento. Um site que traz 10 novos clientes por mês
 
 O custo de um site profissional em Curvelo varia de acordo com a complexidade, o design e os serviços inclusos. O mais importante é investir em qualidade e escolher um profissional que entenda seu negócio e seus objetivos.
 
-Não escolha pelo preço mais barato. Escolha pelo melhor custo-benefício, pela experiência do profissional e pela qualidade do trabalho entregue. Seu site é a porta de entrada digital da sua empresa — faça dele uma experiência positiva.
+Não escolha pelo preço mais barato. Escolha pelo melhor custo-benefício, pela experiência do profissional e pela qualidade do trabalho entregue. Seu site é a porta de entrada digital da sua empresa — faça dele uma experiência positiva. Conheça nossa [criação de sites em Curvelo](/criacao-de-sites-curvelo) e solicite um orçamento.
+
+---
+
+**Leia também:**
+- [7 motivos para sua empresa ter um site](/blog/7-motivos-empresa-ter-site)
+- [Como escolher o melhor web designer em Curvelo](/blog/como-escolher-web-designer-curvelo)
+- [Site lento faz você perder clientes](/blog/site-lento-perde-clientes)

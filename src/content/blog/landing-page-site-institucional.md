@@ -20,7 +20,7 @@ O design é pensado para conversão. Cada elemento visual, cada texto, cada bot�
 
 ### Quando Usar uma Landing Page
 
-Landing pages são ideais para promoções sazonais, lançamentos de produtos, captação de leads, agendamentos e eventos. Se você tem uma campanha específica e quer capturar contatos ou vender um produto concreto, uma landing page é a melhor escolha.
+Uma landing page é ideal para promoções sazonais, lançamentos de produtos, captação de leads, agendamentos e eventos. Se você tem uma campanha específica e quer capturar contatos ou vender um produto concreto, uma [landing page](/landing-page-curvelo) é a melhor escolha.
 
 Por exemplo, se você é um dentista e quer promover uma limpeza dental por um preço especial, uma landing page com essa oferta específica vai converter muito mais do que uma página genérica de um site institucional.
 
@@ -38,7 +38,7 @@ O design é mais tradicional, com menu de navegação, rodapé com links e diver
 
 ### Quando Usar um Site Institucional
 
-Site institucional é ideal para empresas que querem presença online completa, que têm vários serviços ou produtos, que precisam de várias páginas com informações detalhadas e que buscam transmitir credibilidade e profissionalismo.
+Um [site institucional](/site-institucional-curvelo) é ideal para empresas que querem presença online completa, que têm vários serviços ou produtos, que precisam de várias páginas com informações detalhadas e que buscam transmitir credibilidade e profissionalismo.
 
 Clínicas, escritórios, lojas, restaurantes, salões, oficinas — qualquer negócio que queira ter uma presença profissional online se beneficia de um site institucional. É a escolha certa para quem quer investir em algo duradouro e abrangente.
 
@@ -98,4 +98,11 @@ A escolha entre landing page e site institucional depende do seu objetivo. Não 
 
 Se você não sabe qual é a melhor opção para o seu negócio, analise seus objetivos, seu orçamento e sua estratégia de marketing. Considere o que você quer alcançar e escolha a ferramenta que melhor atende essas necessidades.
 
-Lembre-se: tanto uma landing page quanto um site institucional são investimentos que trazem retorno. O mais importante é ter presença digital e ser encontrado pelos clientes que estão procurando pelo que você oferece.
+Lembre-se: tanto uma landing page quanto um site institucional são investimentos que trazem retorno. O mais importante é ter presença digital e ser encontrado pelos clientes que estão procurando pelo que você oferece. Saiba mais sobre [criação de sites em Curvelo](/criacao-de-sites-curvelo) e escolha a melhor opção para o seu negócio.
+
+---
+
+**Leia também:**
+- [7 motivos para sua empresa ter um site](/blog/7-motivos-empresa-ter-site)
+- [Quanto custa um site profissional em Curvelo?](/blog/quanto-custa-site-profissional)
+- [Landing Page para empresas em São Paulo](/blog/landing-page-para-empresas-em-sp)

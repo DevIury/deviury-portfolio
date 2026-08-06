@@ -26,7 +26,7 @@ Muitos clientes pesquisam serviços à noite, nos fins de semana ou feriados. Se
 
 ## 3. SEO Local e Visibilidade no Google
 
-Com um site otimizado, sua empresa aparece nas buscas locais. Quando alguém pesquisar "restaurante em Curvelo", "salão de beleza perto de mim" ou "escritório de contabilidade Curvelo", seu site pode aparecer no topo dos resultados.
+Com um site otimizado para [SEO local](/blog/seo-local-curvelo), sua empresa aparece nas buscas locais. Quando alguém pesquisar "restaurante em Curvelo", "salão de beleza perto de mim" ou "escritório de contabilidade Curvelo", seu site pode aparecer no topo dos resultados.
 
 O SEO local é uma das formas mais eficazes de atrair clientes que estão procurando exatamente pelo que você oferece. Essas pessoas já têm intenção de compra, só precisam encontrar a empresa certa.
 
@@ -70,4 +70,11 @@ Ter um site profissional não é mais opcional — é necessário para qualquer 
 
 Um site profissional transmite credibilidade, trabalha 24 horas por dia, aparece no Google, gera mais vendas, diferencia sua empresa da concorrência, dá controle total sobre sua imagem e retorna o investimento rapidamente.
 
-Não espere mais. Comece hoje a construir a presença digital da sua empresa e veja a diferença que um site profissional faz para o seu negócio.
+Não espere mais. Comece hoje a construir a presença digital da sua empresa e veja a diferença que um site profissional faz para o seu negócio. Quer saber mais sobre [criação de sites em Curvelo](/criacao-de-sites-curvelo)? Entre em contato e descubra como posso ajudar sua empresa a crescer no digital.
+
+---
+
+**Leia também:**
+- [Quanto custa um site profissional em Curvelo?](/blog/quanto-custa-site-profissional)
+- [Landing Page x Site Institucional: qual escolher?](/blog/landing-page-site-institucional)
+- [SEO Local: como aparecer no Google em Curvelo](/blog/seo-local-curvelo)

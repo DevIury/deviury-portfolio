@@ -28,7 +28,7 @@ Analise os resultados e identifique os problemas. Geralmente, as causas são ima
 
 ## Como Melhorar a Velocidade
 
-A primeira coisa a fazer é otimizar as imagens. Imagens grandes são a causa mais comum de sites lentos. Use formatos modernos como WebP e comprima as imagens sem perder qualidade.
+A primeira coisa a fazer é otimizar as imagens. Imagens grandes são a causa mais comum de sites lentos. Use formatos modernos como WebP e comprima as imagens sem perder qualidade. Saiba mais sobre [criação de sites otimizados em Curvelo](/criacao-de-sites-curvelo).
 
 Reduza o número de plugins e scripts desnecessários. Cada plugin adiciona peso ao site e pode causar conflitos. Mantenha apenas o que é realmente necessário.
 
@@ -50,4 +50,11 @@ A velocidade do site é fundamental para o sucesso do seu negócio online. Sites
 
 Verifique a velocidade do seu site, identifique os problemas e tome as medidas necessárias. Inviste em performance e ofereça a melhor experiência possível para seus visitantes.
 
-Seu site precisa carregar rápido. Cada segundo conta.
+Seu site precisa carregar rápido. Cada segundo conta. Quer saber se seu site está lento? [Entre em contato](/criacao-de-sites-curvelo) e faça uma auditoria de velocidade gratuita.
+
+---
+
+**Leia também:**
+- [SEO Local: como aparecer no Google em Curvelo](/blog/seo-local-curvelo)
+- [Quanto custa um site profissional em Curvelo?](/blog/quanto-custa-site-profissional)
+- [7 motivos para sua empresa ter um site](/blog/7-motivos-empresa-ter-site)

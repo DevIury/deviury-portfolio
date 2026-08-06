@@ -15,7 +15,7 @@ SEO local é o conjunto de técnicas de otimização que fazem sua empresa apare
 
 O Google utiliza três fatores principais para determinar os resultados locais: relevância, distância e proeminência. Relevância é o quão bem seu negócio corresponde à busca do usuário. Distância é a proximidade entre sua empresa e o local da pesquisa. Proeminência é a reputação do seu negócio online — avaliações, links, menções e autoridade.
 
-Para otimizar esses três fatores, você precisa trabalhar em diversas frentes. Primeiro, seu perfil no Google Meu Negócio precisa estar completo e atualizado. Segundo, seu site precisa estar otimizado para buscas locais. Terceiro, sua presença online precisa ser consistente em diversos diretórios e plataformas.
+Para otimizar esses três fatores, você precisa trabalhar em diversas frentes. Primeiro, seu perfil no Google Meu Negócio precisa estar completo e atualizado. Segundo, seu site precisa estar otimizado para buscas locais. Terceiro, sua presença online precisa ser consistente em diversos diretórios e plataformas. Saiba mais sobre [SEO local em Minas Gerais](/otimizacao-seo-local).
 
 ## Configurando o Google Meu Negócio
 
@@ -65,4 +65,11 @@ O Google Search Console revela quais palavras-chave estão trazendo tráfego par
 
 SEO local é uma das estratégias mais eficazes para empresas em Minas Gerais que querem atrair clientes pela internet. Com o Google Meu Negócio bem configurado, um site otimizado para buscas locais, conteúdo relevante e presença consistente nos diretórios, sua empresa pode aparecer nas primeiras posições do Google para buscas na sua região.
 
-Invista em SEO local com consistência e paciência. Os resultados não são imediatos, mas quando chegam, são duradouros e trazem tráfego qualificado e gratuito para o seu negócio. Em Minas Gerais, onde o consumidor pesquisa localmente antes de comprar, não ter presença nas buscas locais é perder dinheiro todos os dias.
+Invista em SEO local com consistência e paciência. Os resultados não são imediatos, mas quando chegam, são duradouros e trazem tráfego qualificado e gratuito para o seu negócio. Em Minas Gerais, onde o consumidor pesquisa localmente antes de comprar, não ter presença nas buscas locais é perder dinheiro todos os dias. Quer aparecer no Google? Conheça nosso [serviço de SEO local](/otimizacao-seo-local) para empresas em Minas Gerais.
+
+---
+
+**Leia também:**
+- [SEO Local em Curvelo: como aparecer no Google](/blog/seo-local-curvelo)
+- [Site lento faz você perder clientes](/blog/site-lento-perde-clientes)
+- [7 motivos para sua empresa ter um site](/blog/7-motivos-empresa-ter-site)
