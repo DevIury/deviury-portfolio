@@ -3,12 +3,16 @@ import WhatsAppIcon from './WhatsAppIcon.astro';
 
 interface Props {
 	message?: string;
+	visible?: boolean;
 }
 
-const { message = "Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento%20para%20cria%C3%A7%C3%A3o%20de%20site." } = Astro.props;
+const {
+	message = "Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento%20para%20cria%C3%A7%C3%A3o%20de%20site.",
+	visible = false
+} = Astro.props;
 ---
 
-<a href={`https://wa.me/5538998894811?text=${message}`} target="_blank" rel="noopener noreferrer" class="floating-whatsapp" aria-label="Fale comigo no WhatsApp">
+<a href={`https://wa.me/5538998894811?text=${message}`} target="_blank" rel="noopener noreferrer" class:list={["floating-whatsapp", { "hero-only": !visible }]} aria-label="Fale comigo no WhatsApp">
 	<WhatsAppIcon size={28} />
 </a>
 
@@ -28,6 +32,17 @@ const { message = "Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C
 		box-shadow: 0 4px 25px rgba(0, 230, 118, 0.5);
 		text-decoration: none;
 		animation: pulse-whatsapp 2s infinite;
+		z-index: 1000;
+	}
+
+	.hero-only {
+		display: none;
+	}
+
+	@media (min-width: 769px) {
+		.hero-only {
+			display: flex;
+		}
 	}
 
 	@keyframes pulse-whatsapp {
