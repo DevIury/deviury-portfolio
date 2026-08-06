@@ -6,7 +6,7 @@ import Layout from '../layouts/Layout.astro';
 	<a href="#main-content" class="sr-only" style="position:absolute;top:0;left:0;z-index:9999;padding:0.75rem 1.5rem;background:var(--primary);color:#000;font-weight:600;text-decoration:none;border-radius:0 0 8px 0;">Pular para o conteúdo</a>
 	<header class="header">
 		<nav class="nav">
-			<a href="#" class="logo"><img src="/logo-deviury.webp" alt="DevIury" height="82"></a>
+			<a href="#" class="logo"><img src="/logo-deviury.webp" alt="DevIury" width="240" height="82"></a>
 			<ul class="nav-links">
 				<li><a href="#servicos">Serviços</a></li>
 				<li><a href="#sobre">Sobre</a></li>
@@ -30,7 +30,7 @@ import Layout from '../layouts/Layout.astro';
 				<path d="M18 6L6 18M6 6l12 12"/>
 			</svg>
 		</button>
-		<a href="#" class="sidebar__logo"><img src="/logo-deviury.webp" alt="DevIury" height="60"></a>
+		<a href="#" class="sidebar__logo"><img src="/logo-deviury.webp" alt="DevIury" width="180" height="60"></a>
 		<nav class="sidebar__nav" aria-label="Menu de navegação mobile">
 			<span class="sidebar__label">Navegação</span>
 			<a href="#servicos" class="sidebar__link">Serviços</a>
@@ -74,7 +74,7 @@ import Layout from '../layouts/Layout.astro';
 				</div>
 			</div>
 			<div class="hero-image">
-				<img src="/iury-profissional.webp" alt="DevIury - Web Designer profissional em Curvelo/MG" width="400" height="500">
+				<img src="/iury-profissional.webp" alt="DevIury - Web Designer profissional em Curvelo/MG" width="400" height="500" fetchpriority="high">
 			</div>
 		</div>
 	</section>
@@ -207,7 +207,7 @@ import Layout from '../layouts/Layout.astro';
 			<h2>Projetos em Destaque</h2>
 			<p class="section-subtitle">Sites reais e novos desenvolvidos por mim</p>
 			<div class="portfolio-grid">
-				<a href="https://homevantagens.com.br" target="_blank" class="portfolio-card">
+				<a href="https://homevantagens.com.br" target="_blank" rel="noopener noreferrer" class="portfolio-card">
 					<div class="portfolio-image">
 						<img src="/home.webp" alt="Home Vantagens - Plataforma de benefícios criada por web designer em Curvelo" loading="lazy" width="600" height="400">
 						<div class="portfolio-overlay">
@@ -236,7 +236,7 @@ import Layout from '../layouts/Layout.astro';
 						</div>
 					</div>
 				</a>
-			<a href="https://wallacydesigner.com.br" target="_blank" class="portfolio-card">
+			<a href="https://wallacydesigner.com.br" target="_blank" rel="noopener noreferrer" class="portfolio-card">
 				<div class="portfolio-image">
 					<img src="/wallacy.webp" alt="Wallacy Designer - Portfólio de design gráfico por web designer Curvelo" loading="lazy" width="600" height="400">
 					<div class="portfolio-overlay">
@@ -264,7 +264,7 @@ import Layout from '../layouts/Layout.astro';
 					</div>
 				</div>
 			</a>
-			<a href="https://driffercvo.com.br" target="_blank" class="portfolio-card">
+			<a href="https://driffercvo.com.br" target="_blank" rel="noopener noreferrer" class="portfolio-card">
 				<div class="portfolio-image">
 					<img src="/driffer.webp" alt="Driffer - Gestão de frotas desenvolvida por desenvolvedor web Curvelo" loading="lazy" width="600" height="400">
 					<div class="portfolio-overlay">
@@ -293,7 +293,7 @@ import Layout from '../layouts/Layout.astro';
 					</div>
 				</div>
 			</a>
-			<a href="https://rgeenergia.pages.dev" target="_blank" class="portfolio-card">
+			<a href="https://rgeenergia.pages.dev" target="_blank" rel="noopener noreferrer" class="portfolio-card">
 				<div class="portfolio-image">
 					<img src="/rge.webp" alt="RGE Energia - Site institucional de energia solar em Curvelo MG" loading="lazy" width="600" height="400">
 					<div class="portfolio-overlay">
@@ -322,7 +322,7 @@ import Layout from '../layouts/Layout.astro';
 					</div>
 				</div>
 			</a>
-			<a href="https://coenergy-testando.pages.dev" target="_blank" class="portfolio-card">
+			<a href="https://coenergy-testando.pages.dev" target="_blank" rel="noopener noreferrer" class="portfolio-card">
 				<div class="portfolio-image">
 					<img src="/coenergy.webp" alt="CoEnergy - Site de soluções energéticas por criador de sites Curvelo" loading="lazy" width="600" height="400">
 					<div class="portfolio-overlay">
@@ -351,7 +351,7 @@ import Layout from '../layouts/Layout.astro';
 					</div>
 				</div>
 			</a>
-			<a href="https://somar-agrotech-teste.pages.dev" target="_blank" class="portfolio-card">
+			<a href="https://somar-agrotech-teste.pages.dev" target="_blank" rel="noopener noreferrer" class="portfolio-card">
 				<div class="portfolio-image">
 					<img src="/somar.webp" alt="Somar Agrotech - Site de agronegócio desenvolvido em Curvelo MG" loading="lazy" width="600" height="400">
 					<div class="portfolio-overlay">
@@ -380,7 +380,7 @@ import Layout from '../layouts/Layout.astro';
 					</div>
 				</div>
 			</a>
-			<a href="https://santo-antonio-teste.pages.dev" target="_blank" class="portfolio-card">
+			<a href="https://santo-antonio-teste.pages.dev" target="_blank" rel="noopener noreferrer" class="portfolio-card">
 				<div class="portfolio-image">
 					<img src="/santo-antonio.webp" alt="Hospital Santo Antônio - Site institucional de saúde em Curvelo" loading="lazy" width="600" height="400">
 					<div class="portfolio-overlay">
@@ -409,7 +409,7 @@ import Layout from '../layouts/Layout.astro';
 					</div>
 				</div>
 			</a>
-			<a href="https://rznet-teste.pages.dev" target="_blank" class="portfolio-card">
+			<a href="https://rznet-teste.pages.dev" target="_blank" rel="noopener noreferrer" class="portfolio-card">
 				<div class="portfolio-image">
 					<img src="/rznet.webp" alt="Rz Net - Provedor de internet com site criado em Curvelo MG" loading="lazy" width="600" height="400">
 					<div class="portfolio-overlay">
@@ -532,14 +532,14 @@ import Layout from '../layouts/Layout.astro';
 			<h2>O Que Meus Clientes Dizem</h2>
 			<div class="testimonials-grid">
 				<div class="testimonial-card">
-					<div class="testimonial-stars">★★★★★</div>
+					<div class="testimonial-stars" aria-label="5 de 5 estrelas">★★★★★</div>
 					<p>"Site profissional e as vendas aumentaram depois do lançamento."</p>
 					<div class="testimonial-author">
 						<strong>Home Vantagens</strong>
 					</div>
 				</div>
 				<div class="testimonial-card">
-					<div class="testimonial-stars">★★★★★</div>
+					<div class="testimonial-stars" aria-label="5 de 5 estrelas">★★★★★</div>
 					<p>"Entregou antes do prazo e o site ficou exatamente como eu imaginava."</p>
 					<div class="testimonial-author">
 						<strong>Wallacy Designer</strong>

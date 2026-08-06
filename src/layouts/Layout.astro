@@ -1,25 +1,28 @@
 ---
 import { ViewTransitions } from 'astro:transitions';
+import Analytics from '../components/Analytics.astro';
 
 interface Props {
 	title: string;
 	description?: string;
 	ogImage?: string;
 	ogType?: string;
+	lang?: string;
 }
 
 const {
 	title,
 	description = "DevIury - Web Designer profissional em Curvelo/MG. Crio sites modernos, rápidos e otimizados para converter visitantes em clientes. Orçamento grátis.",
 	ogImage = "/og-image.png",
-	ogType = "website"
+	ogType = "website",
+	lang = "pt-BR"
 } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, 'https://deviury.com');
 const ogImageURL = ogImage.startsWith('http') ? ogImage : `https://deviury.com${ogImage}`;
 ---
 
 <!doctype html>
-<html lang="pt-BR">
+<html lang={lang}>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -154,9 +157,44 @@ const ogImageURL = ogImage.startsWith('http') ? ogImage : `https://deviury.com${
 		}
 		</script>
 
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+		<!-- Self-hosted Inter font (no external requests) -->
+		<style>
+			@font-face {
+				font-family: 'Inter';
+				font-style: normal;
+				font-weight: 400;
+				font-display: swap;
+				src: url('/fonts/inter/inter-latin-400-normal.woff2') format('woff2');
+			}
+			@font-face {
+				font-family: 'Inter';
+				font-style: normal;
+				font-weight: 500;
+				font-display: swap;
+				src: url('/fonts/inter/inter-latin-500-normal.woff2') format('woff2');
+			}
+			@font-face {
+				font-family: 'Inter';
+				font-style: normal;
+				font-weight: 600;
+				font-display: swap;
+				src: url('/fonts/inter/inter-latin-600-normal.woff2') format('woff2');
+			}
+			@font-face {
+				font-family: 'Inter';
+				font-style: normal;
+				font-weight: 700;
+				font-display: swap;
+				src: url('/fonts/inter/inter-latin-700-normal.woff2') format('woff2');
+			}
+			@font-face {
+				font-family: 'Inter';
+				font-style: normal;
+				font-weight: 800;
+				font-display: swap;
+				src: url('/fonts/inter/inter-latin-800-normal.woff2') format('woff2');
+			}
+		</style>
 
 		<!-- Performance: Preload critical resources -->
 		<link rel="preload" href="/iury-profissional.webp" as="image" fetchpriority="high">
@@ -178,6 +216,10 @@ const ogImageURL = ogImage.startsWith('http') ? ogImage : `https://deviury.com${
 				document.head.appendChild(s);
 				gtag('js', new Date());
 				gtag('config', 'G-NSWZ3EKZX9');
+				gtag('event', 'conversion_ready', {
+					page_location: window.location.href,
+					page_title: document.title
+				});
 			}
 
 			if (localStorage.getItem('cookieConsent') === 'accepted') {
@@ -186,6 +228,7 @@ const ogImageURL = ogImage.startsWith('http') ? ogImage : `https://deviury.com${
 		</script>
 
 		<ViewTransitions />
+		<Analytics />
 	</head>
 	<body>
 		<slot />
@@ -193,8 +236,8 @@ const ogImageURL = ogImage.startsWith('http') ? ogImage : `https://deviury.com${
 		<div class="cookie-consent" id="cookie-consent">
 			<p>Este site usa cookies para melhorar sua experiência. Ao continuar navegando, você concorda com o uso de cookies.</p>
 			<div class="cookie-buttons">
-				<button class="cookie-btn cookie-accept" id="cookie-accept">Aceitar</button>
-				<button class="cookie-btn cookie-reject" id="cookie-reject">Recusar</button>
+				<button class="cookie-btn cookie-accept" id="cookie-accept" aria-label="Aceitar cookies">Aceitar</button>
+				<button class="cookie-btn cookie-reject" id="cookie-reject" aria-label="Recusar cookies">Recusar</button>
 			</div>
 		</div>
 
