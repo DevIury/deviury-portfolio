@@ -1,8 +1,9 @@
 ---
-title: "Landing Page para Empresas em São Paulo: Como Aumentar suas Vendas"
-description: "Descubra como uma landing page profissional pode aumentar as vendas da sua empresa em São Paulo. Dicas e exemplos reais."
+title: "Landing Page para Empresas em S&#227;o Paulo: Como Aumentar suas Vendas"
+description: "Descubra como uma landing page profissional pode aumentar as vendas da sua empresa em S&#227;o Paulo. Dicas e exemplos reais."
 date: 2026-05-01
-tags: ["landing page", "são paulo", "vendas", "marketing digital"]
+image: "/blog-landing-page-sp.svg"
+tags: ["landing page", "s&#227;o paulo", "vendas", "marketing digital"]
 author: "DevIury"
 ---
 

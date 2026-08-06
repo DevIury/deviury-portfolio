@@ -1,8 +1,9 @@
 ---
-title: "Criação de Sites em Belo Horizonte: Guia Completo 2026"
-description: "Guia completo sobre criação de sites profissionais em Belo Horizonte. Descubra como escolher o melhor web designer para sua empresa em BH."
+title: "Cria&#231;&#227;o de Sites em Belo Horizonte: Guia Completo 2026"
+description: "Guia completo sobre cria&#231;&#227;o de sites profissionais em Belo Horizonte. Descubra como escolher o melhor web designer para sua empresa em BH."
 date: 2026-04-15
-tags: ["criação de sites", "belo horizonte", "web designer", "minas gerais"]
+image: "/blog-criacao-sites-bh.svg"
+tags: ["cria&#231;&#227;o de sites", "belo horizonte", "web designer", "minas gerais"]
 author: "DevIury"
 ---
 
