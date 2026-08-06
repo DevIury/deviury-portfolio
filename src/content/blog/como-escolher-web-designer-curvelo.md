@@ -1,6 +1,6 @@
 ---
 title: "Como Escolher o Melhor Web Designer em Curvelo"
-description: "Guia completo para escolher um web designer profissional em Curvelo/MG. Saiba o que verificar, perguntas importantes e como identificar um bom profissional."
+description: "Guia completo para escolher um web designer profissional em Curvelo/MG. Saiba o que verificar, perguntas importantes e como identificar o profissional ideal para o seu projeto."
 date: 2026-07-15
 image: "/blog-web-designer-curvelo.svg"
 tags: ["web designer", "curvelo", "dicas"]

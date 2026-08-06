@@ -1,6 +1,6 @@
 ---
 title: "Por Que um Site Lento Faz Você Perder Clientes"
-description: "Descubra como a velocidade do site afeta seus resultados. Saiba por que sites lentos afastam clientes e como melhorar o desempenho do seu site."
+description: "Descubra como a velocidade do site afeta seus resultados. Saiba por que sites lentos afastam clientes e como melhorar o desempenho do seu site para não perder mais vendas."
 date: 2026-06-20
 image: "/blog-site-lento.svg"
 tags: ["velocidade", "performance", "conversão"]

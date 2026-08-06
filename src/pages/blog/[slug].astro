@@ -249,50 +249,64 @@ const breadcrumbSchema = {
 	.post-content :global(h2) {
 		font-size: 1.5rem;
 		font-weight: 700;
-		margin-top: 2.5rem;
-		margin-bottom: 1rem;
+		margin-top: 3rem;
+		margin-bottom: 1.25rem;
 		color: #fff;
+		line-height: 1.3;
 	}
 
 	.post-content :global(h3) {
 		font-size: 1.25rem;
 		font-weight: 600;
-		margin-top: 2rem;
-		margin-bottom: 0.75rem;
+		margin-top: 2.5rem;
+		margin-bottom: 1rem;
 		color: var(--primary);
 	}
 
 	.post-content :global(p) {
 		color: var(--text-gray);
-		line-height: 1.8;
-		margin-bottom: 1rem;
+		line-height: 1.9;
+		margin-bottom: 1.5rem;
+		font-size: 1.05rem;
 	}
 
 	.post-content :global(ul),
 	.post-content :global(ol) {
 		color: var(--text-gray);
-		margin-bottom: 1rem;
+		margin-bottom: 1.5rem;
+		margin-top: 0.5rem;
 		padding-left: 1.5rem;
 	}
 
 	.post-content :global(li) {
-		margin-bottom: 0.5rem;
-		line-height: 1.7;
+		margin-bottom: 0.6rem;
+		line-height: 1.8;
 	}
 
 	.post-content :global(strong) {
 		color: #fff;
+		font-weight: 600;
 	}
 
 	.post-content :global(a) {
 		color: var(--primary);
 		text-decoration: none;
-		border-bottom: 1px solid transparent;
+		border-bottom: 1px solid rgba(0, 230, 118, 0.3);
 		transition: border-color 0.2s;
 	}
 
 	.post-content :global(a:hover) {
 		border-bottom-color: var(--primary);
+	}
+
+	.post-content :global(blockquote) {
+		border-left: 3px solid var(--primary);
+		padding: 1rem 1.5rem;
+		margin: 2rem 0;
+		background: rgba(0, 230, 118, 0.05);
+		border-radius: 0 12px 12px 0;
+		color: var(--text-gray);
+		font-style: italic;
 	}
 
 	.related-posts {

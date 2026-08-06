@@ -1,6 +1,6 @@
 ---
 title: "SEO Local: Como Aparecer no Google em Curvelo"
-description: "Aprenda como usar SEO local para sua empresa aparecer nas buscas do Google em Curvelo/MG. Dicas práticas para atrair mais clientes da sua região."
+description: "Aprenda como usar SEO local para sua empresa aparecer nas buscas do Google em Curvelo/MG. Dicas práticas para atrair mais clientes da sua região agora mesmo."
 date: 2026-06-25
 image: "/blog-seo-local.svg"
 tags: ["seo local", "google", "curvelo"]

@@ -1,6 +1,6 @@
 ---
 title: "Loja Virtual no Brasil: Guia Completo para Vender Online"
-description: "Guia completo para criar sua loja virtual no Brasil. Plataformas, custos, integração com WhatsApp e meios de pagamento."
+description: "Guia completo para criar sua loja virtual no Brasil. Plataformas, custos, integração com WhatsApp e meios de pagamento. Comece a vender online hoje!"
 date: 2026-06-15
 image: "/blog-loja-virtual-brasil.svg"
 tags: ["ecommerce", "loja virtual", "brasil", "vendas online"]

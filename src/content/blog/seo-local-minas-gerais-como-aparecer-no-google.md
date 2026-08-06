@@ -1,6 +1,6 @@
 ---
 title: "SEO Local em Minas Gerais: Como Aparecer no Google"
-description: "Aprenda como usar SEO local para sua empresa em Minas Gerais aparecer no Google Maps e nas primeiras posições."
+description: "Aprenda como usar SEO local para sua empresa em Minas Gerais aparecer no Google Maps e nas primeiras posições. Aumente sua visibilidade local!"
 date: 2026-05-15
 image: "/blog-seo-local-mg.svg"
 tags: ["seo", "seo local", "minas gerais", "google"]

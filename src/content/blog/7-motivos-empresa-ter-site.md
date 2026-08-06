@@ -1,6 +1,6 @@
 ---
 title: "7 Motivos Para Sua Empresa Ter um Site Profissional"
-description: "Descubra por que ter um site profissional é essencial para empresas em Curvelo/MG. Aumente a credibilidade, atraia mais clientes e cresça no digital."
+description: "Descubra por que ter um site profissional é essencial para empresas em Curvelo/MG. Aumente a credibilidade, atraia mais clientes e cresça no digital. Veja os 7 motivos!"
 date: 2026-07-10
 image: "/blog-site-profissional.svg"
 tags: ["site profissional", "empresas", "digital"]

@@ -1,6 +1,6 @@
 ---
 title: "Landing Page x Site Institucional: Qual Escolher?"
-description: "Entenda a diferença entre landing page e site institucional. Descubra qual é a melhor opção para o seu negócio em Curvelo/MG."
+description: "Entenda a diferença entre landing page e site institucional. Descubra qual é a melhor opção para o seu negócio em Curvelo/MG e tome a decisão certa."
 date: 2026-07-05
 image: "/blog-landing-page-site.svg"
 tags: ["landing page", "site institucional", "dicas"]
