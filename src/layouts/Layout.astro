@@ -27,6 +27,8 @@ const ogImageURL = ogImage.startsWith('http') ? ogImage : `https://deviury.com${
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/webp" href="/favicon-deviury.webp" />
+		<link rel="manifest" href="/manifest.json" />
+		<link rel="apple-touch-icon" href="/favicon-deviury.webp" />
 		<meta name="generator" content={Astro.generator} />
 		<meta name="theme-color" content="#00E676" />
 
@@ -60,17 +62,29 @@ const ogImageURL = ogImage.startsWith('http') ? ogImage : `https://deviury.com${
 		<meta name="twitter:description" content={description} />
 		<meta name="twitter:image" content={ogImageURL} />
 
-		<!-- JSON-LD LocalBusiness -->
+		<!-- JSON-LD Organization + ProfessionalService -->
 		<script type="application/ld+json">
 		{
 			"@context": "https://schema.org",
 			"@type": "ProfessionalService",
+			"@id": "https://deviury.com/#organization",
 			"name": "DevIury - Web Designer",
 			"description": "Web Designer profissional em Curvelo/MG. Crio sites modernos, rápidos e otimizados para converter visitantes em clientes.",
 			"url": "https://deviury.com",
 			"image": "https://deviury.com/iury-profissional.webp",
+			"logo": "https://deviury.com/logo-deviury.webp",
 			"telephone": "+5538998894811",
 			"email": "contato@deviury.com",
+			"founder": {
+				"@type": "Person",
+				"name": "DevIury",
+				"url": "https://deviury.com",
+				"image": "https://deviury.com/iury-profissional.webp",
+				"jobTitle": "Web Designer",
+				"sameAs": [
+					"https://wa.me/5538998894811"
+				]
+			},
 			"address": {
 				"@type": "PostalAddress",
 				"addressLocality": "Curvelo",
@@ -82,20 +96,34 @@ const ogImageURL = ogImage.startsWith('http') ? ogImage : `https://deviury.com${
 				"latitude": -18.7553,
 				"longitude": -44.4297
 			},
-			"areaServed": {
-				"@type": "City",
-				"name": "Curvelo",
-				"containedInPlace": {
-					"@type": "State",
-					"name": "Minas Gerais"
+			"areaServed": [
+				{
+					"@type": "City",
+					"name": "Curvelo",
+					"containedInPlace": { "@type": "State", "name": "Minas Gerais" }
+				},
+				{
+					"@type": "City",
+					"name": "Belo Horizonte",
+					"containedInPlace": { "@type": "State", "name": "Minas Gerais" }
+				},
+				{
+					"@type": "City",
+					"name": "São Paulo",
+					"containedInPlace": { "@type": "State", "name": "São Paulo" }
 				}
-			},
-			"serviceType": ["Web Design", "Criação de Sites", "Landing Page", "Site Institucional", "Desenvolvimento Web"],
+			],
+			"serviceType": ["Web Design", "Criação de Sites", "Landing Page", "Site Institucional", "Desenvolvimento Web", "SEO", "E-commerce"],
 			"priceRange": "$$",
 			"openingHours": "Mo-Su 08:00-20:00",
 			"sameAs": [
 				"https://wa.me/5538998894811"
-			]
+			],
+			"aggregateRating": {
+				"@type": "AggregateRating",
+				"ratingValue": "5",
+				"reviewCount": "8"
+			}
 		}
 		</script>
 
