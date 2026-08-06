@@ -1688,6 +1688,9 @@ import Layout from '../layouts/Layout.astro';
 		position: relative;
 		margin-top: 2rem;
 		overflow: hidden;
+		max-width: 600px;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 	.testimonials-track {
@@ -1698,19 +1701,15 @@ import Layout from '../layouts/Layout.astro';
 	.testimonials-track .testimonial-card {
 		min-width: 100%;
 		box-sizing: border-box;
-		padding-right: 1.5rem;
-	}
-
-	.testimonials-track .testimonial-card:last-child {
-		padding-right: 0;
 	}
 
 	.testimonial-card {
 		background: var(--bg-card);
 		border: 1px solid var(--border);
 		border-radius: 16px;
-		padding: 2rem;
+		padding: 1.75rem 2rem;
 		transition: all 0.3s;
+		text-align: center;
 	}
 
 	.testimonial-card:hover {
@@ -1719,34 +1718,35 @@ import Layout from '../layouts/Layout.astro';
 
 	.testimonial-stars {
 		color: #FFD700;
-		font-size: 1.2rem;
-		margin-bottom: 1rem;
+		font-size: 1.1rem;
+		margin-bottom: 0.75rem;
 		letter-spacing: 2px;
 	}
 
 	.testimonial-card > p {
 		color: var(--text-muted);
-		font-size: 1.05rem;
+		font-size: 0.95rem;
 		line-height: 1.7;
-		margin-bottom: 1.5rem;
+		margin-bottom: 1.25rem;
 		font-style: italic;
 	}
 
 	.testimonial-author {
 		display: flex;
 		align-items: center;
-		gap: 0.75rem;
+		justify-content: center;
+		gap: 0.6rem;
 	}
 
 	.testimonial-avatar {
-		width: 40px;
-		height: 40px;
+		width: 36px;
+		height: 36px;
 		border-radius: 50%;
 		background: linear-gradient(135deg, #00C853, #00E676);
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		font-size: 0.75rem;
+		font-size: 0.7rem;
 		font-weight: 700;
 		color: #0a0a0a;
 		flex-shrink: 0;
@@ -1755,12 +1755,14 @@ import Layout from '../layouts/Layout.astro';
 	.testimonial-author strong {
 		display: block;
 		color: var(--text-white);
-		font-size: 0.95rem;
+		font-size: 0.9rem;
+		text-align: left;
 	}
 
 	.testimonial-author span {
 		color: var(--text-muted);
-		font-size: 0.8rem;
+		font-size: 0.75rem;
+		text-align: left;
 	}
 
 	.testimonials-nav {
