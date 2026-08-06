@@ -311,21 +311,25 @@ const ogImageURL = ogImage.startsWith('http') ? ogImage : `https://deviury.pages
 			});
 
 			// Scroll reveal animation
-			const revealSelectors = '.reveal, .portfolio-grid .portfolio-card, .blog-grid .blog-card, .featured-card';
-			const revealElements = document.querySelectorAll(revealSelectors);
-			if (revealElements.length > 0 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-				const revealObserver = new IntersectionObserver((entries) => {
-					entries.forEach(entry => {
-						if (entry.isIntersecting) {
-							entry.target.classList.add('revealed');
-							revealObserver.unobserve(entry.target);
-						}
-					});
-				}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-				revealElements.forEach(el => revealObserver.observe(el));
-			} else {
-				revealElements.forEach(el => el.classList.add('revealed'));
+			function initReveal() {
+				const revealSelectors = '.reveal, .portfolio-grid .portfolio-card, .blog-grid .blog-card, .featured-card';
+				const revealElements = document.querySelectorAll(revealSelectors);
+				if (revealElements.length > 0 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+					const revealObserver = new IntersectionObserver((entries) => {
+						entries.forEach(entry => {
+							if (entry.isIntersecting) {
+								entry.target.classList.add('revealed');
+								revealObserver.unobserve(entry.target);
+							}
+						});
+					}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+					revealElements.forEach(el => revealObserver.observe(el));
+				} else {
+					revealElements.forEach(el => el.classList.add('revealed'));
+				}
 			}
+			initReveal();
+			document.addEventListener('astro:page-load', initReveal);
 		</script>
 	</body>
 </html>
