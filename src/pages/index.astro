@@ -531,20 +531,54 @@ import Layout from '../layouts/Layout.astro';
 		<div class="container">
 			<span class="section-tag">Depoimentos</span>
 			<h2>O Que Meus Clientes Dizem</h2>
-			<div class="testimonials-grid">
-				<div class="testimonial-card">
-					<div class="testimonial-stars" aria-label="5 de 5 estrelas">★★★★★</div>
-					<p>"Site profissional e as vendas aumentaram depois do lançamento."</p>
-					<div class="testimonial-author">
-						<strong>Home Vantagens</strong>
+			<div class="testimonials-carousel" id="testimonials-carousel">
+				<div class="testimonials-track" id="testimonials-track">
+					<div class="testimonial-card">
+						<div class="testimonial-stars" aria-label="5 de 5 estrelas">★★★★★</div>
+						<p>"Site profissional e as vendas aumentaram depois do lançamento."</p>
+						<div class="testimonial-author">
+							<div class="testimonial-avatar">HV</div>
+							<div>
+								<strong>Home Vantagens</strong>
+								<span>Loja de vantagens e benefícios</span>
+							</div>
+						</div>
+					</div>
+					<div class="testimonial-card">
+						<div class="testimonial-stars" aria-label="5 de 5 estrelas">★★★★★</div>
+						<p>"Entregou antes do prazo e o site ficou exatamente como eu imaginava."</p>
+						<div class="testimonial-author">
+							<div class="testimonial-avatar">WD</div>
+							<div>
+								<strong>Wallacy Designer</strong>
+								<span>Design gráfico e web</span>
+							</div>
+						</div>
+					</div>
+					<div class="testimonial-card">
+						<div class="testimonial-stars" aria-label="5 de 5 estrelas">★★★★★</div>
+						<p>"Profissional muito atencioso. O site ficou rápido, bonito e funcional. Recomendo!"</p>
+						<div class="testimonial-author">
+							<div class="testimonial-avatar">DC</div>
+							<div>
+								<strong>Driffer CVO</strong>
+								<span>Consultoria e soluções</span>
+							</div>
+						</div>
 					</div>
 				</div>
-				<div class="testimonial-card">
-					<div class="testimonial-stars" aria-label="5 de 5 estrelas">★★★★★</div>
-					<p>"Entregou antes do prazo e o site ficou exatamente como eu imaginava."</p>
-					<div class="testimonial-author">
-						<strong>Wallacy Designer</strong>
+				<div class="testimonials-nav">
+					<button class="testimonials-btn testimonials-btn--prev" id="testimonial-prev" aria-label="Depoimento anterior">
+						<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+					</button>
+					<div class="testimonials-dots" id="testimonials-dots">
+						<button class="testimonial-dot active" data-index="0" aria-label="Depoimento 1"></button>
+						<button class="testimonial-dot" data-index="1" aria-label="Depoimento 2"></button>
+						<button class="testimonial-dot" data-index="2" aria-label="Depoimento 3"></button>
 					</div>
+					<button class="testimonials-btn testimonials-btn--next" id="testimonial-next" aria-label="Próximo depoimento">
+						<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+					</button>
 				</div>
 			</div>
 		</div>
@@ -1650,11 +1684,25 @@ import Layout from '../layouts/Layout.astro';
 		padding: 6rem 0;
 	}
 
-	.testimonials-grid {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		gap: 1.5rem;
+	.testimonials-carousel {
+		position: relative;
 		margin-top: 2rem;
+		overflow: hidden;
+	}
+
+	.testimonials-track {
+		display: flex;
+		transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+	}
+
+	.testimonials-track .testimonial-card {
+		min-width: 100%;
+		box-sizing: border-box;
+		padding-right: 1.5rem;
+	}
+
+	.testimonials-track .testimonial-card:last-child {
+		padding-right: 0;
 	}
 
 	.testimonial-card {
@@ -1667,7 +1715,6 @@ import Layout from '../layouts/Layout.astro';
 
 	.testimonial-card:hover {
 		border-color: var(--primary);
-		transform: translateY(-5px);
 	}
 
 	.testimonial-stars {
@@ -1677,23 +1724,97 @@ import Layout from '../layouts/Layout.astro';
 		letter-spacing: 2px;
 	}
 
-	.testimonial-card p {
+	.testimonial-card > p {
 		color: var(--text-muted);
-		font-size: 0.95rem;
+		font-size: 1.05rem;
 		line-height: 1.7;
 		margin-bottom: 1.5rem;
 		font-style: italic;
 	}
 
+	.testimonial-author {
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+	}
+
+	.testimonial-avatar {
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		background: linear-gradient(135deg, #00C853, #00E676);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 0.75rem;
+		font-weight: 700;
+		color: #0a0a0a;
+		flex-shrink: 0;
+	}
+
 	.testimonial-author strong {
 		display: block;
 		color: var(--text-white);
-		font-size: 1rem;
+		font-size: 0.95rem;
 	}
 
 	.testimonial-author span {
 		color: var(--text-muted);
-		font-size: 0.85rem;
+		font-size: 0.8rem;
+	}
+
+	.testimonials-nav {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 1.5rem;
+		margin-top: 2rem;
+	}
+
+	.testimonials-btn {
+		width: 44px;
+		height: 44px;
+		border-radius: 50%;
+		background: rgba(255, 255, 255, 0.05);
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		color: #fff;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: all 0.3s;
+	}
+
+	.testimonials-btn:hover {
+		background: rgba(0, 230, 118, 0.15);
+		border-color: rgba(0, 230, 118, 0.4);
+	}
+
+	.testimonials-btn:disabled {
+		opacity: 0.3;
+		cursor: not-allowed;
+	}
+
+	.testimonials-dots {
+		display: flex;
+		gap: 0.5rem;
+	}
+
+	.testimonial-dot {
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		background: rgba(255, 255, 255, 0.15);
+		border: none;
+		cursor: pointer;
+		transition: all 0.3s;
+		padding: 0;
+	}
+
+	.testimonial-dot.active {
+		background: var(--primary);
+		width: 28px;
+		border-radius: 10px;
 	}
 
 	.faq {
@@ -2347,10 +2468,6 @@ import Layout from '../layouts/Layout.astro';
 			gap: 1rem;
 		}
 
-		.testimonials-grid {
-			grid-template-columns: 1fr;
-		}
-
 		section h2 {
 			font-size: 1.75rem;
 		}
@@ -2572,6 +2689,32 @@ import Layout from '../layouts/Layout.astro';
 			}
 
 			setTimeout(type, 1000);
+		}
+
+		const track = document.getElementById('testimonials-track');
+		const prevBtn = document.getElementById('testimonial-prev');
+		const nextBtn = document.getElementById('testimonial-next');
+		const dots = document.querySelectorAll('.testimonial-dot');
+		if (track && prevBtn && nextBtn && dots.length) {
+			let current = 0;
+			const total = dots.length;
+			function goTo(index) {
+				current = Math.max(0, Math.min(index, total - 1));
+				track.style.transform = `translateX(-${current * 100}%)`;
+				dots.forEach((d, i) => d.classList.toggle('active', i === current));
+				prevBtn.disabled = current === 0;
+				nextBtn.disabled = current === total - 1;
+			}
+			prevBtn.addEventListener('click', () => goTo(current - 1));
+			nextBtn.addEventListener('click', () => goTo(current + 1));
+			dots.forEach(d => d.addEventListener('click', () => goTo(+d.dataset.index)));
+			goTo(0);
+			let autoplay = setInterval(() => goTo((current + 1) % total), 5000);
+			const carousel = document.getElementById('testimonials-carousel');
+			carousel?.addEventListener('mouseenter', () => clearInterval(autoplay));
+			carousel?.addEventListener('mouseleave', () => {
+				autoplay = setInterval(() => goTo((current + 1) % total), 5000);
+			});
 		}
 	});
 </script>
