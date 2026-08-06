@@ -10,13 +10,9 @@
 	"icons": [
 		{
 			"src": "/favicon-deviury.webp",
-			"sizes": "192x192",
-			"type": "image/webp"
-		},
-		{
-			"src": "/favicon-deviury.webp",
-			"sizes": "512x512",
-			"type": "image/webp"
+			"sizes": "any",
+			"type": "image/webp",
+			"purpose": "any"
 		}
 	],
 	"categories": ["business", "technology", "design"],

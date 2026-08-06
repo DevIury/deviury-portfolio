@@ -48,7 +48,7 @@ const articleSchema = {
 			"url": "https://deviury.pages.dev/logo-deviury.webp"
 		}
 	},
-	"image": post.data.image ? `https://deviury.pages.dev${post.data.image}` : "https://deviury.pages.dev/og-image.png",
+	"image": post.data.image ? `https://deviury.pages.dev${post.data.image}` : "https://deviury.pages.dev/og-image.svg",
 	"mainEntityOfPage": {
 		"@type": "WebPage",
 		"@id": `https://deviury.pages.dev/blog/${post.id.replace(/\.md$/, '')}`
@@ -77,6 +77,7 @@ const breadcrumbSchema = {
 
 	<Header whatsappMessage="Ol%C3%A1!%20Vim%20pelo%20blog%20e%20gostaria%20de%20um%20or%C3%A7amento." />
 
+	<main id="main-content">
 	<article class="post-page">
 		<div class="container">
 			<nav class="breadcrumbs" aria-label="Breadcrumb">
@@ -134,6 +135,7 @@ const breadcrumbSchema = {
 			)}
 		</div>
 	</article>
+	</main>
 
 	<Footer />
 	<FloatingWhatsApp message="Ol%C3%A1!%20Vim%20pelo%20blog%20e%20gostaria%20de%20um%20or%C3%A7amento." />
