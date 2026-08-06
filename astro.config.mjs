@@ -3,7 +3,7 @@ import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-	site: 'https://deviury.com.br',
+	site: 'https://deviury.pages.dev',
 	compressHTML: true,
 	integrations: [
 		sitemap(),
