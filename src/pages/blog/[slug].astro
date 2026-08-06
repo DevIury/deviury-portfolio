@@ -38,20 +38,20 @@ const articleSchema = {
 	"author": {
 		"@type": "Person",
 		"name": "DevIury",
-		"url": "https://deviury.com"
+		"url": "https://deviury.com.br"
 	},
 	"publisher": {
 		"@type": "Organization",
 		"name": "DevIury - Web Designer",
 		"logo": {
 			"@type": "ImageObject",
-			"url": "https://deviury.com/logo-deviury.webp"
+			"url": "https://deviury.com.br/logo-deviury.webp"
 		}
 	},
-	"image": post.data.image ? `https://deviury.com${post.data.image}` : "https://deviury.com/og-image.png",
+	"image": post.data.image ? `https://deviury.com.br${post.data.image}` : "https://deviury.com.br/og-image.png",
 	"mainEntityOfPage": {
 		"@type": "WebPage",
-		"@id": `https://deviury.com/blog/${post.id.replace(/\.md$/, '')}`
+		"@id": `https://deviury.com.br/blog/${post.id.replace(/\.md$/, '')}`
 	}
 };
 
@@ -59,8 +59,8 @@ const breadcrumbSchema = {
 	"@context": "https://schema.org",
 	"@type": "BreadcrumbList",
 	"itemListElement": [
-		{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://deviury.com" },
-		{ "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://deviury.com/blog" },
+		{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://deviury.com.br" },
+		{ "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://deviury.com.br/blog" },
 		{ "@type": "ListItem", "position": 3, "name": post.data.title }
 	]
 };
