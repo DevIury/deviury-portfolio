@@ -1,9 +1,9 @@
 ---
 title: "Site Profissional para Empresas em Contagem/MG"
-description: "Por que sua empresa em Contagem precisa de um site profissional. Custos, prazos e benef&#237;cios da presen&#231;a digital."
+description: "Por que sua empresa em Contagem precisa de um site profissional. Custos, prazos e benefícios da presença digital."
 date: 2026-06-01
 image: "/blog-site-contagem.svg"
-tags: ["cria&#231;&#227;o de sites", "contagem", "minas gerais", "presen&#231;a digital"]
+tags: ["criação de sites", "contagem", "minas gerais", "presença digital"]
 author: "DevIury"
 ---
 
