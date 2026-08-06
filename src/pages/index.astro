@@ -538,10 +538,7 @@ import Layout from '../layouts/Layout.astro';
 						<p>"Site profissional e as vendas aumentaram depois do lançamento."</p>
 						<div class="testimonial-author">
 							<div class="testimonial-avatar">HV</div>
-							<div>
-								<strong>Home Vantagens</strong>
-								<span>Loja de vantagens e benefícios</span>
-							</div>
+							<strong>Home Vantagens</strong>
 						</div>
 					</div>
 					<div class="testimonial-card">
@@ -549,21 +546,7 @@ import Layout from '../layouts/Layout.astro';
 						<p>"Entregou antes do prazo e o site ficou exatamente como eu imaginava."</p>
 						<div class="testimonial-author">
 							<div class="testimonial-avatar">WD</div>
-							<div>
-								<strong>Wallacy Designer</strong>
-								<span>Design gráfico e web</span>
-							</div>
-						</div>
-					</div>
-					<div class="testimonial-card">
-						<div class="testimonial-stars" aria-label="5 de 5 estrelas">★★★★★</div>
-						<p>"Profissional muito atencioso. O site ficou rápido, bonito e funcional. Recomendo!"</p>
-						<div class="testimonial-author">
-							<div class="testimonial-avatar">DC</div>
-							<div>
-								<strong>Driffer CVO</strong>
-								<span>Consultoria e soluções</span>
-							</div>
+							<strong>Wallacy Designer</strong>
 						</div>
 					</div>
 				</div>
@@ -574,7 +557,6 @@ import Layout from '../layouts/Layout.astro';
 					<div class="testimonials-dots" id="testimonials-dots">
 						<button class="testimonial-dot active" data-index="0" aria-label="Depoimento 1"></button>
 						<button class="testimonial-dot" data-index="1" aria-label="Depoimento 2"></button>
-						<button class="testimonial-dot" data-index="2" aria-label="Depoimento 3"></button>
 					</div>
 					<button class="testimonials-btn testimonials-btn--next" id="testimonial-next" aria-label="Próximo depoimento">
 						<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
@@ -1767,16 +1749,8 @@ import Layout from '../layouts/Layout.astro';
 	}
 
 	.testimonial-author strong {
-		display: block;
 		color: var(--text-white);
 		font-size: 0.85rem;
-		text-align: left;
-	}
-
-	.testimonial-author span {
-		color: var(--text-muted);
-		font-size: 0.7rem;
-		text-align: left;
 	}
 
 	.testimonials-nav {
