@@ -1,0 +1,8 @@
+<svg width="800" height="420" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="420" fill="#0a0a0a"/>
+  <rect x="40" y="40" width="720" height="340" rx="24" fill="#111" stroke="#1a1a1a" stroke-width="1"/>
+  <text x="400" y="180" text-anchor="middle" fill="#00E676" font-family="system-ui, sans-serif" font-size="42" font-weight="800">6 Erros</text>
+  <text x="400" y="240" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="22">que fazem seu site perder clientes</text>
+  <rect x="340" y="280" width="120" height="4" rx="2" fill="#00E676" opacity="0.5"/>
+  <rect x="40" y="350" width="720" height="2" fill="#00E676" opacity="0.3"/>
+</svg>
