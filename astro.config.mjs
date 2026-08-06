@@ -4,7 +4,7 @@ import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
 	site: 'https://deviury.pages.dev',
-	compressHTML: true,
+	compressHTML: false,
 	integrations: [
 		sitemap(),
 	],
