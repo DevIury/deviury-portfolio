@@ -1688,7 +1688,7 @@ import Layout from '../layouts/Layout.astro';
 		position: relative;
 		margin-top: 2rem;
 		overflow: hidden;
-		max-width: 600px;
+		max-width: 480px;
 		margin-left: auto;
 		margin-right: auto;
 	}
@@ -1704,29 +1704,43 @@ import Layout from '../layouts/Layout.astro';
 	}
 
 	.testimonial-card {
-		background: var(--bg-card);
-		border: 1px solid var(--border);
-		border-radius: 16px;
-		padding: 1.75rem 2rem;
+		background: linear-gradient(135deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.01) 100%);
+		border: 1px solid rgba(255,255,255,0.06);
+		border-radius: 20px;
+		padding: 2rem 1.75rem;
 		transition: all 0.3s;
 		text-align: center;
+		position: relative;
+	}
+
+	.testimonial-card::before {
+		content: '\201C';
+		position: absolute;
+		top: 0.75rem;
+		left: 1.25rem;
+		font-size: 3.5rem;
+		color: var(--primary);
+		opacity: 0.15;
+		font-family: Georgia, serif;
+		line-height: 1;
 	}
 
 	.testimonial-card:hover {
-		border-color: var(--primary);
+		border-color: rgba(0, 230, 118, 0.2);
+		box-shadow: 0 8px 32px rgba(0, 230, 118, 0.06);
 	}
 
 	.testimonial-stars {
 		color: #FFD700;
-		font-size: 1.1rem;
-		margin-bottom: 0.75rem;
-		letter-spacing: 2px;
+		font-size: 0.95rem;
+		margin-bottom: 0.6rem;
+		letter-spacing: 3px;
 	}
 
 	.testimonial-card > p {
-		color: var(--text-muted);
-		font-size: 0.95rem;
-		line-height: 1.7;
+		color: rgba(255,255,255,0.7);
+		font-size: 0.9rem;
+		line-height: 1.65;
 		margin-bottom: 1.25rem;
 		font-style: italic;
 	}
@@ -1739,14 +1753,14 @@ import Layout from '../layouts/Layout.astro';
 	}
 
 	.testimonial-avatar {
-		width: 36px;
-		height: 36px;
+		width: 32px;
+		height: 32px;
 		border-radius: 50%;
 		background: linear-gradient(135deg, #00C853, #00E676);
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		font-size: 0.7rem;
+		font-size: 0.65rem;
 		font-weight: 700;
 		color: #0a0a0a;
 		flex-shrink: 0;
@@ -1755,13 +1769,13 @@ import Layout from '../layouts/Layout.astro';
 	.testimonial-author strong {
 		display: block;
 		color: var(--text-white);
-		font-size: 0.9rem;
+		font-size: 0.85rem;
 		text-align: left;
 	}
 
 	.testimonial-author span {
 		color: var(--text-muted);
-		font-size: 0.75rem;
+		font-size: 0.7rem;
 		text-align: left;
 	}
 
@@ -1769,17 +1783,17 @@ import Layout from '../layouts/Layout.astro';
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		gap: 1.5rem;
-		margin-top: 2rem;
+		gap: 1rem;
+		margin-top: 1.5rem;
 	}
 
 	.testimonials-btn {
-		width: 44px;
-		height: 44px;
+		width: 36px;
+		height: 36px;
 		border-radius: 50%;
-		background: rgba(255, 255, 255, 0.05);
-		border: 1px solid rgba(255, 255, 255, 0.1);
-		color: #fff;
+		background: rgba(255, 255, 255, 0.04);
+		border: 1px solid rgba(255, 255, 255, 0.08);
+		color: rgba(255,255,255,0.5);
 		cursor: pointer;
 		display: flex;
 		align-items: center;
@@ -1788,25 +1802,26 @@ import Layout from '../layouts/Layout.astro';
 	}
 
 	.testimonials-btn:hover {
-		background: rgba(0, 230, 118, 0.15);
-		border-color: rgba(0, 230, 118, 0.4);
+		background: rgba(0, 230, 118, 0.1);
+		border-color: rgba(0, 230, 118, 0.3);
+		color: var(--primary);
 	}
 
 	.testimonials-btn:disabled {
-		opacity: 0.3;
+		opacity: 0.2;
 		cursor: not-allowed;
 	}
 
 	.testimonials-dots {
 		display: flex;
-		gap: 0.5rem;
+		gap: 0.4rem;
 	}
 
 	.testimonial-dot {
-		width: 10px;
-		height: 10px;
+		width: 8px;
+		height: 8px;
 		border-radius: 50%;
-		background: rgba(255, 255, 255, 0.15);
+		background: rgba(255, 255, 255, 0.12);
 		border: none;
 		cursor: pointer;
 		transition: all 0.3s;
@@ -1815,7 +1830,7 @@ import Layout from '../layouts/Layout.astro';
 
 	.testimonial-dot.active {
 		background: var(--primary);
-		width: 28px;
+		width: 24px;
 		border-radius: 10px;
 	}
 
