@@ -1442,6 +1442,29 @@ import FloatingWhatsApp from '../components/FloatingWhatsApp.astro';
 	}
 
 	/* Responsive */
+	@media (max-width: 768px) {
+		.discount-banner__inner {
+			flex-direction: column;
+			text-align: center;
+			padding: 1.25rem 1.25rem;
+		}
+
+		.discount-banner__text {
+			flex-direction: column;
+			gap: 0.25rem;
+		}
+
+		.discount-banner__text span {
+			font-size: 0.75rem;
+		}
+
+		.discount-banner__badge {
+			width: 100%;
+			justify-content: center;
+			margin-top: 0.5rem;
+		}
+	}
+
 	@media (min-width: 768px) {
 		.nav-links {
 			display: flex;
