@@ -105,8 +105,8 @@ import Layout from '../layouts/Layout.astro';
 								</div>
 								<div class="price">
 									<span class="currency">R$</span>
-									<span class="amount" data-monthly="697" data-annual="58">697</span>
-									<span class="period" data-monthly="pagamento único" data-annual="/mês">pagamento único</span>
+								<span class="amount" data-monthly="697" data-annual="69">697</span>
+								<span class="period" data-monthly="pagamento único" data-annual="/mês">pagamento único</span>
 								</div>
 								<div class="price-pix">
 									<span class="price-pix__icon">
@@ -116,7 +116,7 @@ import Layout from '../layouts/Layout.astro';
 									</span>
 									<strong>R$ 558</strong> no PIX
 								</div>
-								<span class="installment-info" data-monthly="ou 12x de R$ 58" data-annual="">ou 12x de R$ 58</span>
+								<span class="installment-info" data-monthly="ou 12x de R$ 69" data-annual="">ou 12x de R$ 69</span>
 							</div>
 						</div>
 						<div class="pricing-features">
@@ -184,8 +184,8 @@ import Layout from '../layouts/Layout.astro';
 								</div>
 								<div class="price">
 									<span class="currency">R$</span>
-									<span class="amount" data-monthly="1097" data-annual="91">1097</span>
-									<span class="period" data-monthly="pagamento único" data-annual="/mês">pagamento único</span>
+								<span class="amount" data-monthly="1097" data-annual="109">1097</span>
+								<span class="period" data-monthly="pagamento único" data-annual="/mês">pagamento único</span>
 								</div>
 								<div class="price-pix">
 									<span class="price-pix__icon">
@@ -195,7 +195,7 @@ import Layout from '../layouts/Layout.astro';
 									</span>
 									<strong>R$ 878</strong> no PIX
 								</div>
-								<span class="installment-info" data-monthly="ou 12x de R$ 91" data-annual="">ou 12x de R$ 91</span>
+								<span class="installment-info" data-monthly="ou 12x de R$ 109" data-annual="">ou 12x de R$ 109</span>
 							</div>
 						</div>
 						<div class="pricing-features">
@@ -1806,16 +1806,19 @@ import Layout from '../layouts/Layout.astro';
 				A: {
 					name: 'Controle',
 					pricing: { essencial: 697, profissional: 1097, premium: null },
+					installments: { essencial: 69, profissional: 109 },
 					ctas: { essencial: 'Começar Agora', profissional: 'Fale no WhatsApp', premium: 'Solicitar Orçamento' }
 				},
 				B: {
 					name: 'Preço Mais Baixo',
 					pricing: { essencial: 647, profissional: 1047, premium: null },
+					installments: { essencial: 64, profissional: 104 },
 					ctas: { essencial: 'Garantir Meu Site', profissional: 'Começar Agora', premium: 'Solicitar Orçamento' }
 				},
 				C: {
 					name: 'CTA Urgência',
 					pricing: { essencial: 697, profissional: 1097, premium: null },
+					installments: { essencial: 69, profissional: 109 },
 					ctas: { essencial: 'Últimas Vagas!', profissional: 'Vagas Limitadas', premium: 'Solicitar Orçamento' }
 				}
 			},
@@ -1862,18 +1865,18 @@ import Layout from '../layouts/Layout.astro';
 					if (plan && config.pricing[plan]) {
 						const amountEl = card.querySelector('.amount');
 						const monthlyPrice = config.pricing[plan];
-						const annualPrice = Math.round(monthlyPrice / 12);
+						const installmentPrice = config.installments?.[plan] || Math.round(monthlyPrice / 12);
 						
 						if (amountEl) {
 							amountEl.dataset.monthly = monthlyPrice;
-							amountEl.dataset.annual = annualPrice;
+							amountEl.dataset.annual = installmentPrice;
 							amountEl.textContent = monthlyPrice;
 						}
 
 						// Update installment info
 						const installmentEl = card.querySelector('.installment-info');
 						if (installmentEl) {
-							installmentEl.dataset.monthly = `ou 12x de R$ ${annualPrice}`;
+							installmentEl.dataset.monthly = `ou 12x de R$ ${installmentPrice}`;
 						}
 					}
 				});
