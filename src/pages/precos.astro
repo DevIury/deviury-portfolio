@@ -372,26 +372,6 @@ import Layout from '../layouts/Layout.astro';
 			</div>
 		</section>
 
-		<section class="guarantee-section">
-			<div class="container">
-				<div class="guarantee-card">
-					<div class="guarantee-icon">
-						<svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-							<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-							<path d="M9 12l2 2 4-4"/>
-						</svg>
-					</div>
-					<div class="guarantee-content">
-						<h3>Garantia de 15 Dias</h3>
-						<p>Se após as revisões você não estiver 100% satisfeito com o resultado, devolvo <strong>100% do valor investido</strong>. Sem burocracia, sem perguntas. Meu compromisso é com a sua satisfação total.</p>
-					</div>
-					<div class="guarantee-badge">
-						<span>Satisfação Garantida</span>
-					</div>
-				</div>
-			</div>
-		</section>
-
 		<section class="pricing-faq">
 			<div class="container">
 				<span class="section-tag">Dúvidas Frequentes</span>
@@ -442,7 +422,7 @@ import Layout from '../layouts/Layout.astro';
 							</svg>
 						</button>
 						<div class="faq-answer">
-							<p>Sim! Após a entrega, você terá acesso ao painel administrativo para atualizar textos, imagens e informações de contato. Também ofereço treinamento gratuito para você aprender a gerenciar seu site.</p>
+							<p>Sim! Após a entrega, você terá acesso ao painel administrativo para atualizar textos, imagens e informações de contato. Se preferir, eu faço a manutenção do seu site por um valor acessível mensal.</p>
 						</div>
 					</div>
 
@@ -460,13 +440,13 @@ import Layout from '../layouts/Layout.astro';
 
 					<div class="faq-item">
 						<button class="faq-question" aria-expanded="false">
-							<span>E se eu não gostar do resultado?</span>
+							<span>Como funciona o suporte?</span>
 							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
 								<path d="M6 9l6 6 6-6"/>
 							</svg>
 						</button>
 						<div class="faq-answer">
-							<p>Ofereço garantia de satisfação de 15 dias. Se após as revisões você não estiver satisfeito, devolvo 100% do valor investido. Meu compromisso é com a sua satisfação.</p>
+							<p>Ofereço suporte por 30 dias após a entrega para ajustes finos. Depois disso, mantenho seu site atualizado e funcionando por um valor acessível mensal.</p>
 						</div>
 					</div>
 				</div>
@@ -1345,68 +1325,6 @@ import Layout from '../layouts/Layout.astro';
 		font-weight: 700;
 	}
 
-	/* Guarantee Section */
-	.guarantee-section {
-		padding: 0 0 4rem;
-	}
-
-	.guarantee-card {
-		background: linear-gradient(135deg, rgba(var(--primary-rgb), 0.08), rgba(var(--primary-rgb), 0.02));
-		border: 1px solid rgba(var(--primary-rgb), 0.2);
-		border-radius: 16px;
-		padding: 3rem 2rem;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		text-align: center;
-		gap: 1.5rem;
-		position: relative;
-	}
-
-	.guarantee-icon {
-		color: var(--primary);
-		animation: guaranteeFloat 3s ease-in-out infinite;
-	}
-
-	@keyframes guaranteeFloat {
-		0%, 100% {
-			transform: translateY(0);
-		}
-		50% {
-			transform: translateY(-6px);
-		}
-	}
-
-	.guarantee-content h3 {
-		font-size: 1.5rem;
-		font-weight: 700;
-		margin-bottom: 0.75rem;
-		color: var(--primary);
-	}
-
-	.guarantee-content p {
-		color: var(--text-muted);
-		max-width: 600px;
-		line-height: 1.7;
-	}
-
-	.guarantee-content strong {
-		color: var(--text);
-	}
-
-	.guarantee-badge {
-		display: inline-flex;
-		align-items: center;
-		gap: 0.5rem;
-		background: rgba(var(--primary-rgb), 0.15);
-		border: 1px solid rgba(var(--primary-rgb), 0.3);
-		padding: 0.5rem 1.25rem;
-		border-radius: 20px;
-		font-size: 0.85rem;
-		font-weight: 600;
-		color: var(--primary);
-	}
-
 	/* FAQ */
 	.pricing-faq {
 		padding: 4rem 0;
@@ -1628,16 +1546,6 @@ import Layout from '../layouts/Layout.astro';
 
 		.custom-plan-cta {
 			flex-shrink: 0;
-		}
-
-		.guarantee-card {
-			flex-direction: row;
-			text-align: left;
-			padding: 3rem;
-		}
-
-		.guarantee-content {
-			flex: 1;
 		}
 	}
 
