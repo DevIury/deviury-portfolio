@@ -159,13 +159,19 @@ const waUrl = `https://wa.me/5538998894811?text=${whatsappMessage}`;
 
 	.nav-cta {
 		padding: 0.6rem 1.2rem;
-		background: var(--primary);
+		background: linear-gradient(135deg, #00C853, #00E676, #69F0AE);
 		color: #000;
 		text-decoration: none;
-		border-radius: 8px;
+		border-radius: 24px;
 		font-weight: 600;
 		font-size: 0.9rem;
 		transition: all 0.3s;
+		box-shadow: 0 2px 8px rgba(0, 230, 118, 0.3);
+	}
+
+	.nav-cta:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 4px 12px rgba(0, 230, 118, 0.4);
 	}
 
 	.menu-btn {
