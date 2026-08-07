@@ -465,6 +465,25 @@ const ogImageURL = ogImage.startsWith('http') ? ogImage : `https://deviury.pages
 		animation: fade-in 0.12s ease-out;
 	}
 
+	/* Faster transitions on mobile */
+	@media (max-width: 768px) {
+		::view-transition-old(root) {
+			animation: fade-out 0.05s ease-in forwards;
+		}
+
+		::view-transition-new(root) {
+			animation: fade-in 0.06s ease-out;
+		}
+
+		body.section-transition {
+			animation: fade-out 0.05s ease-in forwards;
+		}
+
+		body:not(.section-transition) {
+			animation: fade-in 0.06s ease-out;
+		}
+	}
+
 	/* Section navigation transitions */
 	body.section-transition {
 		animation: fade-out 0.1s ease-in forwards;
