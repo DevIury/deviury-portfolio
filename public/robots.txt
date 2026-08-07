@@ -37,4 +37,4 @@ User-agent: *
 Crawl-delay: 1
 
 # Sitemaps
-Sitemap: https://deviury.com/sitemap.xml
+Sitemap: https://deviury.pages.dev/sitemap.xml

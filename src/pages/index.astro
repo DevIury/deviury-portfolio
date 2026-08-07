@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="DevIury | Web Designer em Curvelo/MG - Criação de Sites Profissionais">
+<Layout title="DevIury | Web Designer em Curvelo/MG - Criação de Sites Profissionais" preloadHero={true}>
 	<a href="#main-content" class="sr-only" style="position:absolute;top:0;left:0;z-index:9999;padding:0.75rem 1.5rem;background:var(--primary);color:#000;font-weight:600;text-decoration:none;border-radius:0 0 8px 0;">Pular para o conteúdo</a>
 	<header class="header">
 		<nav class="nav">
@@ -1464,24 +1464,23 @@ import Layout from '../layouts/Layout.astro';
 		text-transform: uppercase;
 		letter-spacing: 1.2px;
 		box-shadow: 0 4px 15px rgba(0, 230, 118, 0.4);
-		animation: pulse-badge 2s infinite;
+		animation: pulse-badge 2s ease-in-out 3;
 	}
 
 	.portfolio-badge-new {
 		background: linear-gradient(135deg, var(--primary) 0%, #00C853 100%);
 		box-shadow: 0 4px 15px rgba(0, 230, 118, 0.4);
-		animation: pulse-badge 2s infinite;
+		animation: pulse-badge 2s ease-in-out 3;
 	}
 
 	.portfolio-badge-prototype {
 		background: linear-gradient(135deg, #FF6B35, #FF8C42);
 		box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
-		animation: none;
 	}
 
 	@keyframes pulse-badge {
-		0%, 100% { box-shadow: 0 4px 15px rgba(0, 230, 118, 0.4); }
-		50% { box-shadow: 0 4px 25px rgba(0, 230, 118, 0.6); }
+		0%, 100% { transform: scale(1); }
+		50% { transform: scale(1.05); }
 	}
 
 	.portfolio-info > p {
@@ -1904,7 +1903,6 @@ import Layout from '../layouts/Layout.astro';
 		max-height: 0;
 		overflow: hidden;
 		transition: max-height 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-		will-change: max-height;
 	}
 
 	.faq-item.active .faq-answer {
@@ -2339,6 +2337,11 @@ import Layout from '../layouts/Layout.astro';
 	}
 
 	@media (max-width: 768px) {
+		.header, .sidebar, .cookie-consent, .hero, .section {
+			backdrop-filter: none;
+			-webkit-backdrop-filter: none;
+		}
+
 		.nav-links {
 			display: none;
 		}
